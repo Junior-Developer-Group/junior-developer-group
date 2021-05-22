@@ -14,7 +14,7 @@
 			<!-- Contains stuff from js - don't delete -->
 			<!-- <div id='card-container' class='d-flex'>
 
-		</div> -->
+			</div> -->
 
 			<ul class="nav nav-tabs" id="repo-tabs" role="tablist">
 			</ul>
@@ -76,15 +76,7 @@
 				}
 			}
 
-			class OrgContributorData {
-				constructor() {
-					this.overallContributions = []
-					this.projectContributions = []
-				}
-
-			}
-
-			export class Dashboard {
+			class Dashboard {
 				octokit;
 				chart;
 				cards = [];
@@ -100,7 +92,6 @@
 				}
 
 				BuildDocument() {
-					const cardContainer = document.getElementById('card-container');
 					const ctrbContainer = document.getElementById('contributors-container');
 					const tablist = document.getElementById('repo-tabs');
 					const tabContent = document.getElementById('repo-tabs-content');
@@ -111,7 +102,6 @@
 
 					let setActive = true;
 					this.cards.forEach(c => {
-						// cardContainer.innerHTML += this.RepoCard(c);
 						tablist.innerHTML += this.RepoTab(c, setActive);
 						tabContent.innerHTML += this.RepoPane(c, setActive);
 						setActive = false;
@@ -129,7 +119,6 @@
 				}
 
 				BuildOverallCommitGraphData(statsData) {
-					//const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 					const weeks = statsData.overallWeeks.map(x => new Date((x.w * 1000)).toLocaleDateString("en-gb"));
 					const commitData = {
 						data: statsData.overallWeeks.map(x => x.c),
@@ -248,7 +237,7 @@
 					for (const repo of this.repos) {
 						const c = new CardParams();
 						c.title = repo.name;
-						var cData = {
+						const cData = {
 							contributorData: await this.getContributorDataForRepo(repo.name),
 							stats: await this.getContributorStatsForRepo(repo.name)
 						}
@@ -285,7 +274,7 @@
 					const overallWeeks = [];
 
 					for (const week of flatWeeks) {
-						const existing = overallWeeks.filter(x => x.w === week.w)[0] || null;
+						const existing = overallWeeks.filter(x => x.w === week?.w)[0] || null;
 						if (existing) {
 							const index = overallWeeks.indexOf(existing);
 							existing.a += week.a;
@@ -338,45 +327,34 @@
 
 				RepoTab(params, active = false) {
 					return `<li class="nav-item" role="presentation">
-												<button class="nav-link ${active ? 'active' : ''}" id="${params.title}-tab" data-bs-toggle="tab" data-bs-target="#${params.title}-pane" type="button"
-												role="tab" aria-controls="${params.title}-pane" aria-selected="true">${params.title}</button>
-											</li>`
+														<button class="nav-link ${active ? 'active' : ''}" id="${params.title}-tab" data-bs-toggle="tab" data-bs-target="#${params.title}-pane" type="button"
+														role="tab" aria-controls="${params.title}-pane" aria-selected="true">${params.title}</button>
+													</li>`
 				}
 
 				RepoPane(params, active = false) {
 					const list = params.contributorLogins.map(x => `<li><img style='height:20px' src='${x.avatarUrl}'/>${x.name} | ${x.contributions} contributions</li>`);
 					return `<div class="tab-pane fade ${active ? 'show active' : ''}" id="${params.title}-pane" role="tabpanel" aria-labelledby="home-tab">
-										<card class='card col m-2'>
-											<card-header class='card-header'>${params.title}</card-header>
-											<div class='card-body'>
-												<ul>
-													${list.join('')}
-												</ul>
-											</div>
-										<card></div>`
+												<card class='card col m-2'>
+													<card-header class='card-header'>${params.title}</card-header>
+													<div class='card-body'>
+														<ul>
+															${list.join('')}
+														</ul>
+													</div>
+												</card></div>`
 				}
 
-				RepoCard(params) {
-					const list = params.contributorLogins.map(x => `<li><img style='height:20px' src='${x.avatarUrl}'/>${x.name} | ${x.contributions} contributions</li>`);
-					return `<card class='card col m-2'>
-											<card-header class='card-header'>${params.title}</card-header>
-											<div class='card-body'>
-												<ul>
-													${list.join('')}
-												</ul>
-											</div>
-										<card>`
-				}
 
 				ContributorRow(params) {
 					const element = document.createElement('tr');
 					element.innerHTML = `<td><img style='height: 20px' src='${params.avatarUrl}'/>${params.name}</td>
-											<td>${params.contributions}</td>
-											<td>
-												<button class="btn btn-sm btn-info">
-													More Info
-												</button>
-											</td>`
+													<td>${params.contributions}</td>
+													<td>
+														<button class="btn btn-sm btn-info">
+															More Info
+														</button>
+													</td>`
 
 					const button = element.getElementsByTagName('button')[0] || null;
 					if (button) {
@@ -392,9 +370,6 @@
 				dashboard.BuildDocument();
 			});
 
-
-		</script>
-		<script type="text/javascript">
 
 		</script>
 </body>
