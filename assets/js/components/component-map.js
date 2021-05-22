@@ -1,3 +1,3 @@
-import { Sidebar } from '../components/sidebar.js';
+import { Sidebar } from '../components/sidebar/sidebar.js';
 
 customElements.define('sidebar-component', Sidebar);
