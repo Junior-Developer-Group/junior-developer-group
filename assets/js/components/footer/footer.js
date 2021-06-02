@@ -6,6 +6,6 @@ export class Footer extends HTMLElement {
 	}
 
 	connectedCallback() {
-		ComponentHelper.GetHtml(this, "assets/js/components/footer/footer.html");
+		ComponentHelper.GetHtml(this, "../assets/js/components/footer/footer.html");
 	}
 }
