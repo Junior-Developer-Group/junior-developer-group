@@ -11,51 +11,48 @@
   </head>
 
   <body>
-    <page class="d-flex">
-      <sidebar-component></sidebar-component>
-      <main class="w-100">
-        <!-- Contains stuff from js - don't delete -->
-        <!-- <div id='card-container' class='d-flex'>
+      <page class="d-flex">
+          <sidebar-component></sidebar-component>
+          <main class="w-100">
+              <!-- Contains stuff from js - don't delete -->
+              <!-- <div id='card-container' class='d-flex'>
 
-		</div> -->
+            </div> -->
 
-        <ul class="nav nav-tabs" id="repo-tabs" role="tablist"></ul>
-        <div class="tab-content" id="repo-tabs-content"></div>
+              <ul class="nav nav-tabs" id="repo-tabs" role="tablist"></ul>
+              <div class="tab-content" id="repo-tabs-content"></div>
 
-        <div class="row w-100">
-          <div class="col-4">
-            <canvas id="myChart" width="600" height="400"></canvas>
-          </div>
-          <div class="col-4">
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Contributions</th>
-                  <th></th>
-                </tr>
-              </thead>
-              <tbody id="contributors-container"></tbody>
-            </table>
-          </div>
-          <div class="col-4">
-            <canvas id="contributor-chart" width="600" height="400"></canvas>
-          </div>
-        </div>
-      </main>
-    </page>
+              <div class="row w-100">
+                  <div class="col-4">
+                      <canvas id="myChart" width="600" height="400"></canvas>
+                  </div>
+                  <div class="col-4">
+                      <table class="table table-striped">
+                          <thead>
+                              <tr>
+                                  <th>Name</th>
+                                  <th>Contributions</th>
+                                  <th></th>
+                              </tr>
+                          </thead>
+                          <tbody id="contributors-container"></tbody>
+                      </table>
+                  </div>
+                  <div class="col-4">
+                      <canvas id="contributor-chart" width="600" height="400"></canvas>
+                  </div>
+              </div>
+          </main>
+      </page>
+      <footer-component></footer-component>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.1/dist/chart.min.js"></script>
-    <script
-      src="../assets/js/components/component-map.js"
-      type="module"
-      defer
-    ></script>
-    <script src="../assets/js/dashboard.js" type="module"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+              integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+              crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js@3.2.1/dist/chart.min.js"></script>
+      <script src="../assets/js/components/component-map.js"
+              type="module"
+              defer></script>
+      <script src="../assets/js/dashboard.js" type="module"></script>
   </body>
 </html>
