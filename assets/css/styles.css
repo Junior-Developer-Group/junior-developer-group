@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
+:root {
+  --dark: #21243d;
+  --coral: #ff6464;
+  --yellow: #ffc22b;
+  --white: #f5f5f5;
+  --pure-white: #ffff;
+  --grey: rgba(0, 0, 0, 0.6);
+  --light-grey: rgba(0, 0, 0, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--white);
+  font-family: 'Heebo', 'sans-serif';
+}
+
+#get-involved {
+  font-weight: 300;
+}
+
+#get-involved article {
+  margin: 1em;
+}
+
+#get-involved :where(hgroup, strong) {
+  font-family: 'Open Sans', 'sans-serif';
+  color: var(--dark);
+}
+
+hgroup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-transform: uppercase;
+}
+
+#get-involved h1 {
+  align-self: flex-end;
+
+  background: var(--yellow);
+  color: var(--white);
+
+  font-size: 0.65em;
+  letter-spacing: 0.15em;
+  text-align: center;
+
+  margin: 2em 1em;
+  padding: 0.4em 0.25em;
+  width: 40%;
+
+  border-radius: 0.2em;
+}
+
+#get-involved h2 {
+  font-size: 0.8em;
+  letter-spacing: 0.2em;
+}
+
+#get-involved p {
+  font-size: 0.8em;
+  margin-bottom: 1em;
+  color: var(--grey);
+}
+
+#get-involved a {
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.8em;
+
+  background-color: var(--coral);
+  color: var(--white);
+  letter-spacing: 0.2em;
+
+  margin: 2em 1em 1em;
+  padding: 0.5em 1.5em;
+
+  border-radius: 0.2em;
+}
+
+#get-involved article:first-child a {
+  width: 60%;
+}
+
+.price {
+  font-family: 'DM Serif Display', 'serif';
+  margin: 1em 0 2em;
+}
+
+.price p {
+  font-size: 2em;
+}
+
+.price b {
+  font-size: 2.5em;
+  font-weight: lighter;
+  color: var(--dark);
+}
+
+#get-involved article > div {
+  padding: 1em;
+}
+
+#get-involved article:last-child > div {
+  background: url('/assets/images/website-images/Skateboy\ Illustration.svg');
+  background-repeat: no-repeat;
+  background-position: 0 bottom;
+  background-size: 10vh;
+
+  height: 60vh;
+}
+
+#get-involved article:last-child {
+  background-color: var(--pure-white);
+  border-radius: 0.15em;
+  box-shadow: 0.1em 0.1em 0.5em var(--light-grey);
+}
+
+.involved-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (min-width: 18em) {
+  #get-involved h2 {
+    font-size: 0.9em;
+  }
+
+  #get-involved p {
+    font-size: 0.9em;
+  }
+
+  #get-involved a {
+    font-size: 1em;
+  }
+
+  #get-involved article:last-child > div {
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 21em) {
+  #get-involved article {
+    margin: 1.5em;
+  }
+
+  #get-involved h2 {
+    font-size: 1em;
+  }
+
+  #get-involved article:last-child > div {
+    height: 60vh;
+  }
+}
+
+@media screen and (min-width: 21em) and (min-height: 50em) {
+  #get-involved article:last-child > div {
+    height: 50vh;
+  }
+}
+
+@media screen and (min-width: 25em) {
+  #get-involved article {
+    margin: 2.5em;
+  }
+
+  #get-involved article:last-child > div {
+    height: 60vh;
+  }
+}
+
+@media screen and (min-width: 25em) and (min-height: 50em) {
+  #get-involved article:last-child > div {
+    height: 50vh;
+  }
+}
+
+@media screen and (min-width: 33em) {
+  #get-involved article:last-child > div {
+    background-size: 20vh;
+  }
+}
+
+@media screen and (min-width: 48em) {
+  #get-involved h1 {
+    width: 25%;
+  }
+
+  #get-involved article:last-child > div {
+    background-size: auto 75%;
+  }
+
+  #get-involved article:last-child > div {
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 64em) {
+  #get-involved {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  #get-involved article:first-child a {
+    max-width: 10em;
+  }
+
+  #get-involved article:first-child h1 {
+    width: 25%;
+  }
+
+  #get-involved article:last-child h1 {
+    width: 20%;
+  }
+
+  #get-involved article:first-child {
+    flex-basis: 45%;
+  }
+
+  #get-involved article:last-child {
+    flex-basis: 55%;
+  }
+}
+
+@media screen and (min-width: 64em) and (min-height: 85em) {
+  #get-involved article:first-child h1 {
+    width: 40%;
+  }
+
+  #get-involved article:first-child {
+    flex-basis: 33%;
+  }
+
+  #get-involved article:last-child {
+    flex-basis: 67%;
+  }
+}
