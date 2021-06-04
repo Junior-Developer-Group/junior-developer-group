@@ -85,6 +85,12 @@ hgroup {
   padding: 0.5em 1.5em;
 
   border-radius: 0.2em;
+
+  transition-duration: 0.4s;
+}
+
+#get-involved a:hover {
+  opacity: 0.8;
 }
 
 #get-involved article:first-child a {
