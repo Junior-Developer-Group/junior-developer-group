@@ -6,6 +6,8 @@
   --white: #f5f5f5;
 }
 
+/* note we are using em's as our units of measurement in this project( 16px = 1.00em ) */
+
 
 * {
 margin: 0;
