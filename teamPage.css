@@ -128,20 +128,8 @@ max-height:90%;
     }
 }
 
-@media only screen and (min-width: 64em) {
-    .hero_info h1{
-    font-size:4.5em;
-    padding:0em 3em;
-    }
-    .hero p{
-    font-size:2em;
-    }
-    .call_to_action{
-    font-size:2.5em;
-    }
-}
 
-@media only screen and (min-width: 70em) {
+@media only screen and (min-width: 64.5em) {
     .hero{
     flex-direction:row;
     flex-wrap:wrap;
