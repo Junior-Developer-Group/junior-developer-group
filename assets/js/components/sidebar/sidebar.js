@@ -1,11 +1,14 @@
-import { ComponentHelper } from '../component-helper.js'
+import { ComponentHelper } from '../component-helper.js';
 
 export class Sidebar extends HTMLElement {
-	constructor() {
-		super();
-	}
+  constructor() {
+    super();
+  }
 
-	connectedCallback() {
-		ComponentHelper.GetHtml(this, "assets/js/components/sidebar/sidebar.html");
-	}
+  connectedCallback() {
+    ComponentHelper.GetHtml(
+      this,
+      '../assets/js/components/sidebar/sidebar.html'
+    );
+  }
 }
