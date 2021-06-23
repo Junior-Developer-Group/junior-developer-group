@@ -4,9 +4,12 @@
   --dark:#21243D;
   --coral:#Ff6464;
   --white: #f5f5f5;
+--purple:#434ba1;
 }
 
-/* note we are using em's as our units of measurement in this project( 16px = 1.00em ) */
+/* note we are using em's as our units of measurement in this project( 16px = 1.00em ).*/
+
+ /* We are also using a mobile first approach where styles outside of a media queries are targeted at the smallest screen size and progressively laregr screen sizes are inside of the appropriate media queries  */
 
 
 *  {
@@ -17,6 +20,7 @@
 
 body {
     display:flex;
+    flex-direction:column;
     justify-content:center;
     min-height: 100vh;
     font-family: 'Heebo', sans-serif;
@@ -75,19 +79,47 @@ body {
     max-height:90%;
 }
 
+footer{
+display:flex;
+flex-wrap:wrap;
+justify-content:space-around;
+text-align:center;
+width: 100%;
+padding:1em;
+}
+
+span {
+width:100%;
+font-size:0.7em;
+display:block;
+padding:0.5em;
+}
+
+footer img {
+margin:0.5em;
+height:1.2em;
+width:1.2em;
+}
+
+.wondr_icon {
+border-radius:50%;
+background-color: #434ba1;
+}
 
 /* media queries */
 @media only screen and (min-width: 20em)  {
+
     .hero_info h1 {
         font-size:2.5em;
     }
- .hero_info p {
+    .hero_info p {
         font-size:1em;
     }
-.logo img {
+    .logo img {
         max-width:70%;
         max-height:70%;
     }
+
 }
 @media only screen and (min-width: 25em)  {
     .hero_info p {
@@ -96,13 +128,19 @@ body {
     .hero_info h1 {
         font-size:2.8em;
     }
+
+    footer img{
+    margin:0.5em;
+    height:1.3em;
+    width:1.3em;
+    }
 }
 
 @media only screen and (min-width: 37.5em)  {
     .hero_info p {
         font-size:1.4em;
     }
- .hero_info h1 {
+    .hero_info h1 {
         font-size:3.5em;
     }
 }
@@ -116,7 +154,7 @@ body {
         font-size:1.7em;
         line-height:1.2em;
     }
- .logo img {
+    .logo img {
         max-width:60%;
         max-height:60%;
     }
@@ -127,6 +165,14 @@ body {
     .call_to_action {
         padding:1em 2.4em;
         font-size:1.9em;
+    }
+     footer img{
+    margin:0.8em;
+    height:2.2em;
+    width:2.2em;
+    }
+    footer span{
+    font-size:1em;
     }
 }
 
@@ -164,4 +210,12 @@ body {
         max-width:90%;
         max-height:90%;
     }
+    footer span{
+    font-size:1em;
+    }
+    footer img {
+    height:3.5em;
+    width:3.5em;
+    }
+  
 }
