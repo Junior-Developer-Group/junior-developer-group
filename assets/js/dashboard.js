@@ -72,7 +72,7 @@ export class Dashboard {
 				plugins: {
 					title: {
 						display: true,
-						text: `Weekly commit history for all repo's'
+						text: `Weekly commit history for all repo's`
 					}
 				}
 			}
@@ -103,240 +103,240 @@ export class Dashboard {
 			tension: 0.1
 		};
 
-					const deleteData={
-						data: statsData.overallWeeks.map((x) => x.d/100),
-						borderColor: 'rgb(255, 0, 0)',
-						backgroundColor: 'rgb(255, 0, 0)',
-						label: 'deletes (`00)',
-						tension: 0.1
-					};
+		const deleteData={
+			data: statsData.overallWeeks.map((x) => x.d/100),
+			borderColor: 'rgb(255, 0, 0)',
+			backgroundColor: 'rgb(255, 0, 0)',
+			label: 'deletes (`00)',
+			tension: 0.1
+		};
 
-					const data={
-						labels: weeks,
-						datasets: [commitData, addData, deleteData]
-					};
+		const data={
+			labels: weeks,
+			datasets: [commitData, addData, deleteData]
+		};
 
-					return data;
-				}
+		return data;
+	}
 
 	BuildContributorOverallCommitGraphData(contributorName) {
-					const repoData=this.repos.flatMap((x) => {
-						return { stats: x.cData.stats, reopName: x.name };
-					});
-					console.log(repoData);
-					const contributorAllRepo=repoData.map((x) => {
-						return {
-							stats: x.stats.filter((y) => y.author.login==contributorName),
-							repoName: x.reopName
-						};
-					});
-					const uniqueWeeks=[
-						...new Set(
-							contributorAllRepo
-								.flatMap((x) => x.stats.flatMap((x) => x.weeks))
-								.map((x) => x.w)
-						)
-					].sort((a, b) => a-b);
+		const repoData=this.repos.flatMap((x) => {
+			return { stats: x.cData.stats, reopName: x.name };
+		});
+		console.log(repoData);
+		const contributorAllRepo=repoData.map((x) => {
+			return {
+				stats: x.stats.filter((y) => y.author.login==contributorName),
+				repoName: x.reopName
+			};
+		});
+		const uniqueWeeks=[
+			...new Set(
+				contributorAllRepo
+					.flatMap((x) => x.stats.flatMap((x) => x.weeks))
+					.map((x) => x.w)
+			)
+		].sort((a, b) => a-b);
 
-					const data={
-						labels: uniqueWeeks.map((x) =>
-							new Date(x*1000).toLocaleDateString('en-gb')
-						),
-						datasets: []
-					};
+		const data={
+			labels: uniqueWeeks.map((x) =>
+				new Date(x*1000).toLocaleDateString('en-gb')
+			),
+			datasets: []
+		};
 
-					for (const repo of contributorAllRepo) {
-						let color=
-							this.usedColors.filter((x) => x.name===repo.repoName)[0]||null;
+		for (const repo of contributorAllRepo) {
+			let color=
+				this.usedColors.filter((x) => x.name===repo.repoName)[0]||null;
 
-						if (!color) {
-							color=`rgb(${this.getRandomInt(0, 255)}, ${this.getRandomInt(
-								0,
-								255
-							)}, ${this.getRandomInt(0, 255)})`;
-							this.usedColors.push({ name: repo.repoName, color: color });
-						} else {
-							color=color.color;
-						}
+			if (!color) {
+				color=`rgb(${this.getRandomInt(0, 255)}, ${this.getRandomInt(
+					0,
+					255
+				)}, ${this.getRandomInt(0, 255)})`;
+				this.usedColors.push({ name: repo.repoName, color: color });
+			} else {
+				color=color.color;
+			}
 
-						let i=0;
-						const weekData=[];
-						for (const week of uniqueWeeks) {
-							const matchWeek=
-								repo.stats.flatMap((x) => x.weeks)?.filter((x) => x.w===week)[0]||
-								null;
-							if (matchWeek) {
-								weekData[i]=matchWeek.c;
-							} else {
-								weekData[i]=0;
-							}
-							i++;
-						}
-
-						const d={
-							data: weekData,
-							borderColor: color,
-							backgroundColor: color,
-							label: repo.repoName,
-							tension: 0.1
-						};
-
-						if (d.data.some((x) => x>0)) {
-							data.datasets.push(d);
-						}
-					}
-
-					const config={
-						type: 'line',
-						data: data,
-						options: {
-							plugins: {
-								title: {
-									display: true,
-									text: `Weekly commit history for ${contributorName}`
-								}
-							}
-						}
-					};
-
-					if (this.contributorChart) {
-						this.contributorChart.destroy();
-					}
-
-					const ctx=document.getElementById('contributor-chart');
-					this.contributorChart=new Chart(ctx, config);
+			let i=0;
+			const weekData=[];
+			for (const week of uniqueWeeks) {
+				const matchWeek=
+					repo.stats.flatMap((x) => x.weeks)?.filter((x) => x.w===week)[0]||
+					null;
+				if (matchWeek) {
+					weekData[i]=matchWeek.c;
+				} else {
+					weekData[i]=0;
 				}
+				i++;
+			}
+
+			const d={
+				data: weekData,
+				borderColor: color,
+				backgroundColor: color,
+				label: repo.repoName,
+				tension: 0.1
+			};
+
+			if (d.data.some((x) => x>0)) {
+				data.datasets.push(d);
+			}
+		}
+
+		const config={
+			type: 'line',
+			data: data,
+			options: {
+				plugins: {
+					title: {
+						display: true,
+						text: `Weekly commit history for ${contributorName}`
+					}
+				}
+			}
+		};
+
+		if (this.contributorChart) {
+			this.contributorChart.destroy();
+		}
+
+		const ctx=document.getElementById('contributor-chart');
+		this.contributorChart=new Chart(ctx, config);
+	}
 
 	getRandomInt(min, max) {
-					min=Math.ceil(min);
-					max=Math.floor(max);
-					return Math.floor(Math.random()*(max-min)+min); //The maximum is exclusive and the minimum is inclusive
-				}
+		min=Math.ceil(min);
+		max=Math.floor(max);
+		return Math.floor(Math.random()*(max-min)+min); //The maximum is exclusive and the minimum is inclusive
+	}
 
 	async InitData() {
-					this.repos=await this.getRepoData();
+		this.repos=await this.getRepoData();
 
-					for (const repo of this.repos) {
-						const c=new CardParams();
-						c.title=repo.name;
-						c.pullRequests=await this.getPullRequestsForRepo(repo.name);
-						var cData={
-							contributorData: await this.getContributorDataForRepo(repo.name),
-							stats: await this.getContributorStatsForRepo(repo.name)
-						};
+		for (const repo of this.repos) {
+			const c=new CardParams();
+			c.title=repo.name;
+			c.pullRequests=await this.getPullRequestsForRepo(repo.name);
+			var cData={
+				contributorData: await this.getContributorDataForRepo(repo.name),
+				stats: await this.getContributorStatsForRepo(repo.name)
+			};
 
-						repo.cData=cData;
+			repo.cData=cData;
 
-						const contributorData=cData.contributorData;
-						for (const d of contributorData) {
-							c.contributorLogins.push({
-								name: d.login,
-								avatarUrl: d.avatar_url,
-								contributions: d.contributions
-							});
+			const contributorData=cData.contributorData;
+			for (const d of contributorData) {
+				c.contributorLogins.push({
+					name: d.login,
+					avatarUrl: d.avatar_url,
+					contributions: d.contributions
+				});
 
-							const existing=
-								this.contributors.filter((x) => x.name==d.login)[0]||null;
-							if (existing) {
-								const index=this.contributors.indexOf(existing);
-								existing.contributions+=d.contributions;
-								this.contributors[index]=existing;
-							} else {
-								const ctrb=new Contributor();
-								ctrb.name=d.login;
-								ctrb.contributions=d.contributions;
-								ctrb.avatarUrl=d.avatar_url;
-								this.contributors.push(ctrb);
-							}
-						}
-
-						this.cards.push(c);
-					}
+				const existing=
+					this.contributors.filter((x) => x.name==d.login)[0]||null;
+				if (existing) {
+					const index=this.contributors.indexOf(existing);
+					existing.contributions+=d.contributions;
+					this.contributors[index]=existing;
+				} else {
+					const ctrb=new Contributor();
+					ctrb.name=d.login;
+					ctrb.contributions=d.contributions;
+					ctrb.avatarUrl=d.avatar_url;
+					this.contributors.push(ctrb);
 				}
+			}
+
+			this.cards.push(c);
+		}
+	}
 
 	BuildStatsData() {
-					const flatStats=this.repos.flatMap((x) => x.cData.stats);
-					const flatWeeks=flatStats.flatMap((x) => x.weeks);
+		const flatStats=this.repos.flatMap((x) => x.cData.stats);
+		const flatWeeks=flatStats.flatMap((x) => x.weeks);
 
-					const overallWeeks=[];
+		const overallWeeks=[];
 
-					for (const week of flatWeeks) {
-						const existing=overallWeeks.filter((x) => x.w===week.w)[0]||null;
-						if (existing) {
-							const index=overallWeeks.indexOf(existing);
-							existing.a+=week.a;
-							existing.c+=week.c;
-							existing.d+=week.d;
-							overallWeeks[index]=existing;
-						} else {
-							overallWeeks.push({
-								a: week.a,
-								c: week.c,
-								d: week.d,
-								w: week.w
-							});
-						}
-					}
+		for (const week of flatWeeks) {
+			const existing=overallWeeks.filter((x) => x.w===week.w)[0]||null;
+			if (existing) {
+				const index=overallWeeks.indexOf(existing);
+				existing.a+=week.a;
+				existing.c+=week.c;
+				existing.d+=week.d;
+				overallWeeks[index]=existing;
+			} else {
+				overallWeeks.push({
+					a: week.a,
+					c: week.c,
+					d: week.d,
+					w: week.w
+				});
+			}
+		}
 
-					return {
-						overallWeeks: overallWeeks
-					};
-				}
+		return {
+			overallWeeks: overallWeeks
+		};
+	}
 
 	async getRepoData() {
-					const data=await this.octokit.rest.repos.listForOrg({
-						org: 'junior-developer-group',
-						type: 'public'
-					});
+		const data=await this.octokit.rest.repos.listForOrg({
+			org: 'junior-developer-group',
+			type: 'public'
+		});
 
-					return data.data;
-				}
+		return data.data;
+	}
 
 	async getContributorDataForRepo(repoName) {
-					const data=await this.octokit.rest.repos.listContributors({
-						owner: 'junior-developer-group',
-						repo: repoName
-					});
+		const data=await this.octokit.rest.repos.listContributors({
+			owner: 'junior-developer-group',
+			repo: repoName
+		});
 
-					return data.data;
-				}
+		return data.data;
+	}
 
 	async getContributorStatsForRepo(repoName) {
-					const data=await this.octokit.rest.repos.getContributorsStats({
-						owner: 'junior-developer-group',
-						repo: repoName
-					});
+		const data=await this.octokit.rest.repos.getContributorsStats({
+			owner: 'junior-developer-group',
+			repo: repoName
+		});
 
-					return data.data;
-				}
+		return data.data;
+	}
 
 	async getPullRequestsForRepo(repoName) {
-					const data=await this.octokit.rest.pulls.list({
-						owner: "junior-developer-group",
-						repo: repoName,
-						state: 'all'
-					});
+		const data=await this.octokit.rest.pulls.list({
+			owner: "junior-developer-group",
+			repo: repoName,
+			state: 'all'
+		});
 
-					return data.data;
-				}
+		return data.data;
+	}
 
 	RepoTab(params, active=false) {
-					return `<li class="nav-item" role="presentation">
+		return `<li class="nav-item" role="presentation">
 												<button class="nav-link ${active? 'active':''}" id="${params.title
-						}-tab" data-bs-toggle="tab" data-bs-target="#${params.title
-						}-pane" type="button"
+			}-tab" data-bs-toggle="tab" data-bs-target="#${params.title
+			}-pane" type="button"
 												role="tab" aria-controls="${params.title}-pane" aria-selected="true">${params.title
-						}</button>
+			}</button>
 											</li>`;
-				}
+	}
 
 	RepoPane(params, active=false) {
-					const list=params.contributorLogins.map(
-						(x) =>
-							`<li><img style='height:20px' src='${x.avatarUrl}'/>${x.name} | ${x.contributions} contributions</li>`
-					);
-					return `<div class="tab-pane fade ${active? 'show active':''}" id="${params.title
-						}-pane" role="tabpanel" aria-labelledby="home-tab">
+		const list=params.contributorLogins.map(
+			(x) =>
+				`<li><img style='height:20px' src='${x.avatarUrl}'/>${x.name} | ${x.contributions} contributions</li>`
+		);
+		return `<div class="tab-pane fade ${active? 'show active':''}" id="${params.title
+			}-pane" role="tabpanel" aria-labelledby="home-tab">
 										<card class='card col m-2'>
 											<card-header class='card-header'>${params.title}</card-header>
 											<div class='card-body'>
@@ -346,14 +346,14 @@ export class Dashboard {
 											</div>
 											Pull Requests: ${params.pullRequests.length}
 										<card></div>`;
-				}
+	}
 
 	RepoCard(params) {
-					const list=params.contributorLogins.map(
-						(x) =>
-							`<li><img style='height:20px' src='${x.avatarUrl}'/>${x.name} | ${x.contributions} contributions</li>`
-					);
-					return `<card class='card col m-2'>
+		const list=params.contributorLogins.map(
+			(x) =>
+				`<li><img style='height:20px' src='${x.avatarUrl}'/>${x.name} | ${x.contributions} contributions</li>`
+		);
+		return `<card class='card col m-2'>
 											<card-header class='card-header'>${params.title}</card-header>
 											<div class='card-body'>
 												<ul>
@@ -361,11 +361,11 @@ export class Dashboard {
 												</ul>
 											</div>
 										<card>`;
-				}
+	}
 
 	ContributorRow(params) {
-					const element=document.createElement('tr');
-					element.innerHTML=`<td><img style='height: 20px' src='${params.avatarUrl}'/>${params.name}</td>
+		const element=document.createElement('tr');
+		element.innerHTML=`<td><img style='height: 20px' src='${params.avatarUrl}'/>${params.name}</td>
 											<td>${params.contributions}</td>
 											<td>
 												<button class="btn btn-sm btn-info">
@@ -373,18 +373,18 @@ export class Dashboard {
 												</button>
 											</td>`;
 
-					const button=element.getElementsByTagName('button')[0]||null;
-					if (button) {
-						button.addEventListener('click', () =>
-							this.BuildContributorOverallCommitGraphData(params.name)
-						);
-					}
+		const button=element.getElementsByTagName('button')[0]||null;
+		if (button) {
+			button.addEventListener('click', () =>
+				this.BuildContributorOverallCommitGraphData(params.name)
+			);
+		}
 
-					return element;
-				}
-			}
+		return element;
+	}
+}
 
 const dashboard=new Dashboard();
-			dashboard.InitData().then(() => {
-				dashboard.BuildDocument();
-			});
+dashboard.InitData().then(() => {
+	dashboard.BuildDocument();
+});
