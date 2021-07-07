@@ -1,8 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
+:root {
+  --white-text: #fff;
+  --background: #c8e8f1;
+  --black-text: rgb(68, 66, 66);
+  --p-text: #374a59;
+  --h2-text: #081f32;
+  --h6-text: #6e798c;
+  --h4-text: #6e798c;
+  --a-link: #007ae9;
+  --test: (180deg, #21c8f6, #637bff);
+}
 
 * {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
   box-sizing: border-box;
+  border: none;
 }
 
 body {
@@ -15,5 +32,95 @@ body {
   margin: 0;
 }
 
-card-container {
+.background1-left-column {
+  background: linear-gradient(35deg, #f395ba 0%, #fed182 100%);
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+}
+
+.card {
+  background-color: var(--white-text);
+  border-radius: 1rem;
+  box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.1);
+  display: flex;
+  margin: 1.5rem;
+  overflow: hidden;
+  width: 1002px;
+  height: 19rem;
+}
+
+.left-column {
+  color: var(--white-text);
+  padding: 2rem;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.right-column {
+  padding: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.right-column p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.688rem;
+  color: var(--p-text);
+  font-weight: 400;
+}
+
+.right-column h2 {
+  color: var(--h2-text);
+  font-family: 'DM Serif Display', serif;
+  font-size: 2.5rem;
+  line-height: 2.875rem;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.right-column h6 {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.531rem;
+  font-size: 1.125rem;
+  color: var(--h6-text);
+  font-weight: 400;
+}
+
+.right-column h4 {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.531rem;
+  font-size: 1.688rem;
+  color: var(--h4-text);
+  font-weight: 600;
+}
+
+.right-column a {
+  color: var(--a-link);
+  text-decoration: underline;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.card-footer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-end;
 }
