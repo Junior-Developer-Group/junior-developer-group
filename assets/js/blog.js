@@ -20,12 +20,24 @@ const blogArray = [
     title: '11 Things I Wish I Knew When I Started My Business',
     postDate: '1 month ago',
     preview:
+      'I hope they will save you some time and some anguish because (experience is a good teacher here) the sodium from your tears acts as a corrosive melting agent...',
+    readLink: '#',
+  },
+  {
+    topic: 'Test',
+    title: '11 Tests I Wish I Knew When I Started My Business',
+    postDate: '1 month ago',
+    preview:
       'Here are 11 things I wish I knew when I started my business. I hope they will save you some time and some anguish because (experience is a good teacher here) the sodium from your tears acts as a corrosive melting agent...',
     readLink: '#',
   },
 ]
 
-for (blog of blogArray) {
+const blogAmount = 3
+
+for (i = 0; i < blogAmount; i++) {
+  blog = blogArray[i]
+
   const blogCards = `
     <div class="card">
       <div class="left-column background1-left-column">
@@ -53,3 +65,7 @@ for (blog of blogArray) {
 
   document.querySelector('.blog-card-wrapper').innerHTML += blogCards
 }
+
+document.getElementById('visitButton').addEventListener('click', function () {
+  console.log('Clicked Visit Blog!!!')
+})
