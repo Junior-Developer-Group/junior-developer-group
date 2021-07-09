@@ -219,3 +219,63 @@ background-color: #434ba1;
     }
   
 }
+
+
+/******* MATEA'S CHANGES' ******/
+.blog-container-wrapper {
+    height: 500px;
+}
+
+.blog-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.blog-container--single {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 70%;
+    margin-bottom: 40px;
+}
+
+.blog-image {
+    display: flex;
+    justify-content: center;
+    width: 40%;
+}
+
+.blog-image img {
+    height: 100px;
+    width: 100px;
+}
+
+.right-column {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+.category {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.category span {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+
+    /* Additional text */
+
+    color: #6E798C;
+}
+
+.read-more {
+    justify-content: flex-end;
+    display: flex;
+}
