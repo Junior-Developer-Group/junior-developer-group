@@ -16,7 +16,7 @@
 
 /* note we are using em's as our units of measurement in this project( 16px = 1.00em ).*/
 
-/* We are also using a mobile first approach where styles outside of a media queries are targeted at the smallest screen size and progressively laregr screen sizes are inside of the appropriate media queries  */
+/* This file is currently using a mobile first approach where styles outside of a media queries are targeted at the smallest screen size and progressively larger screen sizes are inside of the appropriate media queries. */
 
 * {
   margin: 0;
