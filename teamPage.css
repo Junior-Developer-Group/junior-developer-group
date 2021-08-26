@@ -75,7 +75,7 @@
   }
 
   .main-navigation--desktop .navigation-links a {
-    font-family: Heebo;
+    font-family: 'Heebo', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
@@ -120,7 +120,7 @@
 
   }
   .hero_header-information h1 {
-    font-family: Heebo;
+    font-family: 'Heebo', sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 44px;
@@ -130,7 +130,7 @@
   }
 
   .hero_header-information p {
-    font-family: Heebo;
+    font-family: 'Heebo', sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -147,7 +147,7 @@
     border-radius: 10px;
 
     color: var(--white);
-    font-family: Heebo;
+    font-family: 'Heebo', sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
@@ -197,7 +197,7 @@
   }
 
   .active-projects h2 {
-    font-family: Heebo;
+    font-family: 'Heebo', sans-serif;
     font-style: bold;
     font-size: 24px;
     line-height: 35px;
@@ -301,7 +301,7 @@
   }
 
   .about-technologies h2 {
-    font-family: Heebo;
+    font-family: 'Heebo', sans-serif;
     font-style: bold;
     font-size: 24px;
     line-height: 35px;
@@ -333,6 +333,224 @@
   }
 
 
+/**********************************/
+/******** EVENTS/WORKSHOPS ********/
+/**********************************/
+
+  .events-and-workshops {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 900px;
+
+    width: 100%;
+  }
+
+  .events-and-workshops h2 {
+    font-family: 'Heebo', sans-serif;
+    font-style: bold;
+    font-size: 36px;
+    line-height: 35px;
+    text-align: center;
+
+
+    color: var(--dark);
+    margin-bottom: 50px;
+    text-transform: uppercase;
+  }
+
+  .events-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 80%;
+    flex-wrap: wrap;
+  }
+
+  .single-event {
+    background: linear-gradient(90.02deg, #254E5A 0.02%, #141824 113.01%);
+    border-radius: 16px;
+    width: 500px;
+    min-height: 120px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin: 20px;
+  }
+
+  .event-details,
+  .event-image {
+    padding: 20px;
+  }
+
+  .event-details h3 {
+    font-family: 'Heebo', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    color: var(--white);
+    margin-bottom: 0;
+    margin-top: 0;
+
+    text-transform: capitalize;
+  }
+
+  .event-details p {
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    color: var(--white);
+    margin: 0;
+  }
+
+  .event-image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .event-image img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .event-image button {
+    background: var(--white);
+    border: none;
+    border-radius: 4px;
+    margin: 10px;
+    width: 90px;
+    height: 25px;
+
+    font-family: 'Heebo', sans-serif;
+    font-size: 14px;
+    color: var(--dark);
+    
+  }
+
+  .event-image button:hover {
+    background: var(--yellow);
+    color: var(--white);
+  }
+
+/**********************************/
+/******** FEATURED POSTS ********/
+/**********************************/
+
+.featured-posts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 900px;
+  height: 100%;
+
+  width: 100%;
+}
+
+.featured-posts h2 {
+  font-family: 'Heebo', sans-serif;
+  font-style: bold;
+  font-size: 36px;
+  line-height: 35px;
+  text-align: center;
+
+
+  color: var(--dark);
+  margin-bottom: 50px;
+  text-transform: uppercase;
+}
+
+.single-post {
+  display: flex;
+  width: 80%;
+  min-height: 250px;
+  margin-bottom: 40px;
+}
+
+.post-image {
+  width: 50%;
+  margin-right: 40px;
+}
+
+.post-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.post-details {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.date-posted {
+  display: flex;
+  justify-content: space-between;
+}
+
+.date-posted p {
+  font-style: normal;
+  font-size: 18px;
+  margin: 0;
+  color: #6E798C;
+}
+
+.post-title h3 {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+
+  color: #081F32;
+}
+
+.post-description p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 27px;
+  /* or 150% */
+
+
+  /* Body text */
+
+  color: #374A59;
+}
+.post-url {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.post-url a {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  
+  color: #007AE9;
+
+  border: 2px grey solid;
+  padding: 10px;
+
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+}
+.post-url a:hover,
+.post-url a:visited {
+  color: var(--purple);
+
+  border: 2px var(--purple) dashed;
+}
+
+
 
   /**********************************/
   /******** GET INVOLVED ************/
@@ -354,7 +572,7 @@
 
   .get-involved .badge {
     display: flex;
-    background: #FFC22B;
+    background: var(--yellow);
     border-radius: 6px;
 
     font-family: Open Sans;
@@ -558,7 +776,7 @@
     }
 
     .navigation-links-wrapper .navigation-links a {
-      font-family: Heebo;
+      font-family: 'Heebo', sans-serif;
       font-style: normal;
       font-weight: 500;
       font-size: 20px;
@@ -649,6 +867,14 @@
       font-size: 12px;
     }
 
+    .post-image {
+      display: none;
+    }
+    .single-post .post-details {
+      width: 100%;
+      margin: 20px;
+    }
+
 
 /***************************/
 /*******  FOOTER ************/
@@ -685,6 +911,30 @@
   .project-details h3 {
     font-size: 18px;
   }
+
+  .events-wrapper {
+    width: 100%;
+  }
+
+  .event-details h3 {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .event-details p {
+    font-size: 12px;
+  }
+  .featured-posts {
+    height: 1300px;
+  }
+
+  .date-posted {
+    display: flex;
+    flex-direction: column;
+  }
+  .date-posted p {
+    margin-top: 10px;
+  }
 }
 
 /***************************************/
@@ -713,5 +963,4 @@
     width: 60%;
     height: 30px;
   }
-  
 }
