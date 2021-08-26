@@ -1,66 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SEO SETTINGS FOR GOOGLE-->
+    <meta name="author" content="Junior Developer Group" />
+    <meta name="description"content="Join junior developers like yourself and start collaborating on smaller projects, practice version control and make meaningful connections"/>
 
-  <!-- SEO SETTINGS FOR GOOGLE-->
-  <meta name="author" content="Junior Developer Group">
-  <meta name="description"
-    content="Join other junior developers working on smaller projects, practicing version control and using tools you'd use at your workplace - such as Jira.">
+    <!-- SEO SETTINGS FOR WHEN WEBSITE URL IS SHARED -->
+    <meta name="og:title"property="og:title"content="Junior Developer Group"/>
+    <meta property="og:description"content="Join junior developers like yourself and start collaborating on smaller projects, practice version control and make meaningful connections"/>
+    <meta property="og:image"content="assets/website-images/logo-with-background.png"/>
 
-  <!-- SEO SETTINGS FOR WHEN WEBSITE URL IS SHARED -->
-  <meta name="og:title" property="og:title" content="Junior Developer Group">
-  <meta property="og:description"
-    content="Join other junior developers working on smaller projects, practicing version control and using tools you'd use at your workplace - such as Jira." />
-  <meta property="og:image" content="assets/website-images/Logo_transparentBackground.svg" />
+    <!-- WEBSITE TITLE-->
+    <title>Junior Developer Group</title>
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/jpg" href="assets/images/favicon.ico" />
+
+    <!-- CSS STYLESHEET -- TEAM PAGE -->
+    <link rel="stylesheet" href="teamPage.css" />
+  </head>
+
+  <body>
+
+    <!-- DESKTOP NAVIGATION -->
+    <nav class="main-navigation--desktop">
+      <div class="navigation-logo">
+        <img src="./assets/images/website-images/logo-with-background.png">
+      </div>
+      <div class="navigation-links">
+        <a href=""> About</a>
+        <a href=""> Developers </a>
+        <a href=""> Projects </a>
+        <a href=""> Workshops </a>
+        <a href=""> Get Involved</a>
+        <a href=""> Blog</a>
+      </div>
+    </nav>
+
+    <!-- MOBILE NAVIGATION -->
+    <nav class="main-navigation--mobile">
+
+      <div class="navigation-menu-icon">
+        <div class="hamburger" onclick="showMobileNavigationContent()">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
+      </div>
+
+      <div class="navigation-links-wrapper" id="mobileNavigationWrapper">
+        <div class="close-icon" onclick="hideMobileNavigationContent()"> Close </div>
+        <div class="navigation-links">
+          <a href=""> About</a>
+          <a href=""> Developers </a>
+          <a href=""> Projects </a>
+          <a href=""> Workshops </a>
+          <a href=""> Get Involved</a>
+          <a href=""> Blog</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HEADER SECTION -->
+    <section class="hero_header">
+        <div class="hero_header-information">
+            <h1> Junior Developer Group </h1>
+            <p>
+                We're a small (and very friendly) international non-profit group 
+                that serves a community of early career developers entering their 
+                first roles in tech with workshops, group and personal projects, 
+                skill-appropriate code reviews, weekly catchups, 1-1 guidance, 
+                exposure to Agile/Scrum terminology and usage of tools such as Jira
+                and GitHub while working on group projects.
+            </p>
+            <button> More Info </button>
+        </div>
+        <div class="hero_header-logo">
+          <img src="./assets/images/website-images/logo-with-background.png">
+        </div>
+    </section>
+
+    <!-- TOOLS & TECHNOLOGIES-->
+    <section class="group-projects">
+        <div class="active-projects">
+          <h2> ACTIVE PROJECTS</h2>
+            <div class="single-project">
+
+                <div class="project-image">
+                  <img 
+                    src="./assets/images/website-images/dahsboard.png" 
+                    alt="an ilustration of a dashboard on a green background"
+                    onclick="openTeamDashboardRepository()"
+                  >
+                </div>
+
+                <div class="project-details">
+                  <!-- project status -->
+                  <span> 
+                    <h5> Status:</h5>
+                    <p> In Progress </p>
+                  </span>
+                   <!-- project title -->
+                  <h3> Team Dashboard </h3>
+                </div>
+
+            </div>
+            <div class="single-project">
+
+              <div class="project-image">
+                <img 
+                  src="./assets/images/website-images/catmatch.png" 
+                  alt="a person and their cat chililng on a purple coloured couch"
+                  onclick="openCatMatchRepository()"
+                >
+              </div>
+
+              <div class="project-details">
+                <!-- project status -->
+                <span> 
+                  <h5> Status:</h5>
+                  <p> Paused </p>
+                </span>
+                 <!-- project title -->
+                <h3> Cat Match </h3>
+              </div>
+
+          </div>
+          <div class="single-project">
+
+            <div class="project-image">
+              <img 
+                src="./assets/images/website-images/sleep.png" 
+                alt="two clouds on a blue background accompanied by text reading Sleep Quality Calculator by Junior developer Group"
+                onclick="openSleepQualityCalculatorWebsite()"
+              >
+            </div>
+
+            <div class="project-details">
+              <!-- project status -->
+              <span> 
+                <h5> Status:</h5>
+                <p> Completed </p>
+              </span>
+               <!-- project title -->
+              <h3> Sleep Quality Calculator</h3>
+            </div>
+          </div>
+          <div class="single-project">
+
+            <div class="project-image">
+              <img 
+                src="./assets/images/website-images/hacktoberfest.png" 
+                alt="Hacktoberfest challenge logo | a pink letter H on a navy blue background"
+                onclick="openHacktoberfest2020Challenge()"
+              >
+            </div>
+
+            <div class="project-details">
+              <!-- project status -->
+              <span> 
+                <h5> Status:</h5>
+                <p> Completed </p>
+              </span>
+               <!-- project title -->
+              <h3> Hacktoberfest 2020</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-technologies">
+          <h2> Tools & Technologies </h2>
+
+         <div class="tool-row">
+
+          <div class="single-tool green"></div>
+
+          <div class="single-tool pink"></div>
+
+          <div class="single-tool blue"></div>
+
+          
+          <div class="single-tool green"></div>
+
+          <div class="single-tool pink"></div>
+
+          <div class="single-tool blue"></div>
+
+         </div>
+
+        </div>
+
+    </section>
+
+    <!-- GET INVOLVED SECTION -->
+    <section class="get-involved">
+      
+        <!-- JUNIOR DEVELOPERS -->
+        <div class="get-involved__column">
+            <div class="badge"> Get Involved</div>
+            <div class="column-title">
+              <h3> Junior Developers </h3>
+            </div>
+            <div class="column-price">
+                <p>
+                    <strong> $0</strong>
+                    <span> /mo</span>     
+                </p>
+            </div>
+            <div class="column-information">
+              <ul>
+                  <li> 
+                    <strong>Skill appropriate</strong> code reviews & feedback
+                  </li>
+                  <li>
+                    <strong>Weekly</strong> team catch-ups on GatherTown
+                  </li>
+                  <li>
+                    <strong>Monthly</strong> workshops & hackathon events
+                  </li>
+              </ul>
+            </div>
+            <div class="column-button">
+              <button> Join us </button>
+            </div>
+        </div>
+
+        <!-- SKATEBOY IMAGE -->
+        <div class="get-involved__column">
+          <img src="./assets/images/website-images/skateboy.png" alt="a skateboy in an orange coloured tshirt enjoying his ride">
+        </div>
+
+        <!-- SENIOR DEVELOPERS AND MENTORS -->
+        <div class="get-involved__column">
+          <div class="badge"> Get Involved</div>
+          <div class="column-title">
+            <h3> Mentors & Team Leads </h3>
+          </div>
+          <div class="column-price">
+            <p>
+                <strong> $0</strong>
+                <span> /mo</span>     
+            </p>
+          </div>
+          <div class="column-information">
+            <ul>
+              <li> 
+                <strong>Help</strong> members with skill appropriate feedback
+              </li>
+              <li>
+                <strong>Prepare</strong> weekly team catch-ups on GatherTown
+              </li>
+              <li>
+                <strong>Lead</strong> monthly workshops & hackathon events
+              </li>
+          </ul>
+          </div>
+          <div class="column-button">
+            <button> Talk to us</button>
+          </div>
+
+        </div>
+
+    </section>
 
 
-  <!-- WEBSITE TITLE-->
-  <title>Junior Developer Group</title>
-
-  <!-- FAVICON -->
-  <link rel="icon" type="image/jpg" href="assets/images/favicon.ico" />
-
-  <!-- CSS STYLESHEET -- TEAM PAGE -->
-  <link rel="stylesheet" href="teamPage.css">
-
-</head>
-
-<body>
-
-  <!-- HERO HEADER / WEBSITE HEADER -->
-  <section class="hero">
-    <div class="hero_info">
-      <h1> Junior Developer Group</h1>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo enim aliquam veniam nam deleniti
-        eaque ducimus incidunt sed in. Explicabo voluptatem id obcaecati atque dicta optio beatae, quasi
-        consequuntur repellendus.</p>
-      <a class="call_to_action" href="">Read More</a>
-    </div>
-    <div class="logo">
-      <img src="assets/website-images/Logo_transparentBackground.svg" alt="junior developer group Logo">
-    </div>
-
-  </section>
 
 
-  <!-- FOOTER-->
-  <footer>
-    <div>
-      <a href="https://github.com/Junior-Developer-Group"><img src="assets/images/GitHub-Mark-64px.png"
-          alt="Github logo"></a>
-      <a href="https://instagram.com/juniordevelopergroup?utm_medium=copy_link"><img
-          src="assets/images/Instagram_Glyph_Gradient_RGB.png" alt="Instagram Logo"></a>
-      <a href="https://gather.town/i/cvbsooyQ"><img src="./assets/images/gather.png" alt="Gather town logo"></a>
-      <a href=" https://mywondr.co/profile/view/cdd60d10-7ac3-11eb-b163-1fd52740df0d/?invite=1"><img class="wondr_icon"
-          src="./assets/images/WONDR Bubble Transparent.png" alt="Wondr logo"></a>
-    </div>
 
-    <span>&copy; Junior Developer Group, 2021</span>
-  </footer>
 
-</body>
+    <footer>
+      <div class="footer-socials">
+        <img 
+          src="./assets/images/github-logo.png" 
+          alt="GitHub logo | a white coloured kitten on a dark background"
+        >
+        <img 
+          src="./assets/images/instagram-logo.png" 
+          alt="Outline of Instagram logo on a white background"
+        >
+        <img 
+          src="./assets/images/gather.png" 
+          alt="GatherTown logo | Grape vine on a purple background"
+        >
+        <img 
+          class="wondr-logo"
+          src="./assets/images/wondr-logo.png"
+          alt=" WONDR logo | Speach bubble on a purple background"
+         >
+      </div>
+      <div class="footer-copyright">
+        <p> © Junior Developer Group, 2021 </p>
+      </div>
+    </footer>
+   
+  </body>
 
+  <!-- SCRIPTS -->
+  <script src="./assets/js/homepage-scripts.js"></script>
 </html>
