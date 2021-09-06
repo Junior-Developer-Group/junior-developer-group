@@ -330,11 +330,16 @@
 
     display: flex;
     justify-content: center;
+    align-items: center;
   }
 
+  .single-tool img {
+    width: 50%;
+    height: 50%;
+  }
 
 /**********************************/
-/******** EVENTS/WORKSHOPS ********/
+/******** EVENTS/WOR  KSHOPS ********/
 /**********************************/
 
   .events-and-workshops {
