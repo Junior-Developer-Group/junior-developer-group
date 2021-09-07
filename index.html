@@ -31,12 +31,15 @@
         <img src="./assets/images/website-images/logo-with-background.png">
       </div>
       <div class="navigation-links">
-        <a href=""> About</a>
-        <a href=""> Developers </a>
-        <a href=""> Projects </a>
+        <a href="./pages/about.html"> About</a>
+        <a href="./pages/developers.html"> Developers </a>
+        <!--This route can lead to the Dashboard if we want it to so that visitors can see exactly which projects are being worked on with statistical data of who is contributing and all that, or we can simply link to the Active Projects seciton on the main homepage.  Currently links to Active Projects section but can easily be changed if so desired.-->        
+        <a href="#projects"> Projects </a>
         <a href=""> Workshops </a>
         <a href=""> Get Involved</a>
-        <a href=""> Blog</a>
+
+      <!-- The Blog Page route is non-existent currently as we don't have any blog posts to link to. Will follow traditional routing as other links href="./blog/MAIN Blog Page" -->
+        <a href="#blog"> Blog</a>
       </div>
     </nav>
 
@@ -54,12 +57,13 @@
       <div class="navigation-links-wrapper" id="mobileNavigationWrapper">
         <div class="close-icon" onclick="hideMobileNavigationContent()"> Close </div>
         <div class="navigation-links">
-          <a href=""> About</a>
-          <a href=""> Developers </a>
-          <a href=""> Projects </a>
+          <a href="./pages/about.html"> About</a>
+          <a href="./pages/developers.html"> Developers </a>
+          <a href="#projects"> Projects </a>
           <a href=""> Workshops </a>
           <a href=""> Get Involved</a>
-          <a href=""> Blog</a>
+        <!-- The Blog Page route is non-existent currently as we don't have any blog posts to link to. Will follow traditional routing as other links href="./blog/MAIN Blog Page" -->
+          <a href="#blog"> Blog</a>
         </div>
       </div>
     </nav>
@@ -84,7 +88,7 @@
     </section>
 
     <!-- TOOLS & TECHNOLOGIES-->
-    <section class="group-projects">
+    <section class="group-projects" id="projects">
         <div class="active-projects">
           <h2> ACTIVE PROJECTS</h2>
             <div class="single-project">
@@ -255,7 +259,7 @@
 
     <!--BLOG POSTS & ANNOUNCEMENTS -->
     <section class="featured-posts">
-      <h2> Featured Posts </h2>
+      <h2 id="blog"> Featured Posts </h2>
 
       <div class="single-post">
           <div class="post-image">
