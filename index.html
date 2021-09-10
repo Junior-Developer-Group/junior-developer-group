@@ -6,12 +6,25 @@
 
     <!-- SEO SETTINGS FOR GOOGLE-->
     <meta name="author" content="Junior Developer Group" />
-    <meta name="description"content="Join junior developers like yourself and start collaborating on smaller projects, practice version control and make meaningful connections"/>
+    <meta
+      name="description"
+      content="Join junior developers like yourself and start collaborating on smaller projects, practice version control and make meaningful connections"
+    />
 
     <!-- SEO SETTINGS FOR WHEN WEBSITE URL IS SHARED -->
-    <meta name="og:title"property="og:title"content="Junior Developer Group"/>
-    <meta property="og:description"content="Join junior developers like yourself and start collaborating on smaller projects, practice version control and make meaningful connections"/>
-    <meta property="og:image"content="assets/website-images/logo-with-background.png"/>
+    <meta
+      name="og:title"
+      property="og:title"
+      content="Junior Developer Group"
+    />
+    <meta
+      property="og:description"
+      content="Join junior developers like yourself and start collaborating on smaller projects, practice version control and make meaningful connections"
+    />
+    <meta
+      property="og:image"
+      content="assets/website-images/logo-with-background.png"
+    />
 
     <!-- WEBSITE TITLE-->
     <title>Junior Developer Group</title>
@@ -24,11 +37,10 @@
   </head>
 
   <body>
-
     <!-- DESKTOP NAVIGATION -->
     <nav class="main-navigation--desktop">
       <div class="navigation-logo">
-        <img src="./assets/images/website-images/logo-with-background.png">
+        <img src="./assets/images/website-images/logo-with-background.png" />
       </div>
       <div class="navigation-links">
         <a href=""> About</a>
@@ -42,7 +54,6 @@
 
     <!-- MOBILE NAVIGATION -->
     <nav class="main-navigation--mobile">
-
       <div class="navigation-menu-icon">
         <div class="hamburger" onclick="showMobileNavigationContent()">
           <div class="line"></div>
@@ -52,7 +63,9 @@
       </div>
 
       <div class="navigation-links-wrapper" id="mobileNavigationWrapper">
-        <div class="close-icon" onclick="hideMobileNavigationContent()"> Close </div>
+        <div class="close-icon" onclick="hideMobileNavigationContent()">
+          Close
+        </div>
         <div class="navigation-links">
           <a href=""> About</a>
           <a href=""> Developers </a>
@@ -66,186 +79,201 @@
 
     <!-- HEADER SECTION -->
     <section class="hero_header">
-        <div class="hero_header-information">
-            <h1> Junior Developer Group </h1>
-            <p>
-                We're a small (and very friendly) international non-profit group 
-                that serves a community of early career developers entering their 
-                first roles in tech with workshops, group and personal projects, 
-                skill-appropriate code reviews, weekly catchups, 1-1 guidance, 
-                exposure to Agile/Scrum terminology and usage of tools such as Jira
-                and GitHub while working on group projects.
-            </p>
-            <button> More Info </button>
-        </div>
-        <div class="hero_header-logo">
-          <img src="./assets/images/website-images/logo-with-background.png">
-        </div>
+      <div class="hero_header-information">
+        <h1>Junior Developer Group</h1>
+        <p>
+          We're a small (and very friendly) international non-profit group that
+          serves a community of early career developers entering their first
+          roles in tech with workshops, group and personal projects,
+          skill-appropriate code reviews, weekly catchups, 1-1 guidance,
+          exposure to Agile/Scrum terminology and usage of tools such as Jira
+          and GitHub while working on group projects.
+        </p>
+        <button>More Info</button>
+      </div>
+      <div class="hero_header-logo">
+        <img src="./assets/images/website-images/logo-with-background.png" />
+      </div>
     </section>
 
     <!-- TOOLS & TECHNOLOGIES-->
     <section class="group-projects">
-        <div class="active-projects">
-          <h2> ACTIVE PROJECTS</h2>
-            <div class="single-project">
-
-                <div class="project-image">
-                  <img 
-                    src="./assets/images/website-images/dahsboard.png" 
-                    alt="an ilustration of a dashboard on a green background"
-                    onclick="openTeamDashboardRepository()"
-                  >
-                </div>
-
-                <div class="project-details">
-                  <!-- project status -->
-                  <span> 
-                    <h5> Status:</h5>
-                    <p> In Progress </p>
-                  </span>
-                   <!-- project title -->
-                  <h3> Team Dashboard </h3>
-                </div>
-
-            </div>
-            <div class="single-project">
-
-              <div class="project-image">
-                <img 
-                  src="./assets/images/website-images/catmatch.png" 
-                  alt="a person and their cat chililng on a purple coloured couch"
-                  onclick="openCatMatchRepository()"
-                >
-              </div>
-
-              <div class="project-details">
-                <!-- project status -->
-                <span> 
-                  <h5> Status:</h5>
-                  <p> Paused </p>
-                </span>
-                 <!-- project title -->
-                <h3> Cat Match </h3>
-              </div>
-
+      <div class="active-projects">
+        <h2>ACTIVE PROJECTS</h2>
+        <div class="single-project">
+          <div class="project-image">
+            <img
+              src="./assets/images/website-images/dahsboard.png"
+              alt="an ilustration of a dashboard on a green background"
+              onclick="openTeamDashboardRepository()"
+            />
           </div>
-          <div class="single-project">
 
-            <div class="project-image">
-              <img 
-                src="./assets/images/website-images/sleep.png" 
-                alt="two clouds on a blue background accompanied by text reading Sleep Quality Calculator by Junior developer Group"
-                onclick="openSleepQualityCalculatorWebsite()"
-              >
-            </div>
-
-            <div class="project-details">
-              <!-- project status -->
-              <span> 
-                <h5> Status:</h5>
-                <p> Completed </p>
-              </span>
-               <!-- project title -->
-              <h3> Sleep Quality Calculator</h3>
-            </div>
-          </div>
-          <div class="single-project">
-
-            <div class="project-image">
-              <img 
-                src="./assets/images/website-images/hacktoberfest.png" 
-                alt="Hacktoberfest challenge logo | a pink letter H on a navy blue background"
-                onclick="openHacktoberfest2020Challenge()"
-              >
-            </div>
-
-            <div class="project-details">
-              <!-- project status -->
-              <span> 
-                <h5> Status:</h5>
-                <p> Completed </p>
-              </span>
-               <!-- project title -->
-              <h3> Hacktoberfest 2020</h3>
-            </div>
+          <div class="project-details">
+            <!-- project status -->
+            <span>
+              <h5>Status:</h5>
+              <p>In Progress</p>
+            </span>
+            <!-- project title -->
+            <h3>Team Dashboard</h3>
           </div>
         </div>
+        <div class="single-project">
+          <div class="project-image">
+            <img
+              src="./assets/images/website-images/catmatch.png"
+              alt="a person and their cat chililng on a purple coloured couch"
+              onclick="openCatMatchRepository()"
+            />
+          </div>
 
-        <div class="about-technologies">
-          <h2> Tools & Technologies </h2>
-
-         <div class="tool-row">
-
-          <div class="single-tool green"><img src="./assets/images/html5.png" alt="html 5 logo" /></div>
-
-          <div class="single-tool pink"><img src="./assets/images/css3.png" alt="css 3 logo" /></div>
-          
-          <div class="single-tool blue"><img src="./assets/images/javascript.png" alt="javascript logo"  /></div>
-
-          
-          <div class="single-tool green"><img src="./assets/images/vs-code.png" alt="Visual Studio Code logo"/></div>
-          
-          <div class="single-tool pink"><img src="./assets/images/jira.png" alt="Jira Cloud Logo"/></div>
-
-          <div class="single-tool blue"><img src="./assets/images/git.png" alt="git logo" /></div>
-
-         </div>
-
+          <div class="project-details">
+            <!-- project status -->
+            <span>
+              <h5>Status:</h5>
+              <p>Paused</p>
+            </span>
+            <!-- project title -->
+            <h3>Cat Match</h3>
+          </div>
         </div>
+        <div class="single-project">
+          <div class="project-image">
+            <img
+              src="./assets/images/website-images/sleep.png"
+              alt="two clouds on a blue background accompanied by text reading Sleep Quality Calculator by Junior developer Group"
+              onclick="openSleepQualityCalculatorWebsite()"
+            />
+          </div>
 
+          <div class="project-details">
+            <!-- project status -->
+            <span>
+              <h5>Status:</h5>
+              <p>Completed</p>
+            </span>
+            <!-- project title -->
+            <h3>Sleep Quality Calculator</h3>
+          </div>
+        </div>
+        <div class="single-project">
+          <div class="project-image">
+            <img
+              src="./assets/images/website-images/hacktoberfest.png"
+              alt="Hacktoberfest challenge logo | a pink letter H on a navy blue background"
+              onclick="openHacktoberfest2020Challenge()"
+            />
+          </div>
+
+          <div class="project-details">
+            <!-- project status -->
+            <span>
+              <h5>Status:</h5>
+              <p>Completed</p>
+            </span>
+            <!-- project title -->
+            <h3>Hacktoberfest 2020</h3>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-technologies">
+        <h2>Tools & Technologies</h2>
+
+        <div class="tool-row">
+          <div class="single-tool green">
+            <img src="./assets/images/html5.png" alt="html 5 logo" />
+          </div>
+
+          <div class="single-tool pink">
+            <img src="./assets/images/css3.png" alt="css 3 logo" />
+          </div>
+
+          <div class="single-tool blue">
+            <img src="./assets/images/javascript.png" alt="javascript logo" />
+          </div>
+
+          <div class="single-tool green">
+            <img
+              src="./assets/images/vs-code.png"
+              alt="Visual Studio Code logo"
+            />
+          </div>
+
+          <div class="single-tool pink">
+            <img src="./assets/images/jira.png" alt="Jira Cloud Logo" />
+          </div>
+
+          <div class="single-tool blue">
+            <img src="./assets/images/git.png" alt="git logo" />
+          </div>
+        </div>
+      </div>
     </section>
 
     <!--EVENTS & WORKSHOPS -->
     <section class="events-and-workshops">
-        <h2> Events & Workshops</h2>
+      <h2>Events & Workshops</h2>
 
-        <div class="events-wrapper">
-
-            <div class="single-event">
-                <div class="event-details">
-                    <h3>NAME OF THE EVENT </h3>
-                    <p>DATE OF THE EVENT</p>
-                </div>
-
-                <div class="event-image">
-                  <img src="./assets/images/website-images/logo-with-background.png" alt="Junior Developer Group Logo | A butterfly with a blue and a purple wing">
-                  <button> Join Event </button>
-                </div>
-            </div>
-
-            <div class="single-event">
-              <div class="event-details">
-                  <h3>NAME OF THE EVENT </h3>
-                  <p>DATE OF THE EVENT</p>
-              </div>
-
-              <div class="event-image">
-                <img src="./assets/images/website-images/logo-with-background.png" alt="Junior Developer Group Logo | A butterfly with a blue and a purple wing">
-                <button> Join Event </button>
-              </div>
+      <div class="events-wrapper">
+        <div class="single-event">
+          <div class="event-details">
+            <h3>NAME OF THE EVENT</h3>
+            <p>DATE OF THE EVENT</p>
           </div>
 
-          <div class="single-event">
-            <div class="event-details">
-                <h3>NAME OF THE EVENT </h3>
-                <p>DATE OF THE EVENT</p>
-            </div>
-
-            <div class="event-image">
-              <img src="./assets/images/website-images/logo-with-background.png" alt="Junior Developer Group Logo | A butterfly with a blue and a purple wing">
-              <button> Join Event </button>
-            </div>
+          <div class="event-image">
+            <img
+              src="./assets/images/website-images/logo-with-background.png"
+              alt="Junior Developer Group Logo | A butterfly with a blue and a purple wing"
+            />
+            <button>Join Event</button>
+          </div>
         </div>
 
         <div class="single-event">
           <div class="event-details">
-              <h3>NAME OF THE EVENT </h3>
-              <p>DATE OF THE EVENT</p>
+            <h3>NAME OF THE EVENT</h3>
+            <p>DATE OF THE EVENT</p>
           </div>
 
           <div class="event-image">
-            <img src="./assets/images/website-images/logo-with-background.png" alt="Junior Developer Group Logo | A butterfly with a blue and a purple wing">
-            <button> Join Event </button>
+            <img
+              src="./assets/images/website-images/logo-with-background.png"
+              alt="Junior Developer Group Logo | A butterfly with a blue and a purple wing"
+            />
+            <button>Join Event</button>
+          </div>
+        </div>
+
+        <div class="single-event">
+          <div class="event-details">
+            <h3>NAME OF THE EVENT</h3>
+            <p>DATE OF THE EVENT</p>
+          </div>
+
+          <div class="event-image">
+            <img
+              src="./assets/images/website-images/logo-with-background.png"
+              alt="Junior Developer Group Logo | A butterfly with a blue and a purple wing"
+            />
+            <button>Join Event</button>
+          </div>
+        </div>
+
+        <div class="single-event">
+          <div class="event-details">
+            <h3>NAME OF THE EVENT</h3>
+            <p>DATE OF THE EVENT</p>
+          </div>
+
+          <div class="event-image">
+            <img
+              src="./assets/images/website-images/logo-with-background.png"
+              alt="Junior Developer Group Logo | A butterfly with a blue and a purple wing"
+            />
+            <button>Join Event</button>
           </div>
         </div>
       </div>
@@ -255,153 +283,156 @@
 
     <!--BLOG POSTS & ANNOUNCEMENTS -->
     <section class="featured-posts">
-      <h2> Featured Posts </h2>
+      <h2>Featured Posts</h2>
 
       <div class="single-post">
-          <div class="post-image">
-              <img src="./assets/images/website-images/dahsboard.png" alt="">
+        <div class="post-image">
+          <img src="./assets/images/website-images/dahsboard.png" alt="" />
+        </div>
+
+        <div class="post-details">
+          <div class="date-posted">
+            <p>Post Category</p>
+            <p>Date Posted</p>
           </div>
 
-          <div class="post-details">
-              <div class="date-posted">
-                <p> Post Category </p>
-                <p> Date Posted</p>
-              </div>
-
-              <div class="post-title">
-                <h3> 7 Skills of Highly Effective Programmers </h3>
-              </div>
-
-              <div class="post-description">
-                <p>Our team was inspired by the seven skills of highly effective programmers created by the TechLead. We wanted to provide our own take on the topic. Here are our seven skills of effective programmers... </p>
-              </div>
-              <div class="post-url">
-                <a href="" target="blank"> Read more </a>
-              </div>
+          <div class="post-title">
+            <h3>7 Skills of Highly Effective Programmers</h3>
           </div>
+
+          <div class="post-description">
+            <p>
+              Our team was inspired by the seven skills of highly effective
+              programmers created by the TechLead. We wanted to provide our own
+              take on the topic. Here are our seven skills of effective
+              programmers...
+            </p>
+          </div>
+          <div class="post-url">
+            <a href="" target="blank"> Read more </a>
+          </div>
+        </div>
       </div>
 
       <div class="single-post">
         <div class="post-image">
-            <img src="./assets/images/website-images/dahsboard.png" alt="">
+          <img src="./assets/images/website-images/dahsboard.png" alt="" />
         </div>
 
         <div class="post-details">
-            <div class="date-posted">
-              <p> Post Category </p>
-              <p> Date Posted</p>
-            </div>
+          <div class="date-posted">
+            <p>Post Category</p>
+            <p>Date Posted</p>
+          </div>
 
-            <div class="post-title">
-              <h3> 7 Skills of Highly Effective Programmers </h3>
-            </div>
+          <div class="post-title">
+            <h3>7 Skills of Highly Effective Programmers</h3>
+          </div>
 
-            <div class="post-description">
-              <p>Our team was inspired by the seven skills of highly effective programmers created by the TechLead. We wanted to provide our own take on the topic. Here are our seven skills of effective programmers... </p>
-            </div>
-            <div class="post-url">
-              <a href="" target="blank"> Read more </a>
-            </div>
+          <div class="post-description">
+            <p>
+              Our team was inspired by the seven skills of highly effective
+              programmers created by the TechLead. We wanted to provide our own
+              take on the topic. Here are our seven skills of effective
+              programmers...
+            </p>
+          </div>
+          <div class="post-url">
+            <a href="" target="blank"> Read more </a>
+          </div>
         </div>
-    </div>
+      </div>
     </section>
 
     <!-- GET INVOLVED SECTION -->
     <section class="get-involved">
-      
-        <!-- JUNIOR DEVELOPERS -->
-        <div class="get-involved__column">
-            <div class="badge"> Get Involved</div>
-            <div class="column-title">
-              <h3> Junior Developers </h3>
-            </div>
-            <div class="column-price">
-                <p>
-                    <strong> $0</strong>
-                    <span> /mo</span>     
-                </p>
-            </div>
-            <div class="column-information">
-              <ul>
-                  <li> 
-                    <strong>Skill appropriate</strong> code reviews & feedback
-                  </li>
-                  <li>
-                    <strong>Weekly</strong> team catch-ups on GatherTown
-                  </li>
-                  <li>
-                    <strong>Monthly</strong> workshops & hackathon events
-                  </li>
-              </ul>
-            </div>
-            <div class="column-button">
-              <button> Join us </button>
-            </div>
+      <!-- JUNIOR DEVELOPERS -->
+      <div class="get-involved__column">
+        <div class="badge">Get Involved</div>
+        <div class="column-title">
+          <h3>Junior Developers</h3>
         </div>
-
-        <!-- SKATEBOY IMAGE -->
-        <div class="get-involved__column">
-          <img src="./assets/images/website-images/skateboy.png" alt="a skateboy in an orange coloured tshirt enjoying his ride">
+        <div class="column-price">
+          <p>
+            <strong> $0</strong>
+            <span> /mo</span>
+          </p>
         </div>
-
-        <!-- SENIOR DEVELOPERS AND MENTORS -->
-        <div class="get-involved__column">
-          <div class="badge"> Get Involved</div>
-          <div class="column-title">
-            <h3> Mentors & Team Leads </h3>
-          </div>
-          <div class="column-price">
-            <p>
-                <strong> $0</strong>
-                <span> /mo</span>     
-            </p>
-          </div>
-          <div class="column-information">
-            <ul>
-              <li> 
-                <strong>Help</strong> members with skill appropriate feedback
-              </li>
-              <li>
-                <strong>Prepare</strong> weekly team catch-ups on GatherTown
-              </li>
-              <li>
-                <strong>Lead</strong> monthly workshops & hackathon events
-              </li>
+        <div class="column-information">
+          <ul>
+            <li><strong>Skill appropriate</strong> code reviews & feedback</li>
+            <li><strong>Weekly</strong> team catch-ups on GatherTown</li>
+            <li><strong>Monthly</strong> workshops & hackathon events</li>
           </ul>
-          </div>
-          <div class="column-button">
-            <button> Talk to us</button>
-          </div>
-
         </div>
+        <div class="column-button">
+          <button>Join us</button>
+        </div>
+      </div>
 
+      <!-- SKATEBOY IMAGE -->
+      <div class="get-involved__column">
+        <img
+          src="./assets/images/website-images/skateboy.png"
+          alt="a skateboy in an orange coloured tshirt enjoying his ride"
+        />
+      </div>
+
+      <!-- SENIOR DEVELOPERS AND MENTORS -->
+      <div class="get-involved__column">
+        <div class="badge">Get Involved</div>
+        <div class="column-title">
+          <h3>Mentors & Team Leads</h3>
+        </div>
+        <div class="column-price">
+          <p>
+            <strong> $0</strong>
+            <span> /mo</span>
+          </p>
+        </div>
+        <div class="column-information">
+          <ul>
+            <li>
+              <strong>Help</strong> members with skill appropriate feedback
+            </li>
+            <li>
+              <strong>Prepare</strong> weekly team catch-ups on GatherTown
+            </li>
+            <li><strong>Lead</strong> monthly workshops & hackathon events</li>
+          </ul>
+        </div>
+        <div class="column-button">
+          <button>Talk to us</button>
+        </div>
+      </div>
     </section>
 
     <footer>
       <div class="footer-socials">
-        <img 
-          src="./assets/images/github-logo.png" 
+        <img
+          src="./assets/images/github-logo.png"
           alt="GitHub logo | a white coloured kitten on a dark background"
-        >
-        <img 
-          src="./assets/images/instagram-logo.png" 
+        />
+        <img
+          src="./assets/images/instagram-logo.png"
           alt="Outline of Instagram logo on a white background"
-        >
-        <img 
-          src="./assets/images/gather.png" 
+        />
+        <img
+          src="./assets/images/gather.png"
           alt="GatherTown logo | Grape vine on a purple background"
-        >
-        <img 
+        />
+        <img
           class="wondr-logo"
           src="./assets/images/wondr-logo.png"
           alt=" WONDR logo | Speach bubble on a purple background"
-         >
+        />
       </div>
       <div class="footer-copyright">
-        <p> © Junior Developer Group, 2021 </p>
+        <p>
+          © Junior Developer Group, <span class="footer-copyright--date"></span>
+        </p>
       </div>
     </footer>
-   
   </body>
 
   <!-- SCRIPTS -->
