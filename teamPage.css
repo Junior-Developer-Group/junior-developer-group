@@ -457,6 +457,17 @@
     text-align: center;
     padding-top: 15px;
     padding-bottom: 50px;
+    color: var(--dark);
+  }
+
+  .team-celebrations h2 {
+    font-family: 'Heebo', sans-serif;
+    font-size: 36px;
+    line-height: 35px;
+    text-align: center;
+    color: var(--dark);
+    margin-bottom: 50px;
+    text-transform: uppercase;
   }
 
   #celebrate {
@@ -544,8 +555,8 @@
     align-items: center;
     min-height: 900px;
     height: 100%;
-
     width: 100%;
+    padding-top: 50px;
   }
 
   .featured-posts h2 {
