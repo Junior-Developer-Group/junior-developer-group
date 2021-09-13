@@ -451,13 +451,24 @@
   /**********************************/
   /******** Member Celebrations ********/
   /**********************************/
-/* Actual Card Styling */
+  /* Actual Card Styling */
+
+  .team-celebrations {
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 50px;
+  }
 
   #celebrate {
     display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    align-content: center;
+    color: white;
+    font-weight: bold;
+
   }
 
   .card {
@@ -465,11 +476,20 @@
     border-radius: 25px;
     flex-direction: column;
     background: linear-gradient(90.02deg, #254E5A 0.02%, #141824 113.01%);
-  }
+    }
 
   .card-cover {
+    display: flex;
+    align-self: flex-start;
+    justify-content: flex-start;
+    font-size: 125px;
+    padding-left: 25px;
+    font-family: 'DM Serif Display';
+    font-style: normal;
+    font-weight: normal;
+    color: white;
     height: 150px;
-    width: 100%;
+    width: 250px;
   }
 
   .card-content {
@@ -477,7 +497,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    align-self: center;
     padding: 15px;
   }
 
@@ -492,15 +512,15 @@
   .avatar {
     /* Rounded border */
     display: flex;
-    justify-content: right;
-    height: 64px;
-    width: 64px;
+    height: 80px;
+    width: 80px;
     z-index: 100;
     position: absolute;
     padding: 15px;
-}
+    align-self: flex-end;
+  }
 
-.avatar-image {
+  .avatar-image {
     /* Rounded border */
     border-radius: 50%;
     display: flex;
@@ -509,12 +529,7 @@
     /* Take full size */
     height: 100%;
     width: 100%;
-}
-
-
-
-
-
+  }
 
 
 
