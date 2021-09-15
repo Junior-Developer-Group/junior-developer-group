@@ -1,15 +1,6 @@
 
 //Creating an array of users that will be used to hold all of the information provided by team members regarding their wins
 
-//Create a new user with this template for easy copy pasta
-
-// {
-//     'fname': '',
-//     'lName': '',
-//     'celebration': '',
-//     'image': '/assets/images/team-members/'
-// }
-
 
 const users = [
     {
