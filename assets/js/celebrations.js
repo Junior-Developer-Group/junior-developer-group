@@ -60,6 +60,3 @@ const markup = `
 //Setting our markup to replace the innerHTML of our <div> element with the ID of celebrate
 
 document.getElementById('celebrate').innerHTML= markup;
-
-console.log(typeof(User));
-// ToDo -Figure out how to randomize the picking of a user object to display in the html template string markup
