@@ -457,7 +457,7 @@
     text-align: center;
     padding-top: 15px;
     padding-bottom: 50px;
-    color: var(--dark);
+    color: var(--white);
   }
 
   .team-celebrations h2 {
@@ -477,7 +477,7 @@
     justify-content: center;
     align-items: center;
     align-content: center;
-    color: white;
+    color: var(--dark);
     font-weight: bold;
 
   }
@@ -486,7 +486,9 @@
     display: flex;
     border-radius: 25px;
     flex-direction: column;
-    background: linear-gradient(90.02deg, #254E5A 0.02%, #141824 113.01%);
+    background: var(--white);
+    border: 1px solid var(--light-grey);
+    box-shadow: 3px 3px var(--light-grey);
     }
 
   .card-cover {
@@ -498,7 +500,7 @@
     font-family: 'DM Serif Display';
     font-style: normal;
     font-weight: normal;
-    color: white;
+    color: var(--dark);
     height: 100px;
     width: 250px;
   }

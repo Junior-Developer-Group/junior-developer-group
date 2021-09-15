@@ -7,49 +7,43 @@ const users = [
         'fName': 'Matea',
         'lName': 'Howard',
         'celebration': 'Founder of Junior Developer Group. Working way too many hours.',
-        'image': '/assets/images/team-members/likii.jpg'
+        'image': './assets/images/team-members/likii.jpg'
     },
     {
         'fName': 'Denice',
         'lName': 'Soper',
         'celebration': 'Junior Software Developer at Change Grow Live',
-        'image': '/assets/images/team-members/denice.png'
-    },
-    {
-        'fName': 'David',
-        'lName': 'Maidment',
-        'celebration': 'CTO/VP Engineering WONDR',
-        'image': '/assets/images/team-members/david.jpeg'
+        'image': './assets/images/team-members/denice.png'
     },
     {
         'fName': 'onlyasmall',
         'lName': 'lizard',
         'celebration': 'Bootcamp Grad working tirelessly to pursue my dreams.',
-        'image': '/assets/images/team-members/lizard.jpg'
+        'image': './assets/images/team-members/lizard.jpg'
     },
     {
         'fName': 'Uriel',
         'lName': 'Ofir',
         'celebration': 'Fullstack Web Developer',
-        'image': '/assets/images/team-members/uriel.jpg'
+        'image': './assets/images/team-members/uriel.jpg'
     },
     {
         'fName': 'Francesca',
         'lName': 'De Laurentis',
         'celebration': 'Happy learner - happy coder. Delivers accessible and user friendly web & mobile apps.',
-        'image': '/assets/images/team-members/franny.jpg'
+        'image': './assets/images/team-members/franny.jpg'
     },
     {
         'fName': 'Oghenekparobo',
         'lName': 'O.',
         'celebration': 'Software Engineering Student @ALX || Founder of Lesous Technology',
-        'image': '/assets/images/team-members/jay.jpg'
+        'image': './assets/images/team-members/jay.jpg'
     },
     {
         'fName': 'Debra-Kaye',
         'lName': 'Elliott',
         'celebration': 'Front End Developer',
-        'image': '/assets/images/team-members/debra-kaye.jpg'
+        'image': './assets/images/team-members/debra-kaye.jpg'
     }
 
 ]
