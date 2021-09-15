@@ -13,23 +13,54 @@
 
 const users = [
     {
-        'fName': 'Joe',
-        'lName': 'Smith',
-        'celebration': 'Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum',
+        'fName': 'Matea',
+        'lName': 'Howard',
+        'celebration': 'Founder of Junior Developer Group. Working way too many hours.',
         'image': '/assets/images/team-members/likii.jpg'
     },
     {
-        'fName': 'Sandy',
-        'lName': 'Shores',
-        'celebration': 'morem ipsum more ipsum more ipsum more ipsum more ipsum more ipsum',
+        'fName': 'Denice',
+        'lName': 'Soper',
+        'celebration': 'Junior Software Developer at Change Grow Live',
         'image': '/assets/images/team-members/denice.png'
     },
     {
-        'fName': 'Jeff',
-        'lName': 'Jessie',
-        'celebration': 'Winning at life and having a blast contributing to the Junior Developer Group',
-        'image': '/assets/images/team-members/'
+        'fName': 'David',
+        'lName': 'Maidment',
+        'celebration': 'CTO/VP Engineering WONDR',
+        'image': '/assets/images/team-members/david.jpeg'
+    },
+    {
+        'fName': 'onlyasmall',
+        'lName': 'lizard',
+        'celebration': 'Bootcamp Grad working tirelessly to pursue my dreams.',
+        'image': '/assets/images/team-members/lizard.jpg'
+    },
+    {
+        'fName': 'Uriel',
+        'lName': 'Ofir',
+        'celebration': 'Fullstack Web Developer',
+        'image': '/assets/images/team-members/uriel.jpg'
+    },
+    {
+        'fName': 'Francesca',
+        'lName': 'De Laurentis',
+        'celebration': 'Happy learner - happy coder. Delivers accessible and user friendly web & mobile apps.',
+        'image': '/assets/images/team-members/franny.jpg'
+    },
+    {
+        'fName': 'Oghenekparobo',
+        'lName': 'O.',
+        'celebration': 'Software Engineering Student @ALX || Founder of Lesous Technology',
+        'image': '/assets/images/team-members/jay.jpg'
+    },
+    {
+        'fName': 'Debra-Kaye',
+        'lName': 'Elliott',
+        'celebration': 'Front End Developer',
+        'image': '/assets/images/team-members/debra-kaye.jpg'
     }
+
 ]
 
 //Sorting through this array and picking a random user to display on the site in the celebrations section

@@ -499,7 +499,7 @@
     font-style: normal;
     font-weight: normal;
     color: white;
-    height: 150px;
+    height: 100px;
     width: 250px;
   }
 
@@ -510,6 +510,7 @@
     align-items: center;
     align-self: center;
     padding: 15px;
+    font-size: 24px;
   }
 
   .card-text {
@@ -527,7 +528,8 @@
     width: 80px;
     z-index: 1;
     position: absolute;
-    padding: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
     align-self: flex-end;
   }
 
@@ -953,8 +955,7 @@
     .about-technologies {
       width: 100%;
     }
-
-
+  
     /**********************************/
     /******** GET INVOLVED ************/
     /**********************************/
@@ -1048,6 +1049,10 @@
     .date-posted p {
       margin-top: 10px;
     }
+  }
+
+  .card {
+    width: 50%;
   }
 
   /***************************************/
