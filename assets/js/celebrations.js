@@ -1,16 +1,42 @@
 
-//creating our User object that will be used to setup the rest of the objects that we utilize for this template string
+//Creating an array of users that will be used to hold all of the information provided by team members regarding their wins
 
-function User(fName, lName, celebration, image) {
-    this.fName= fName;
-    this.lName= lName;
-    this.celebration= celebration;
-    this.image= image;
-}
+//Create a new user with this template for easy copy pasta
+
+// {
+//     'fname': '',
+//     'lName': '',
+//     'celebration': '',
+//     'image': '/assets/images/team-members/'
+// }
 
 
-//Creating our first New User based on our object template and passing in the values
-let user1 = new User("Joe", "Smith", '"Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum"', '/assets/images/team-members/likii.jpg');
+const users = [
+    {
+        'fName': 'Joe',
+        'lName': 'Smith',
+        'celebration': 'Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum',
+        'image': '/assets/images/team-members/likii.jpg'
+    },
+    {
+        'fName': 'Sandy',
+        'lName': 'Shores',
+        'celebration': 'morem ipsum more ipsum more ipsum more ipsum more ipsum more ipsum',
+        'image': '/assets/images/team-members/denice.png'
+    },
+    {
+        'fName': 'Jeff',
+        'lName': 'Jessie',
+        'celebration': 'Winning at life and having a blast contributing to the Junior Developer Group',
+        'image': '/assets/images/team-members/'
+    }
+]
+
+//Sorting through this array and picking a random user to display on the site in the celebrations section
+
+let pickedUser = users[Math.floor(Math.random()*users.length)];
+
+
 
 
 //Creating our HTML template markup to take the above object information and populate it into our HTML file in a structured way that makes it cleaner inside the HTML file
@@ -21,12 +47,12 @@ const markup = `
     “
     </div>
     <div class="avatar">
-    <img class="avatar-image" src= ${user1.image} />
+    <img class="avatar-image" src= ${pickedUser.image} />
 </div>
     <div class="card-content">
-    ${user1.celebration}
+    ${pickedUser.celebration}
     </div>
-    <p class='card-text'> - ${user1.fName} ${user1.lName}</p>
+    <p class='card-text'> - ${pickedUser.fName} ${pickedUser.lName}</p>
 
 </div>
 
@@ -35,5 +61,5 @@ const markup = `
 
 document.getElementById('celebrate').innerHTML= markup;
 
-
+console.log(typeof(User));
 // ToDo -Figure out how to randomize the picking of a user object to display in the html template string markup
