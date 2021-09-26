@@ -6,43 +6,49 @@ const users = [
     {
         'fName': 'Matea',
         'lName': 'Howard',
-        'celebration': 'Founder of Junior Developer Group. Working way too many hours.',
+        'celebration': 'Created our first HacktoberFest challenge in 2020 🎉',
+        'image': './assets/images/team-members/likii.jpg'
+    },
+    {
+        'fName': 'Matea',
+        'lName': 'Howard',
+        'celebration': 'Established Junior Developer Group 🎉',
         'image': './assets/images/team-members/likii.jpg'
     },
     {
         'fName': 'Denice',
         'lName': 'Soper',
-        'celebration': 'Junior Software Developer at Change Grow Live',
+        'celebration': 'Joined Junior Developer Group 🎉',
         'image': './assets/images/team-members/denice.png'
     },
     {
         'fName': 'onlyasmall',
         'lName': 'lizard',
-        'celebration': 'Bootcamp Grad working tirelessly to pursue my dreams.',
+        'celebration': 'Joined Junior Developer Group 🎉',
         'image': './assets/images/team-members/lizard.jpg'
     },
     {
         'fName': 'Uriel',
         'lName': 'Ofir',
-        'celebration': 'Fullstack Web Developer',
+        'celebration': 'Joined Junior Developer Group 🎉',
         'image': './assets/images/team-members/uriel.jpg'
     },
     {
         'fName': 'Francesca',
         'lName': 'De Laurentis',
-        'celebration': 'Happy learner - happy coder. Delivers accessible and user friendly web & mobile apps.',
+        'celebration': 'Joined Junior Developer Group 🎉',
         'image': './assets/images/team-members/franny.jpg'
     },
     {
         'fName': 'Oghenekparobo',
         'lName': 'O.',
-        'celebration': 'Software Engineering Student @ALX || Founder of Lesous Technology',
+        'celebration': 'Joined Junior Developer Group 🎉',
         'image': './assets/images/team-members/jay.jpg'
     },
     {
         'fName': 'Debra-Kaye',
         'lName': 'Elliott',
-        'celebration': 'Front End Developer',
+        'celebration': 'Joined Junior Developer Group 🎉',
         'image': './assets/images/team-members/debra-kaye.jpg'
     }
 
@@ -59,17 +65,20 @@ let pickedUser = users[Math.floor(Math.random()*users.length)];
 const markup = `
 
 <div class="card">
-    <div class="card-cover">
-    “
-    </div>
-    <div class="avatar">
-    <img class="avatar-image" src= ${pickedUser.image} />
-</div>
-    <div class="card-content">
-    ${pickedUser.celebration}
-    </div>
-    <p class='card-text'> - ${pickedUser.fName} ${pickedUser.lName}</p>
 
+    <div class="card-cover">
+     “
+    </div>
+
+    <div class="avatar">
+        <img class="avatar-image" src= ${pickedUser.image} />
+    </div>
+
+    <div class="card-content">
+        ${pickedUser.celebration}
+    </div>
+
+    <p class='card-text'> - ${pickedUser.fName} ${pickedUser.lName}</p>
 </div>
 
 `;
