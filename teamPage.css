@@ -808,6 +808,10 @@
     background-color: #434aa1;
     border-radius: 100%;
   }
+  footer .footer-socials img.discord-logo {
+    height: 53px;
+    width: 53px;
+  }
 
   /***************************************/
   /********* TABLET VIEW *****************/

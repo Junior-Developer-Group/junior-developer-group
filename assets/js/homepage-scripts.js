@@ -30,6 +30,37 @@ function openTeamDashboardRepository() {
   );
 }
 
+function openDiscord() {
+  window.open(
+    "https://discord.gg/EePB7Txtd8",
+    "_blank"
+  );
+}
+
+function openGitHub() {
+  window.open(
+    "https://github.com/Junior-Developer-Group",
+    "_blank"
+  );
+}
+
+function openInstagram() {
+  window.open(
+    "https://www.instagram.com/juniordevelopergroup/",
+    "_blank"
+  );
+}
+
+
+
+
+function openGather() {
+  window.open(
+    "https://gather.town/invite?token=6NeAjCOdrZUnwBN9RRoYHjPgAAyledKp",
+    "_blank"
+  );
+}
+
 function updateFooter() {
   const getDateElement = document.querySelector(".footer-copyright--date");
 

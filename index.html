@@ -40,15 +40,15 @@
     <!-- DESKTOP NAVIGATION -->
     <nav class="main-navigation--desktop">
       <div class="navigation-logo">
-        <img src="./assets/images/website-images/logo-with-background.png" />
+        <img src="./assets/images/website-images/logo-with-background.png"  onclick="window.open('/')"/>
       </div>
       <div class="navigation-links">
-        <a href=""> About</a>
-        <a href=""> Developers </a>
-        <a href=""> Projects </a>
-        <a href=""> Workshops </a>
-        <a href=""> Get Involved</a>
-        <a href=""> Blog</a>
+        <a href="./pages/about.html"> About</a>
+        <a href="#celebrations"> Developers </a>
+        <a href="./pages/hacktoberfest/maintainers.html"> HacktoberFest 2021 </a>
+        <a href="#events"> Workshops </a>
+        <a href="#getInvolved"> Get Involved</a>
+        <a href="#blog"> Blog</a>
       </div>
     </nav>
 
@@ -67,9 +67,9 @@
           Close
         </div>
         <div class="navigation-links">
-          <a href=""> About</a>
+          <a href="./pages/hacktoberfest/about.html"> About</a>
           <a href=""> Developers </a>
-          <a href=""> Projects </a>
+          <a href="./pages/hacktoberfest/maintainers.html"> HacktoberFest 2021 </a>
           <a href=""> Workshops </a>
           <a href=""> Get Involved</a>
           <a href=""> Blog</a>
@@ -89,7 +89,7 @@
         <p> We started working together in December 2020 and have been building projects, <br>
           exploring Scrum ceremonies and debugging JavaScript ever since. 
         </p>
-        <button>More Info</button>
+        <button onclick="window.open('./pages/hacktoberfest/about.html')">More Info</button>
       </div>
       <div class="hero_header-logo">
         <img src="./assets/images/website-images/logo-with-background.png" />
@@ -213,7 +213,7 @@
     </section>
 
     <!--EVENTS & WORKSHOPS -->
-    <section class="events-and-workshops">
+    <section class="events-and-workshops" id="events">
       <h2>Events & Workshops</h2>
 
       <div class="events-wrapper">
@@ -338,14 +338,14 @@
 
     <!--RECENT CELEBRATIONS -->
 
-    <section class="team-celebrations">
+    <section class="team-celebrations" id="celebrations">
       <h2>Recent Celebrations</h2>
       <div id="celebrate"></div>
     </section>
 
     
     <!--BLOG POSTS & ANNOUNCEMENTS -->
-    <section class="featured-posts">
+    <section class="featured-posts" id="blog">
       <h2>Featured Posts</h2>
 
       <div class="single-post">
@@ -405,7 +405,7 @@
     </section>
 
     <!-- GET INVOLVED SECTION -->
-    <section class="get-involved">
+    <section class="get-involved" id="getInvolved">
       <!-- JUNIOR DEVELOPERS -->
       <div class="get-involved__column">
         <div class="badge">Get Involved</div>
@@ -469,22 +469,27 @@
 
     <footer>
       <div class="footer-socials">
+
+        <img
+        class="discord-logo"
+        src="./assets/images/discord.png"
+        alt=" Discord logo"
+        onclick="openLink()"
+      />
         <img
           src="./assets/images/github-logo.png"
           alt="GitHub logo | a white coloured kitten on a dark background"
+          onclick="openGitHub()"
         />
         <img
           src="./assets/images/instagram-logo.png"
           alt="Outline of Instagram logo on a white background"
+          onclick="openInstagram()"
         />
         <img
           src="./assets/images/gather.png"
           alt="GatherTown logo | Grape vine on a purple background"
-        />
-        <img
-          class="wondr-logo"
-          src="./assets/images/wondr-logo.png"
-          alt=" WONDR logo | Speach bubble on a purple background"
+          onclick="openGather()"
         />
       </div>
       <div class="footer-copyright">
