@@ -211,7 +211,7 @@
   .single-project {
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: center;
     width: 400px;
 
     margin-bottom: 30px;
