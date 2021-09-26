@@ -12,7 +12,13 @@ const users = [
     {
         'fName': 'Matea',
         'lName': 'Howard',
-        'celebration': 'Established Junior Developer Group 🎉',
+        'celebration': 'Created our second HacktoberFest challenge in 2021 🎉',
+        'image': './assets/images/team-members/likii.jpg'
+    },
+    {
+        'fName': 'Matea',
+        'lName': 'Howard',
+        'celebration': 'Established Junior Developer Group in 2020 🎉',
         'image': './assets/images/team-members/likii.jpg'
     },
     {
