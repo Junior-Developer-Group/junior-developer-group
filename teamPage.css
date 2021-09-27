@@ -831,6 +831,8 @@
     /* show mobile navigation */
     .main-navigation--mobile {
       display: flex;
+      position: fixed;
+      top: 0;
     }
 
     .hamburger {
