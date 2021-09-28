@@ -106,3 +106,24 @@ summary::marker {
     font-size: 14px;
     color: var(--grey);
 }
+
+@media (max-width: 500px) {
+    .helpers-help img,
+    .mainteiners-help img {
+        height: auto;
+        width: 90%;
+    }
+
+    details {
+        margin-bottom: 30px;
+    }
+
+    h2 {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+
+    details summary {
+        font-size: 18px;
+    }
+}
