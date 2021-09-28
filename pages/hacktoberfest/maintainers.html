@@ -41,42 +41,42 @@
     <!-- DESKTOP NAVIGATION -->
     <nav class="main-navigation--desktop">
       <div class="navigation-logo">
-        <img src="/assets/images/website-images/logo-with-background.png" />
+        <img src="/assets/images/website-images/logo-with-background.png"  onclick="window.open('/')"/>
       </div>
       <div class="navigation-links">
-        <a href=""> About</a>
-        <a href=""> Developers </a>
-        <a href=""> Projects </a>
-        <a href=""> Workshops </a>
-        <a href=""> Get Involved</a>
-        <a href=""> Blog</a>
+        <a href="/pages/about.html"> About</a>
+        <a href="/index.html#celebrations"> Developers </a>
+        <a href="/pages/hacktoberfest/maintainers.html"> HacktoberFest 2021 </a>
+        <a href="/index.html#events"> Workshops </a>
+        <a href="/index.html#getInvolved"> Get Involved</a>
+        <a href="/index.html#blog"> Blog</a>
       </div>
     </nav>
 
-     <!-- MOBILE NAVIGATION -->
-     <nav class="main-navigation--mobile">
-        <div class="navigation-menu-icon">
-          <div class="hamburger" onclick="showMobileNavigationContent()">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-          </div>
+    <!-- MOBILE NAVIGATION -->
+    <nav class="main-navigation--mobile">
+      <div class="navigation-menu-icon">
+        <div class="hamburger" onclick="showMobileNavigationContent()">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
         </div>
-  
-        <div class="navigation-links-wrapper" id="mobileNavigationWrapper">
-          <div class="close-icon" onclick="hideMobileNavigationContent()">
-            Close
-          </div>
-          <div class="navigation-links">
-            <a href=""> About</a>
-            <a href=""> Developers </a>
-            <a href=""> Projects </a>
-            <a href=""> Workshops </a>
-            <a href=""> Get Involved</a>
-            <a href=""> Blog</a>
-          </div>
+      </div>
+
+      <div class="navigation-links-wrapper" id="mobileNavigationWrapper">
+        <div class="close-icon" onclick="hideMobileNavigationContent()">
+          Close
         </div>
-      </nav>
+        <div class="navigation-links">
+          <a href="/pages/about.html""> About</a>
+          <a href="/index.html#celebrations"> Developers </a>
+          <a href="/pages/hacktoberfest/maintainers.html"> HacktoberFest 2021 </a>
+          <a href="/index.html#events"> Workshops </a>
+          <a href="/index.html#getInvolved"> Get Involved</a>
+          <a href="/index.html#blog"> Blog</a>
+        </div>
+      </div>
+    </nav>
 
     <main class="hacktoberfest-maintainers">
 
@@ -200,32 +200,38 @@
         </section>
     </main>
 
-    <footer>
-        <div class="footer-socials">
-          <img
-            src="/assets/images/github-logo.png"
-            alt="GitHub logo | a white coloured kitten on a dark background"
-          />
-          <img
-            src="/assets/images/instagram-logo.png"
-            alt="Outline of Instagram logo on a white background"
-          />
-          <img
-            src="/assets/images/gather.png"
-            alt="GatherTown logo | Grape vine on a purple background"
-          />
-          <img
-            class="wondr-logo"
-            src="/assets/images/wondr-logo.png"
-            alt=" WONDR logo | Speach bubble on a purple background"
-          />
-        </div>
-        <div class="footer-copyright">
-          <p>
-            © Junior Developer Group, <span class="footer-copyright--date"></span>
-          </p>
-        </div>
-    </footer>
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-socials">
+
+      <img
+      class="discord-logo"
+      src="/assets/images/discord.png"
+      alt=" Discord logo"
+      onclick="openLink()"
+    />
+      <img
+        src="/assets/images/github-logo.png"
+        alt="GitHub logo | a white coloured kitten on a dark background"
+        onclick="openGitHub()"
+      />
+      <img
+        src="/assets/images/instagram-logo.png"
+        alt="Outline of Instagram logo on a white background"
+        onclick="openInstagram()"
+      />
+      <img
+        src="/assets/images/gather.png"
+        alt="GatherTown logo | Grape vine on a purple background"
+        onclick="openGather()"
+      />
+    </div>
+    <div class="footer-copyright">
+      <p>
+        © Junior Developer Group, <span class="footer-copyright--date"></span>
+      </p>
+    </div>
+  </footer>
 
 
     </body>
