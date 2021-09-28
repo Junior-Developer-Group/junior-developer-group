@@ -899,11 +899,30 @@
       color: var(--dark);
     }
 
-    .close-icon {
+    .close-icon-text {
       position: absolute;
       top: 40px;
       left: 40px;
+    }
+
+    .close-icon {
+      position: absolute;
+      top: 10px;
+      left: 50px;
       cursor: pointer;
+    }
+
+    .close-line-1, .close-line-2 {
+      width: 15px;
+      border: 1px solid var(--dark);
+    }
+
+    .close-line-1 {
+      transform: rotate(49deg);
+    }
+
+    .close-line-2 {
+      transform: translateY(-1.5px) rotate(-51deg);
     }
 
 
