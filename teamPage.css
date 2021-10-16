@@ -137,11 +137,12 @@
     font-weight: normal;
     font-size: 18px;
     line-height: 23px;
+    margin-bottom: 30px;
 
     color: var(--dark);
   }
 
-  .hero_header-information button {
+  .hero_header-information a {
     width: 208px;
     height: 55.68px;
 
@@ -160,9 +161,11 @@
     text-transform: uppercase;
 
     margin-top: 15px;
+
+    padding: 10px;
   }
 
-  .hero_header-information button:hover {
+  .hero_header-information a:hover {
     background: var(--purple);
     border-radius: 20px;
     transition: 0.1s;
