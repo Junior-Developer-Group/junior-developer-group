@@ -1,0 +1,37 @@
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+}
+
+a {
+    text-decoration: none;
+    color: #016492;
+    font-size: 16px;
+    margin-bottom: 5px;
+
+}
+
+h2 {
+    color: #21243d;
+    margin-bottom: 15px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    top: 80px;
+
+    margin-bottom: 90px;
+}
+
+.privacy-policy__header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}

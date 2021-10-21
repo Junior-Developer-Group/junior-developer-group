@@ -52,14 +52,19 @@ function openInstagram() {
 }
 
 
-
-
 function openGather() {
   window.open(
     "https://gather.town/invite?token=6NeAjCOdrZUnwBN9RRoYHjPgAAyledKp",
     "_blank"
   );
 }
+function openAboutPage() {
+  window.location (
+    "/pages/about.html",
+    "_blank"
+  );
+}
+/pages/hacktoberfest/about.html
 
 function updateFooter() {
   const getDateElement = document.querySelector(".footer-copyright--date");
@@ -69,6 +74,13 @@ function updateFooter() {
   };
 
   footerDate();
+}
+
+function openDiscord() {
+  window.open(
+    "https://discord.gg/58YEbSgSAc",
+    "_blank"
+  );
 }
 
 updateFooter();

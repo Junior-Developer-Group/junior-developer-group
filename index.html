@@ -30,7 +30,7 @@
     <title>Junior Developer Group</title>
 
     <!-- FAVICON -->
-    <link rel="icon" type="image/jpg" href="assets/images/favicon.ico" />
+    <link rel="icon" type="image/jpg" href="/assets/images/favicon.ico" />
 
     <!-- CSS STYLESHEET -- TEAM PAGE -->
     <link rel="stylesheet" href="teamPage.css" />
@@ -40,7 +40,7 @@
     <!-- DESKTOP NAVIGATION -->
     <nav class="main-navigation--desktop">
       <div class="navigation-logo">
-        <img src="/assets/images/website-images/logo-with-background.png"  onclick="window.open('/')"/>
+        <img src="./assets/images/website-images/logo-with-background.png"  onclick="window.open('/')"/>
       </div>
       <div class="navigation-links">
         <a href="/pages/about.html"> About</a>
@@ -94,7 +94,7 @@
         <p> We started working together in December 2020 and have been building projects, <br>
           exploring Scrum ceremonies and debugging JavaScript ever since. 
         </p>
-        <button onclick="window.open('./pages/hacktoberfest/about.html')">More Info</button>
+        <a href="/pages/about.html">More Info</a>
       </div>
       <div class="hero_header-logo">
         <img src="./assets/images/website-images/logo-with-background.png" />
@@ -403,7 +403,7 @@
             </p>
           </div>
           <div class="post-url">
-            <a href="" target="blank"> Read more </a>
+            <a href="https://likiipedia.com/simplifying-git-commands/" target="blank"> Read more </a>
           </div>
         </div>
       </div>
@@ -431,7 +431,7 @@
           </ul>
         </div>
         <div class="column-button">
-          <button>Join us</button>
+          <button onclick="openDiscord()">Join us</button>
         </div>
       </div>
 
@@ -467,7 +467,7 @@
           </ul>
         </div>
         <div class="column-button">
-          <button>Talk to us</button>
+          <button onclick="openDiscord()">Talk to us</button>
         </div>
       </div>
     </section>
