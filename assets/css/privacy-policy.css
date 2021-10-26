@@ -35,3 +35,9 @@ main {
     justify-content: center;
     margin-bottom: 40px;
 }
+
+@media (max-width: 980px) {
+    .privacy-policy__content {
+        padding: 20px;
+    }
+}
