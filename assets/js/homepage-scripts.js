@@ -64,7 +64,6 @@ function openAboutPage() {
     "_blank"
   );
 }
-/pages/hacktoberfest/about.html
 
 function updateFooter() {
   const getDateElement = document.querySelector(".footer-copyright--date");
