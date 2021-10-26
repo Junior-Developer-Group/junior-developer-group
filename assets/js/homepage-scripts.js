@@ -64,7 +64,6 @@ function openAboutPage() {
     "_blank"
   );
 }
-/pages/hacktoberfest/about.html
 
 function updateFooter() {
   const getDateElement = document.querySelector(".footer-copyright--date");
@@ -84,3 +83,21 @@ function openDiscord() {
 }
 
 updateFooter();
+
+
+function runAnalyticsScripts() {
+
+  const script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src = 'https://www.googletagmanager.com/gtag/js?id=G-E7KQ4C9DKP';    
+
+  document.head.appendChild(script);
+
+  this.hideGDPRpopup();
+}
+
+function hideGDPRpopup () {
+  const element = document.getElementById('GDPRwrapper')
+  element.classList.remove("gdpr-wrapper");
+  element.classList.add("gdpr-wrapper--hidden")
+}

@@ -143,26 +143,30 @@
   }
 
   .hero_header-information a {
-    width: 208px;
+    width: 180px;
     height: 55.68px;
 
     background: var(--coral);
     border-radius: 10px;
 
     color: var(--white);
+
     font-family: 'Heebo', sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
     line-height: 29px;
+
     text-align: center;
     letter-spacing: 2px;
 
     text-transform: uppercase;
 
-    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    padding: 10px;
+    margin-top: 15px;
   }
 
   .hero_header-information a:hover {
@@ -838,6 +842,9 @@
       position: fixed;
       top: 0;
       z-index: 5;
+      width: 100%;
+      background: white;
+      box-shadow: 2px 5px 4px -2px rgba(0,0,0,.1);
     }
 
     .hamburger {
@@ -1097,3 +1104,86 @@
       height: 30px;
     }
   }
+
+
+  /************ GDPR *****************/
+  .gdpr-wrapper {
+    width: 100%;
+    background-color: #f5f5f5;
+    z-index: 999999;
+
+    display: flex;
+    justify-content: space-evenly;
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+  }
+
+  .gdpr-paragraph {
+    width: 60%;
+  }
+
+  .gdpr-actions {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .gdpr-actions button.accept {
+
+      background: var(--purple);
+      border-radius: 4px;
+      font-family: Open Sans;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+  
+      text-align: center;
+      letter-spacing: 0.2em;
+  
+      color: #FFFFFF;
+      margin: 5px;
+      padding: 10px;
+  }
+
+  .gdpr-actions button.decline {
+
+    background: var(--light-grey);
+    border-radius: 4px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+
+    text-align: center;
+    letter-spacing: 0.2em;
+
+    color: #FFFFFF;
+    margin: 5px;
+    padding: 10px;
+}
+
+.gdpr-wrapper--hidden {
+  display: none;
+}
+
+
+@media (max-width: 500px) {
+  .gdpr-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .gdpr-paragraph {
+    display: flex;
+    text-align: center;
+    width: 80%;
+  }
+
+  .gdpr-actions button {
+    width: 280px;
+  }
+}
