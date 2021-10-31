@@ -50,8 +50,6 @@ body {
 /* Team cards */
 
 .team-card-wrapper {
-  margin-left:3.2rem;
-  margin-right:3.2rem;
   height:auto;
   width: auto;
   display: flex;
