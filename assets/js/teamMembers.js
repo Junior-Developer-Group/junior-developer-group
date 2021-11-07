@@ -153,7 +153,7 @@ const Member = [
 		contact: "https://github.com/A-amon",
 	},
 	{
-		about: "I'm a junior front end developer from Tunisia, and i have passion to discover new technologie.",
+		about: "I'm a junior front end developer from Tunisia, and i have passion to discover new technologies.",
 		name: "Ilyes",
 		speciality: "Front-End Developer",
 		image: "https://avatars.githubusercontent.com/u/76397123?s=400&u=706f68dcc2afa754355536114a15d3ce75280e43&v=4",
