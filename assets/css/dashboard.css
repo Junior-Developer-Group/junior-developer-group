@@ -1,0 +1,26 @@
+body {
+	display: -moz-box;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	height: 100vh;
+	overflow: hidden;
+}
+
+page {
+	-webkit-flex: 1;
+	-ms-flex: 1;
+	-moz-box-flex: 1;
+	-webkit-box-flex: 1;
+	flex: 1;
+	overflow: hidden;
+}
+
+main {
+	overflow: auto;
+	overflow-x: hidden;
+}
