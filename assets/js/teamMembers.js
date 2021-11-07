@@ -152,6 +152,18 @@ const Member = [
 		},
 		contact: "https://github.com/A-amon",
 	},
+	{
+		about: "I'm a junior front end developer from Tunisia, and i have passion to discover new technologies.",
+		name: "Ilyes",
+		speciality: "Front-End Developer",
+		image: "https://avatars.githubusercontent.com/u/76397123?s=400&u=706f68dcc2afa754355536114a15d3ce75280e43&v=4",
+		social_links: {
+			github: "https://github.com/ilyes-B-H-D",
+			linkedin: "https://www.linkedin.com/in/ilyes-bhd-53a95021a/",
+			twitter: "https://twitter.com/hajdahman_ilyes"
+		},
+		contact: "https://www.linkedin.com/in/ilyes-bhd-53a95021a/",
+	}
 ];
 
 for (members of Member) {
