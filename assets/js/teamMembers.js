@@ -154,7 +154,7 @@ const Member = [
 	},
 
 	{
-		about: "I'm a Computer Science student and have HTML,CSS,JS,BOOTSTRAPH and a little NODE/EXPRESS under my belt.",
+		about: "I'm a Computer Science student and have HTML, CSS, JS, BOOTSTRAP and a little NODE/EXPRESS under my belt.",
 		name: "Lokesh",
 		speciality: "Front-End Developer",
 		image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-zzhyevJYyVWIGKmoCU4Fn2tbuKJZgqDIGA&usqp=CAU",
