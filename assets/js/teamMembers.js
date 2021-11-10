@@ -152,6 +152,18 @@ const Member = [
 		},
 		contact: "https://github.com/A-amon",
 	},
+
+	{
+		about: "I'm a Computer Science student and have HTML, CSS, JS, BOOTSTRAP and a little NODE/EXPRESS under my belt.",
+		name: "Lokesh",
+		speciality: "Front-End Developer",
+		image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-zzhyevJYyVWIGKmoCU4Fn2tbuKJZgqDIGA&usqp=CAU",
+		social_links: {
+			github: "https://github.com/Lokesh-Rathore",
+			linkedin: "https://www.linkedin.com/in/lokesh-rathore-6a661321a/",
+		},
+	},
+
 	{
 		about: "I'm a junior front end developer from Tunisia, and i have passion to discover new technologies.",
 		name: "Ilyes",
@@ -164,6 +176,7 @@ const Member = [
 		},
 		contact: "https://www.linkedin.com/in/ilyes-bhd-53a95021a/",
 	}
+
 ];
 
 for (members of Member) {
