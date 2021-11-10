@@ -320,12 +320,46 @@ export class Dashboard {
 		return data.data;
 	}
 
+	/**
+	 * Remove hyphen(-) from text
+	 * @param {string} text 
+	 * @returns {string} textNoHyphen
+	 */
+	removeHyphen(text){
+		const textNoHyphen = text.replace(/-/g,' ');
+		return textNoHyphen;
+	}
+
+	/**
+	 * Capitalize first letter of every word
+	 * 'an example' to 'An Example'
+	 * @param {string} text 
+	 * @returns {string} textCapitalized
+	 */
+	capitalizeWords(text){
+		let textCapitalized = '';
+        const words = text.split(' ');
+        const wordsLen = words.length;
+        for(let ind=0;ind<wordsLen;ind++){
+            const word = words[ind];
+            textCapitalized += word[0].toUpperCase() + word.slice(1);
+            if(ind !== wordsLen - 1){	// Only add whitespace if not last word
+                textCapitalized += ' ';
+            }
+        }
+		return textCapitalized;
+	}
+
+
 	RepoTab(params, active=false) {
+		let repoName = this.removeHyphen(params.title);
+		repoName = this.capitalizeWords(repoName);
+
 		return `<li class="nav-item" role="presentation">
 												<button class="nav-link ${active? 'active':''}" id="${params.title
 			}-tab" data-bs-toggle="tab" data-bs-target="#${params.title
 			}-pane" type="button"
-												role="tab" aria-controls="${params.title}-pane" aria-selected="true">${params.title
+												role="tab" aria-controls="${params.title}-pane" aria-selected="true">${repoName
 			}</button>
 											</li>`;
 	}
