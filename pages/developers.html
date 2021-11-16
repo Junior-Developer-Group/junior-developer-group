@@ -43,50 +43,8 @@
   </head>
 
   <body>
-
-    <!-- DESKTOP NAVIGATION -->
-    <nav class="main-navigation--desktop">
-      <div class="navigation-logo">
-        <img src="/assets/images/website-images/logo-with-background.png"  onclick="window.open('/')"/>
-      </div>
-      <div class="navigation-links">
-        <a href="/pages/about.html"> About</a>
-        <a href="/pages/developers.html"> Developers </a>
-        <!-- <a href="/pages/hacktoberfest/maintainers.html"> HacktoberFest 2021 </a> -->
-        <a href="/index.html#events"> Workshops </a>
-        <a href="/index.html#getInvolved"> Get Involved</a>
-        <a href="/index.html#blog"> Blog</a>
-      </div>
-    </nav>
-
-    <!-- MOBILE NAVIGATION -->
-    <nav class="main-navigation--mobile">
-      <div class="navigation-menu-icon">
-        <div class="hamburger" onclick="showMobileNavigationContent()">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-        </div>
-      </div>
-
-      <div class="navigation-links-wrapper" id="mobileNavigationWrapper">
-        <div class="close-icon-text">
-          Close
-          <div class="close-icon" onclick="hideMobileNavigationContent()">
-            <div class="close-line-1"></div>
-            <div class="close-line-2"></div>
-          </div>
-        </div>
-        <div class="navigation-links">
-          <a href="/pages/about.html"> About</a>
-          <a href="/pages/developers.html"> Developers </a>
-          <!-- <a href="/pages/hacktoberfest/maintainers.html"> HacktoberFest 2021 </a> -->
-          <a href="/index.html#events"> Workshops </a>
-          <a href="/index.html#getInvolved"> Get Involved</a>
-          <a href="/index.html#blog"> Blog</a>
-        </div>
-      </div>
-    </nav>
+    <!-- Navbar -->
+    <navbar-component></navbar-component>
     
     <!-- Team Members -->
     <div id="teamMembers" class="team-header">
