@@ -1,4 +1,36 @@
-body {
+/* body {
+	max-width: none;
+	width: 100vh;
+	overflow:hidden;
+	margin: 0;
+}
+
+.dashboard-wrapper {
+	height: 100%;
+	width: 100%;
+
+	display: flex;
+	flex-direction: row;
+}
+
+.dashboard {
+	overflow: hidden;
+}
+
+.sidebar-wrapper {
+	height: 100vh;
+}
+
+.footer-wrapper {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	z-index: 2;
+}
+
+ */
+
+ body {
 	display: -moz-box;
 	display: -webkit-box;
 	display: -webkit-flex;
@@ -24,3 +56,4 @@ main {
 	overflow: auto;
 	overflow-x: hidden;
 }
+

@@ -31,7 +31,7 @@
 
     <!-- FAVICON -->
     <link rel="icon" type="image/jpg" href="/assets/images/favicon.ico" />
-    
+
     <!-- CSS STYLESHEET -- front page -->
     <link rel="stylesheet" href="/teamPage.css" />
 
@@ -39,7 +39,10 @@
     <link rel="stylesheet" href="/assets/css/teamMembers.css" />
 
     <!--Font Awesome CDN-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
   </head>
 
   <body>
@@ -51,59 +54,29 @@
       <h1>Meet the Team 👋</h1>
     </div>
 
-    <section class="team-card-wrapper">
-    </section>
-
-    <footer>
-      <div class="footer-socials">
-
-        <img
-        class="discord-logo"
-        src="/assets/images/discord.png"
-        alt=" Discord logo"
-        onclick="openLink()"
-      />
-        <img
-          src="/assets/images/github-logo.png"
-          alt="GitHub logo | a white coloured kitten on a dark background"
-          onclick="openGitHub()"
-        />
-        <img
-          src="/assets/images/instagram-logo.png"
-          alt="Outline of Instagram logo on a white background"
-          onclick="openInstagram()"
-        />
-        <img
-          src="/assets/images/gather.png"
-          alt="GatherTown logo | Grape vine on a purple background"
-          onclick="openGather()"
-        />
-      </div>
-      <div class="footer-copyright">
-        <p>
-          © Junior Developer Group, <span class="footer-copyright--date"></span>
-        </p>
-      </div>
-    </footer>
+    <section class="team-card-wrapper"></section>
+    <footer-component></footer-component>
 
     <gdpr-component></gdpr-component>
-
   </body>
 
-<!-- SCRIPTS -->
-<script src="/assets/js/homepage-scripts.js"></script>
-<script src="/assets/js/teamMembers.js"></script>
+  <!-- SCRIPTS -->
+  <script src="/assets/js/homepage-scripts.js"></script>
+  <script src="/assets/js/teamMembers.js"></script>
 
-<script src="../assets/js/components/component-map.js"
-type="module"
-defer> </script>
+  <script
+    src="../assets/js/components/component-map.js"
+    type="module"
+    defer
+  ></script>
 
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-  gtag('config', 'G-E7KQ4C9DKP');
-
+    gtag("config", "G-E7KQ4C9DKP");
   </script>
 </html>
