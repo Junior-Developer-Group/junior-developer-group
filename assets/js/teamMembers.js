@@ -175,18 +175,7 @@ const Member = [
 			twitter: "https://twitter.com/hajdahman_ilyes"
 		},
 		contact: "https://www.linkedin.com/in/ilyes-bhd-53a95021a/",
-	},
-	{
-		about: "I'm a computer science student from North Macedonia. Currently studying more about JavaScript.",
-		name: "Angela",
-		specialty: "Front-end Developer",
-		image: "https://avatars.githubusercontent.com/u/41633886?v=4",
-		social_links: {
-			github: "https://github.com/codekoya",
-			linkedin: "https://www.linkedin.com/in/angela-nikolova-8a39601ab/",
-			codepen: "https://codepen.io/codekoya"
-		},
-	},
+	}
 
 ];
 
