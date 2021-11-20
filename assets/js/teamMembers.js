@@ -179,7 +179,7 @@ const Member = [
 	{
 		about: "I'm a computer science student from North Macedonia. Currently studying more about JavaScript.",
 		name: "Angela",
-		specialty: "Front-end Developer",
+		speciality: "Front-end Developer",
 		image: "https://avatars.githubusercontent.com/u/41633886?v=4",
 		social_links: {
 			github: "https://github.com/codekoya",
