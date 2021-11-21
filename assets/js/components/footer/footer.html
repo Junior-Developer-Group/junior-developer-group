@@ -1,10 +1,52 @@
 <footer>
+  <style>
+  /***************************/
+  /*******  FOOTER ************/
+  /***************************/
+
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+    position: relative;
+    bottom: 0;
+    left: 0;
+
+    background: white;
+  }
+
+  footer .footer-socials img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    margin: 5px;
+  }
+
+  img.wondr-logo {
+    background-color: #434aa1;
+    border-radius: 100%;
+  }
+  footer .footer-socials img.discord-logo {
+    height: 53px;
+    width: 53px;
+  }
+
+  @media(max-width: 980px) {
+    .footer-socials img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+  </style>
   <div class="footer-socials">
     <img
       class="discord-logo"
       src="/assets/images/discord.png"
       alt=" Discord logo"
-      onclick="openLink()"
+      onclick="openDiscord()"
     />
     <img
       src="/assets/images/github-logo.png"
@@ -28,3 +70,4 @@
     </p>
   </div>
 </footer>
+
