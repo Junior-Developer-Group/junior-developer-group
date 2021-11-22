@@ -53,13 +53,6 @@ function openTeamDashboardRepository() {
   );
 }
 
-function openDiscord() {
-  window.open(
-    "https://discord.gg/EePB7Txtd8",
-    "_blank"
-  );
-}
-
 function openGitHub() {
   window.open(
     "https://github.com/Junior-Developer-Group",
