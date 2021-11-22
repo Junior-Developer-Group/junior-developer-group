@@ -38,212 +38,188 @@
   </head>
 
   <body>
-    <!-- DESKTOP NAVIGATION -->
-    <nav class="main-navigation--desktop">
-      <div class="navigation-logo">
-        <img src="/assets/images/website-images/logo-with-background.png"  onclick="window.open('/')"/>
-      </div>
-      <div class="navigation-links">
-        <a href="/pages/about.html"> About</a>
-        <a href="/pages/developers.html"> Developers </a>
-        <!-- <a href="/pages/hacktoberfest/maintainers.html"> HacktoberFest 2021 </a> -->
-        <a href="/index.html#events"> Workshops </a>
-        <a href="/index.html#getInvolved"> Get Involved</a>
-        <a href="/index.html#blog"> Blog</a>
-      </div>
-    </nav>
-
-    <!-- MOBILE NAVIGATION -->
-    <nav class="main-navigation--mobile">
-      <div class="navigation-menu-icon">
-        <div class="hamburger" onclick="showMobileNavigationContent()">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-        </div>
-      </div>
-
-      <div class="navigation-links-wrapper" id="mobileNavigationWrapper">
-        <div class="close-icon-text">
-          Close
-          <div class="close-icon" onclick="hideMobileNavigationContent()">
-            <div class="close-line-1"></div>
-            <div class="close-line-2"></div>
-          </div>
-        </div>
-        <div class="navigation-links">
-          <a href="/pages/about.html"> About</a>
-          <a href="/pages/developers.html"> Developers </a>
-          <!-- <a href="/pages/hacktoberfest/maintainers.html"> HacktoberFest 2021 </a> -->
-          <a href="/index.html#events"> Workshops </a>
-          <a href="/index.html#getInvolved"> Get Involved</a>
-          <a href="/index.html#blog"> Blog</a>
-        </div>
-      </div>
-    </nav>
+    <navbar-component></navbar-component>
 
     <main>
-        <section class="privacy-policy__header">
-            <img src="/assets/images/website-images/logo-with-background.png" />
-        </section>
+      <section class="privacy-policy__header">
+        <img src="/assets/images/website-images/logo-with-background.png" />
+      </section>
 
-        <section class="privacy-policy__content">
-            
-            <div class="column">
-                <h2> Privacy Policy for Junior Developer Group </h2>
-                 <p> At Junior Developer Group, accessible from  <a href="https://junior-developer-group.com/" target="_blank">junior-developer-group.com</a> one of our main priorities is the privacy of our visitors. 
-                     <br> This Privacy Policy document contains types of information that is collected, used and recorded by Junior Developer Group and is written with the help of a generator. 
-                </p>
-                <p> If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us trough media provided at the bottom of our website. </p>
-            </div>
-
-            <div class="column">
-                <h2> General Data Protection Regulation (GDPR) </h2>
-                 <p> We are a Data Controller of your information. </p>
-
-                 <P>Junior Developer Group legal basis for collecting and using the personal information described 
-                     in this Privacy Policy depends on the Personal Information we collect and the specific context in 
-                     which we collect the information:
-                 </P>
-
-                 <ul>
-                     <li> Junior Developer Group needs to perform a contract with you  </li>
-                     <li> You have given Junior Developer Group permission to do so </li>
-                     <li> Processing your personal information is in Junior Developer Group legitimate interests </li>
-                     <li> Junior Developer Group needs to comply with the law </li>
-                 </ul>
-
-                 <p> 
-                    Junior Developer Group will retain your personal information only for as long as is necessary for the purposes set out in this Privacy Policy. 
-                    We might retain and use your information to the extent necessary to enforce our policies and provide better training materials for our group members. 
-                 </p>
-
-                 <p>
-                    If you are a resident of the European Economic Area (EEA), you have certain data protection rights.
-                    If you wish to be informed what Personal Information we hold about you and if you want it to be removed from our systems,
-                    please contact us via media provided at the bottom of our website.
-                 </p>
-
-                 <p>
-                    In certain circumstances, you have the following data protection rights:
-                 </p>
-
-                 <ul>
-                    <li> The right to access, update or to delete the information we have collected  </li>
-                    <li> The right of rectification. </li>
-                    <li> The right to object. </li>
-                    <li> The right of restriction </li>
-                    <li> The right to data portability</li>
-                    <li> The right to withdraw consent </li>
-                </ul>
-            </div>
-
-            <div class="column">
-                <h2>Log Files </h2>
-                 <p> 
-                    Junior Developer Group follows a standard procedure of using log files. These files log visitors when they visit websites. 
-                     All hosting companies do this and a part of hosting services' analytics. The information collected by log files include 
-                     internet protocol (IP) addresses, bcolumnser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, 
-                     and possibly the number of clicks. These are not linked to any information that is personally identifiable. 
-                     The purpose of the information is for analyzing trends, administering the site, tracking users' movement on 
-                     the website, and gathering demographic information.
-                </p>
-            </div>
-
-            <div class="column">
-                <h2> Cookies and Web Beacons </h2>
-                 <p> Like any other website, Junior Developer Group uses 'cookies'. These cookies are used to store information including visitors' 
-                     preferences, and the pages on the website that the visitor accessed or visited. 
-                     The information is used to optimize the users' experience by customizing our web page content based on visitors' 
-                     bcolumnser type and/or other information.
-                </p>
-            </div>
-
-            <div class="column">
-                <h2> Privacy Policies</h2>
-
-                 <p> You may consult this list to find the Privacy Policy for each of the advertising partners of Junior Developer Group</p>
-
-                 <p> 
-                     Third-party ad servers or ad networks uses technologies like cookies, JavaScript, or Web Beacons 
-                     that are used in their respective advertisements and links that appear on Junior Developer Group, 
-                     which are sent directly to users' bcolumnser. They automatically receive your IP address when this occurs. 
-                     These technologies are used to measure the effectiveness of their advertising campaigns and/or to personalize the 
-                     advertising content that you see on websites that you visit 
-                </p>
-                <p>
-                    Note that Junior Developer Group has no access to or control over these cookies that are used by third-party advertisers.
-                </p>
-            </div>
-
-            
-            <div class="column">
-                <h2>Third Party Privacy Policies </h2>
-
-                 <p> Junior Developer Group's Privacy Policy does not apply to other advertisers or websites. 
-                     Thus, we are advising you to consult the respective Privacy Policies of these third-party ad servers for more detailed information. 
-                     It may include their practices and instructions about how to opt-out of certain options.
-                </p>
-
-                <p> 
-                    You can choose to disable cookies through your individual bcolumnser options. 
-                    To know more detailed information about cookie management with specific web bcolumnsers, it can be found at the bcolumnsers' respective websites.
-                </p>
-            </div>
-
-            
-            <div class="column">
-                <h2>Third Parties | Google Analytics </h2>
-
-                 <p> Junior Developer Group uses Google Analytics for learning purposes. <br>
-                   Data we collect contains basic visitor information and is used to discuss and learn from monthly reports. 
-                 </p>
-            </div>
-
-            <div class="column">
-                <h2>Consent</h2>
-    
-                 <p>By using our website, you hereby consent to our Privacy Policy and agree to its terms.</p>
-            </div>
-
-        </section>
-    </main>
-
-    <footer>
-
-        <div class="footer-socials">
-  
-          <img
-          class="discord-logo"
-          src="/assets/images/discord.png"
-          alt=" Discord logo"
-          onclick="openLink()"
-        />
-          <img
-            src="/assets/images/github-logo.png"
-            alt="GitHub logo | a white coloured kitten on a dark background"
-            onclick="openGitHub()"
-          />
-          <img
-            src="/assets/images/instagram-logo.png"
-            alt="Outline of Instagram logo on a white background"
-            onclick="openInstagram()"
-          />
-          <img
-            src="/assets/images/gather.png"
-            alt="GatherTown logo | Grape vine on a purple background"
-            onclick="openGather()"
-          />
-        </div>
-        <div class="footer-copyright">
+      <section class="privacy-policy__content">
+        <div class="column">
+          <h2>Privacy Policy for Junior Developer Group</h2>
           <p>
-            © Junior Developer Group, <span class="footer-copyright--date"></span>
+            At Junior Developer Group, accessible from
+            <a href="https://junior-developer-group.com/" target="_blank"
+              >junior-developer-group.com</a
+            >
+            one of our main priorities is the privacy of our visitors. <br />
+            This Privacy Policy document contains types of information that is
+            collected, used and recorded by Junior Developer Group and is
+            written with the help of a generator.
+          </p>
+          <p>
+            If you have additional questions or require more information about
+            our Privacy Policy, do not hesitate to contact us trough media
+            provided at the bottom of our website.
           </p>
         </div>
-      </footer>
-    </body>
+
+        <div class="column">
+          <h2>General Data Protection Regulation (GDPR)</h2>
+          <p>We are a Data Controller of your information.</p>
+
+          <p>
+            Junior Developer Group legal basis for collecting and using the
+            personal information described in this Privacy Policy depends on the
+            Personal Information we collect and the specific context in which we
+            collect the information:
+          </p>
+
+          <ul>
+            <li>Junior Developer Group needs to perform a contract with you</li>
+            <li>You have given Junior Developer Group permission to do so</li>
+            <li>
+              Processing your personal information is in Junior Developer Group
+              legitimate interests
+            </li>
+            <li>Junior Developer Group needs to comply with the law</li>
+          </ul>
+
+          <p>
+            Junior Developer Group will retain your personal information only
+            for as long as is necessary for the purposes set out in this Privacy
+            Policy. We might retain and use your information to the extent
+            necessary to enforce our policies and provide better training
+            materials for our group members.
+          </p>
+
+          <p>
+            If you are a resident of the European Economic Area (EEA), you have
+            certain data protection rights. If you wish to be informed what
+            Personal Information we hold about you and if you want it to be
+            removed from our systems, please contact us via media provided at
+            the bottom of our website.
+          </p>
+
+          <p>
+            In certain circumstances, you have the following data protection
+            rights:
+          </p>
+
+          <ul>
+            <li>
+              The right to access, update or to delete the information we have
+              collected
+            </li>
+            <li>The right of rectification.</li>
+            <li>The right to object.</li>
+            <li>The right of restriction</li>
+            <li>The right to data portability</li>
+            <li>The right to withdraw consent</li>
+          </ul>
+        </div>
+
+        <div class="column">
+          <h2>Log Files</h2>
+          <p>
+            Junior Developer Group follows a standard procedure of using log
+            files. These files log visitors when they visit websites. All
+            hosting companies do this and a part of hosting services' analytics.
+            The information collected by log files include internet protocol
+            (IP) addresses, bcolumnser type, Internet Service Provider (ISP),
+            date and time stamp, referring/exit pages, and possibly the number
+            of clicks. These are not linked to any information that is
+            personally identifiable. The purpose of the information is for
+            analyzing trends, administering the site, tracking users' movement
+            on the website, and gathering demographic information.
+          </p>
+        </div>
+
+        <div class="column">
+          <h2>Cookies and Web Beacons</h2>
+          <p>
+            Like any other website, Junior Developer Group uses 'cookies'. These
+            cookies are used to store information including visitors'
+            preferences, and the pages on the website that the visitor accessed
+            or visited. The information is used to optimize the users'
+            experience by customizing our web page content based on visitors'
+            bcolumnser type and/or other information.
+          </p>
+        </div>
+
+        <div class="column">
+          <h2>Privacy Policies</h2>
+
+          <p>
+            You may consult this list to find the Privacy Policy for each of the
+            advertising partners of Junior Developer Group
+          </p>
+
+          <p>
+            Third-party ad servers or ad networks uses technologies like
+            cookies, JavaScript, or Web Beacons that are used in their
+            respective advertisements and links that appear on Junior Developer
+            Group, which are sent directly to users' bcolumnser. They
+            automatically receive your IP address when this occurs. These
+            technologies are used to measure the effectiveness of their
+            advertising campaigns and/or to personalize the advertising content
+            that you see on websites that you visit
+          </p>
+          <p>
+            Note that Junior Developer Group has no access to or control over
+            these cookies that are used by third-party advertisers.
+          </p>
+        </div>
+
+
+        <div class="column">
+          <h2>Third Party Privacy Policies</h2>
+
+          <p>
+            Junior Developer Group's Privacy Policy does not apply to other
+            advertisers or websites. Thus, we are advising you to consult the
+            respective Privacy Policies of these third-party ad servers for more
+            detailed information. It may include their practices and
+            instructions about how to opt-out of certain options.
+          </p>
+
+          <p>
+            You can choose to disable cookies through your individual bcolumnser
+            options. To know more detailed information about cookie management
+            with specific web bcolumnsers, it can be found at the bcolumnsers'
+            respective websites.
+          </p>
+        </div>
+
+        <div class="column">
+          <h2>Third Parties | Google Analytics</h2>
+
+          <p>
+            Junior Developer Group uses Google Analytics for learning purposes.
+            <br />
+            Data we collect contains basic visitor information and is used to
+            discuss and learn from monthly reports.
+          </p>
+        </div>
+
+        <div class="column">
+          <h2>Consent</h2>
+
+          <p>
+            By using our website, you hereby consent to our Privacy Policy and
+            agree to its terms.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer-component></footer-component>
+  </body>
   
     <!-- SCRIPTS -->
     <script src="./assets/js/homepage-scripts.js"></script>
     <script src="./assets/js/celebrations.js"></script>
+    <script src="../assets/js/components/component-map.js" type="module" defer></script>
   </html>
+

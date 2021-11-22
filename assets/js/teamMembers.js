@@ -152,8 +152,20 @@ const Member = [
 		},
 		contact: "https://github.com/A-amon",
 	},
+
 	{
-		about: "I'm a junior front end developer from Tunisia, and i have passion to discover new technologie.",
+		about: "I'm a Computer Science student and have HTML, CSS, JS, BOOTSTRAP and a little NODE/EXPRESS under my belt.",
+		name: "Lokesh",
+		speciality: "Front-End Developer",
+		image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-zzhyevJYyVWIGKmoCU4Fn2tbuKJZgqDIGA&usqp=CAU",
+		social_links: {
+			github: "https://github.com/Lokesh-Rathore",
+			linkedin: "https://www.linkedin.com/in/lokesh-rathore-6a661321a/",
+		},
+	},
+
+	{
+		about: "I'm a junior front end developer from Tunisia, and i have passion to discover new technologies.",
 		name: "Ilyes",
 		speciality: "Front-End Developer",
 		image: "https://avatars.githubusercontent.com/u/76397123?s=400&u=706f68dcc2afa754355536114a15d3ce75280e43&v=4",
@@ -163,7 +175,19 @@ const Member = [
 			twitter: "https://twitter.com/hajdahman_ilyes"
 		},
 		contact: "https://www.linkedin.com/in/ilyes-bhd-53a95021a/",
-	}
+	},
+	{
+		about: "I'm a computer science student from North Macedonia. Currently studying more about JavaScript.",
+		name: "Angela",
+		speciality: "Front-end Developer",
+		image: "https://avatars.githubusercontent.com/u/41633886?v=4",
+		social_links: {
+			github: "https://github.com/codekoya",
+			linkedin: "https://www.linkedin.com/in/angela-nikolova-8a39601ab/",
+			codepen: "https://codepen.io/codekoya"
+		},
+	},
+
 ];
 
 for (members of Member) {
@@ -214,4 +238,3 @@ for (members of Member) {
 
 	document.querySelector(".team-card-wrapper").innerHTML += team_member;
 }
-

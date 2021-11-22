@@ -2,70 +2,73 @@ import { Octokit } from 'https://cdn.skypack.dev/@octokit/rest';
 
 class CardParams {
 	constructor() {
-		this.title='';
-		this.contributorLogins=[];
-		this.pullRequests=[];
+		this.title = '';
+		this.contributorLogins = [];
+		this.pullRequests = [];
 	}
 }
 
 class Contributor {
 	constructor() {
-		this.name='';
-		this.contributions=0;
-		this.avatarUrl='';
+		this.name = '';
+		this.contributions = 0;
+		this.avatarUrl = '';
 	}
 }
 
 class OrgData {
 	constructor() {
-		this.contributorData=[];
-		this.overallContributionData=[];
+		this.contributorData = [];
+		this.overallContributionData = [];
 	}
 }
 
 class OrgContributorData {
 	constructor() {
-		this.overallContributions=[];
-		this.projectContributions=[];
+		this.overallContributions = [];
+		this.projectContributions = [];
 	}
 }
 
 export class Dashboard {
 	octokit;
 	chart;
-	cards=[];
-	contributors=[];
-	repos=[];
-	orgData=new OrgData();
+	cards = [];
+	contributors = [];
+	repos = [];
+	orgData = new OrgData();
 	contributorChart;
 
-	usedColors=[];
+	usedColors = [];
 
 	constructor() {
-		this.octokit=new Octokit();
+		this.octokit = new Octokit();
 	}
 
-	BuildDocument() {
-		const cardContainer=document.getElementById('card-container');
-		const ctrbContainer=document.getElementById('contributors-container');
-		const tablist=document.getElementById('repo-tabs');
-		const tabContent=document.getElementById('repo-tabs-content');
+	BuildDocument () {
+		const cardContainer = document.getElementById('card-container');
+		const ctrbContainer = document.getElementById('contributors-container');
+		const tablist = document.getElementById('repo-tabs');
+		const tabContent = document.getElementById('repo-tabs-content');
 
-		this.contributors.forEach((c) => {
+		// Sort contributors by contributions/commits count - Descending (Largest to smallest)
+		const sortedContributors = this.contributors.sort((current, next) => (current.contributions > next.contributions ? -1 : 1));
+
+		sortedContributors.forEach((c) => {
 			ctrbContainer.append(this.ContributorRow(c));
 		});
 
-		let setActive=true;
+		let setActive = true;
 		this.cards.forEach((c) => {
 			// cardContainer.innerHTML += this.RepoCard(c);
-			tablist.innerHTML+=this.RepoTab(c, setActive);
-			tabContent.innerHTML+=this.RepoPane(c, setActive);
-			setActive=false;
+			tablist.innerHTML += this.RepoTab(c, setActive);
+			tabContent.innerHTML += this.RepoPane(c, setActive);
+			setActive = false;
 		});
 
-		const statsData=this.BuildStatsData();
+		const statsData = this.BuildStatsData();
 
-		const config={
+		const config = {
 			type: 'line',
 			data: this.BuildOverallCommitGraphData(statsData),
 			options: {
@@ -78,16 +81,16 @@ export class Dashboard {
 			}
 		};
 
-		let ctx=document.getElementById('myChart');
-		this.chart=new Chart(ctx, config);
+		let ctx = document.getElementById('myChart');
+		this.chart = new Chart(ctx, config);
 	}
 
-	BuildOverallCommitGraphData(statsData) {
+	BuildOverallCommitGraphData (statsData) {
 		//const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-		const weeks=statsData.overallWeeks.map((x) =>
-			new Date(x.w*1000).toLocaleDateString('en-gb')
+		const weeks = statsData.overallWeeks.map((x) =>
+			new Date(x.w * 1000).toLocaleDateString('en-gb')
 		);
-		const commitData={
+		const commitData = {
 			data: statsData.overallWeeks.map((x) => x.c),
 			borderColor: 'rgb(0, 191, 255)',
 			backgroundColor: 'rgb(0, 191, 255)',
@@ -95,23 +98,23 @@ export class Dashboard {
 			tension: 0.1
 		};
 
-		const addData={
-			data: statsData.overallWeeks.map((x) => x.a/100),
+		const addData = {
+			data: statsData.overallWeeks.map((x) => x.a / 100),
 			borderColor: 'rgb(0, 255, 64)',
 			backgroundColor: 'rgb(0, 255, 64)',
 			label: 'adds (`00) ',
 			tension: 0.1
 		};
 
-		const deleteData={
-			data: statsData.overallWeeks.map((x) => x.d/100),
+		const deleteData = {
+			data: statsData.overallWeeks.map((x) => x.d / 100),
 			borderColor: 'rgb(255, 0, 0)',
 			backgroundColor: 'rgb(255, 0, 0)',
 			label: 'deletes (`00)',
 			tension: 0.1
 		};
 
-		const data={
+		const data = {
 			labels: weeks,
 			datasets: [commitData, addData, deleteData]
 		};
@@ -119,61 +122,61 @@ export class Dashboard {
 		return data;
 	}
 
-	BuildContributorOverallCommitGraphData(contributorName) {
-		const repoData=this.repos.flatMap((x) => {
+	BuildContributorOverallCommitGraphData (contributorName) {
+		const repoData = this.repos.flatMap((x) => {
 			return { stats: x.cData.stats, reopName: x.name };
 		});
 		console.log(repoData);
-		const contributorAllRepo=repoData.map((x) => {
+		const contributorAllRepo = repoData.map((x) => {
 			return {
-				stats: x.stats.filter((y) => y.author.login==contributorName),
+				stats: x.stats.filter((y) => y.author.login == contributorName),
 				repoName: x.reopName
 			};
 		});
-		const uniqueWeeks=[
+		const uniqueWeeks = [
 			...new Set(
 				contributorAllRepo
 					.flatMap((x) => x.stats.flatMap((x) => x.weeks))
 					.map((x) => x.w)
 			)
-		].sort((a, b) => a-b);
+		].sort((a, b) => a - b);
 
-		const data={
+		const data = {
 			labels: uniqueWeeks.map((x) =>
-				new Date(x*1000).toLocaleDateString('en-gb')
+				new Date(x * 1000).toLocaleDateString('en-gb')
 			),
 			datasets: []
 		};
 
 		for (const repo of contributorAllRepo) {
-			let color=
-				this.usedColors.filter((x) => x.name===repo.repoName)[0]||null;
+			let color =
+				this.usedColors.filter((x) => x.name === repo.repoName)[0] || null;
 
 			if (!color) {
-				color=`rgb(${this.getRandomInt(0, 255)}, ${this.getRandomInt(
+				color = `rgb(${this.getRandomInt(0, 255)}, ${this.getRandomInt(
 					0,
 					255
 				)}, ${this.getRandomInt(0, 255)})`;
 				this.usedColors.push({ name: repo.repoName, color: color });
 			} else {
-				color=color.color;
+				color = color.color;
 			}
 
-			let i=0;
-			const weekData=[];
+			let i = 0;
+			const weekData = [];
 			for (const week of uniqueWeeks) {
-				const matchWeek=
-					repo.stats.flatMap((x) => x.weeks)?.filter((x) => x.w===week)[0]||
+				const matchWeek =
+					repo.stats.flatMap((x) => x.weeks)?.filter((x) => x.w === week)[0] ||
 					null;
 				if (matchWeek) {
-					weekData[i]=matchWeek.c;
+					weekData[i] = matchWeek.c;
 				} else {
-					weekData[i]=0;
+					weekData[i] = 0;
 				}
 				i++;
 			}
 
-			const d={
+			const d = {
 				data: weekData,
 				borderColor: color,
 				backgroundColor: color,
@@ -181,12 +184,12 @@ export class Dashboard {
 				tension: 0.1
 			};
 
-			if (d.data.some((x) => x>0)) {
+			if (d.data.some((x) => x > 0)) {
 				data.datasets.push(d);
 			}
 		}
 
-		const config={
+		const config = {
 			type: 'line',
 			data: data,
 			options: {
@@ -203,31 +206,31 @@ export class Dashboard {
 			this.contributorChart.destroy();
 		}
 
-		const ctx=document.getElementById('contributor-chart');
-		this.contributorChart=new Chart(ctx, config);
+		const ctx = document.getElementById('contributor-chart');
+		this.contributorChart = new Chart(ctx, config);
 	}
 
-	getRandomInt(min, max) {
-		min=Math.ceil(min);
-		max=Math.floor(max);
-		return Math.floor(Math.random()*(max-min)+min); //The maximum is exclusive and the minimum is inclusive
+	getRandomInt (min, max) {
+		min = Math.ceil(min);
+		max = Math.floor(max);
+		return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
 	}
 
-	async InitData() {
-		this.repos=await this.getRepoData();
+	async InitData () {
+		this.repos = await this.getRepoData();
 
 		for (const repo of this.repos) {
-			const c=new CardParams();
-			c.title=repo.name;
-			c.pullRequests=await this.getPullRequestsForRepo(repo.name);
-			var cData={
+			const c = new CardParams();
+			c.title = repo.name;
+			c.pullRequests = await this.getPullRequestsForRepo(repo.name);
+			var cData = {
 				contributorData: await this.getContributorDataForRepo(repo.name),
 				stats: await this.getContributorStatsForRepo(repo.name)
 			};
 
-			repo.cData=cData;
+			repo.cData = cData;
 
-			const contributorData=cData.contributorData;
+			const contributorData = cData.contributorData;
 			for (const d of contributorData) {
 				c.contributorLogins.push({
 					name: d.login,
@@ -235,17 +238,17 @@ export class Dashboard {
 					contributions: d.contributions
 				});
 
-				const existing=
-					this.contributors.filter((x) => x.name==d.login)[0]||null;
+				const existing =
+					this.contributors.filter((x) => x.name == d.login)[0] || null;
 				if (existing) {
-					const index=this.contributors.indexOf(existing);
-					existing.contributions+=d.contributions;
-					this.contributors[index]=existing;
+					const index = this.contributors.indexOf(existing);
+					existing.contributions += d.contributions;
+					this.contributors[index] = existing;
 				} else {
-					const ctrb=new Contributor();
-					ctrb.name=d.login;
-					ctrb.contributions=d.contributions;
-					ctrb.avatarUrl=d.avatar_url;
+					const ctrb = new Contributor();
+					ctrb.name = d.login;
+					ctrb.contributions = d.contributions;
+					ctrb.avatarUrl = d.avatar_url;
 					this.contributors.push(ctrb);
 				}
 			}
@@ -254,20 +257,20 @@ export class Dashboard {
 		}
 	}
 
-	BuildStatsData() {
-		const flatStats=this.repos.flatMap((x) => x.cData.stats);
-		const flatWeeks=flatStats.flatMap((x) => x.weeks);
+	BuildStatsData () {
+		const flatStats = this.repos.flatMap((x) => x.cData.stats);
+		const flatWeeks = flatStats.flatMap((x) => x.weeks);
 
-		const overallWeeks=[];
+		const overallWeeks = [];
 
 		for (const week of flatWeeks) {
-			const existing=overallWeeks.filter((x) => x.w===week.w)[0]||null;
+			const existing = overallWeeks.filter((x) => x.w === week.w)[0] || null;
 			if (existing) {
-				const index=overallWeeks.indexOf(existing);
-				existing.a+=week.a;
-				existing.c+=week.c;
-				existing.d+=week.d;
-				overallWeeks[index]=existing;
+				const index = overallWeeks.indexOf(existing);
+				existing.a += week.a;
+				existing.c += week.c;
+				existing.d += week.d;
+				overallWeeks[index] = existing;
 			} else {
 				overallWeeks.push({
 					a: week.a,
@@ -283,8 +286,8 @@ export class Dashboard {
 		};
 	}
 
-	async getRepoData() {
-		const data=await this.octokit.rest.repos.listForOrg({
+	async getRepoData () {
+		const data = await this.octokit.rest.repos.listForOrg({
 			org: 'junior-developer-group',
 			type: 'public'
 		});
@@ -292,8 +295,8 @@ export class Dashboard {
 		return data.data;
 	}
 
-	async getContributorDataForRepo(repoName) {
-		const data=await this.octokit.rest.repos.listContributors({
+	async getContributorDataForRepo (repoName) {
+		const data = await this.octokit.rest.repos.listContributors({
 			owner: 'junior-developer-group',
 			repo: repoName
 		});
@@ -301,8 +304,8 @@ export class Dashboard {
 		return data.data;
 	}
 
-	async getContributorStatsForRepo(repoName) {
-		const data=await this.octokit.rest.repos.getContributorsStats({
+	async getContributorStatsForRepo (repoName) {
+		const data = await this.octokit.rest.repos.getContributorsStats({
 			owner: 'junior-developer-group',
 			repo: repoName
 		});
@@ -310,8 +313,8 @@ export class Dashboard {
 		return data.data;
 	}
 
-	async getPullRequestsForRepo(repoName) {
-		const data=await this.octokit.rest.pulls.list({
+	async getPullRequestsForRepo (repoName) {
+		const data = await this.octokit.rest.pulls.list({
 			owner: "junior-developer-group",
 			repo: repoName,
 			state: 'all'
@@ -320,22 +323,56 @@ export class Dashboard {
 		return data.data;
 	}
 
+	/**
+	 * Remove hyphen(-) from text
+	 * @param {string} text 
+	 * @returns {string} textNoHyphen
+	 */
+	removeHyphen(text){
+		const textNoHyphen = text.replace(/-/g,' ');
+		return textNoHyphen;
+	}
+
+	/**
+	 * Capitalize first letter of every word
+	 * 'an example' to 'An Example'
+	 * @param {string} text 
+	 * @returns {string} textCapitalized
+	 */
+	capitalizeWords(text){
+		let textCapitalized = '';
+        const words = text.split(' ');
+        const wordsLen = words.length;
+        for(let ind=0;ind<wordsLen;ind++){
+            const word = words[ind];
+            textCapitalized += word[0].toUpperCase() + word.slice(1);
+            if(ind !== wordsLen - 1){	// Only add whitespace if not last word
+                textCapitalized += ' ';
+            }
+        }
+		return textCapitalized;
+	}
+
+
 	RepoTab(params, active=false) {
+		let repoName = this.removeHyphen(params.title);
+		repoName = this.capitalizeWords(repoName);
+
 		return `<li class="nav-item" role="presentation">
-												<button class="nav-link ${active? 'active':''}" id="${params.title
+												<button class="nav-link ${active ? 'active' : ''}" id="${params.title
 			}-tab" data-bs-toggle="tab" data-bs-target="#${params.title
 			}-pane" type="button"
-												role="tab" aria-controls="${params.title}-pane" aria-selected="true">${params.title
+												role="tab" aria-controls="${params.title}-pane" aria-selected="true">${repoName
 			}</button>
 											</li>`;
 	}
 
-	RepoPane(params, active=false) {
-		const list=params.contributorLogins.map(
+	RepoPane (params, active = false) {
+		const list = params.contributorLogins.map(
 			(x) =>
 				`<li><img style='height:20px' src='${x.avatarUrl}'/>${x.name} | ${x.contributions} contributions</li>`
 		);
-		return `<div class="tab-pane fade ${active? 'show active':''}" id="${params.title
+		return `<div class="tab-pane fade ${active ? 'show active' : ''}" id="${params.title
 			}-pane" role="tabpanel" aria-labelledby="home-tab">
 										<card class='card col m-2'>
 											<card-header class='card-header'>${params.title}</card-header>
@@ -348,8 +385,8 @@ export class Dashboard {
 										<card></div>`;
 	}
 
-	RepoCard(params) {
-		const list=params.contributorLogins.map(
+	RepoCard (params) {
+		const list = params.contributorLogins.map(
 			(x) =>
 				`<li><img style='height:20px' src='${x.avatarUrl}'/>${x.name} | ${x.contributions} contributions</li>`
 		);
@@ -363,9 +400,9 @@ export class Dashboard {
 										<card>`;
 	}
 
-	ContributorRow(params) {
-		const element=document.createElement('tr');
-		element.innerHTML=`<td><img style='height: 20px' src='${params.avatarUrl}'/>${params.name}</td>
+	ContributorRow (params) {
+		const element = document.createElement('tr');
+		element.innerHTML = `<td><img style='height: 20px' src='${params.avatarUrl}'/>${params.name}</td>
 											<td>${params.contributions}</td>
 											<td>
 												<button class="btn btn-sm btn-info">
@@ -373,7 +410,7 @@ export class Dashboard {
 												</button>
 											</td>`;
 
-		const button=element.getElementsByTagName('button')[0]||null;
+		const button = element.getElementsByTagName('button')[0] || null;
 		if (button) {
 			button.addEventListener('click', () =>
 				this.BuildContributorOverallCommitGraphData(params.name)
@@ -384,7 +421,30 @@ export class Dashboard {
 	}
 }
 
-const dashboard=new Dashboard();
+const dashboard = new Dashboard();
 dashboard.InitData().then(() => {
 	dashboard.BuildDocument();
 });
+
+/**
+ * Member invitation
+ * > View in console
+ */
+ console.log(
+"%cHello stranger! 👋\n\n\n\n\nLooking to improve your dev skills? \n\n\n\n\nLet's do it together 💪 \n\n\n\n\n 👇 Join our group 👇\n\n",
+'color:dimgrey; font-size: 40px; background-color: pink; border-radius: 10px;',
+)
+console.log(
+'%cDiscord Channel:\n\n\n\nhttps://discord.gg/58YEbSgSAc\n\n\n\n',
+'font-size: 20px',
+)
+console.log(
+'%cOur Website: \n\n\n\nhttps://junior-developer-group.com\n\n\n\n',
+'font-size: 20px',
+)
+
+console.log('%cWe also need designers 😉', 'font-size: 40px')
+console.log('%c\n\n\n\n\n- Likii & the team 💛', 'font-size: 20px')
+/**
+ * End - Member Invitation
+ */

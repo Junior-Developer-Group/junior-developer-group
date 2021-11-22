@@ -37,62 +37,23 @@
   </head>
 
   <body>
-    <!-- DESKTOP NAVIGATION -->
-    <nav class="main-navigation--desktop">
-      <div class="navigation-logo">
-        <img src="./assets/images/website-images/logo-with-background.png"  onclick="window.open('/')"/>
-      </div>
-      <div class="navigation-links">
-        <a href="/pages/about.html"> About</a>
-        <a href="/pages/developers.html"> Developers </a>
-        <!-- <a href="/pages/hacktoberfest/maintainers.html"> HacktoberFest 2021 </a> -->
-        <a href="/index.html#events"> Workshops </a>
-        <a href="/index.html#getInvolved"> Get Involved</a>
-        <a href="/index.html#blog"> Blog</a>
-      </div>
-    </nav>
-
-    <!-- MOBILE NAVIGATION -->
-    <nav class="main-navigation--mobile">
-      <div class="navigation-menu-icon">
-        <div class="hamburger" onclick="showMobileNavigationContent()">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-        </div>
-      </div>
-
-      <div class="navigation-links-wrapper" id="mobileNavigationWrapper">
-        <div class="close-icon-text">
-          Close
-          <div class="close-icon" onclick="hideMobileNavigationContent()">
-            <div class="close-line-1"></div>
-            <div class="close-line-2"></div>
-          </div>
-        </div>
-        <div class="navigation-links">
-          <a href="/pages/about.html"> About</a>
-          <a href="/pages/developers.html"> Developers </a>
-          <!-- <a href="/pages/hacktoberfest/maintainers.html"> HacktoberFest 2021 </a> -->
-          <a href="/index.html#events"> Workshops </a>
-          <a href="/index.html#getInvolved"> Get Involved</a>
-          <a href="/index.html#blog"> Blog</a>
-        </div>
-      </div>
-    </nav>
-
+    <!-- Navbar -->
+    <navbar-component></navbar-component>
+    
     <!-- HEADER SECTION -->
     <section class="hero_header">
       <div class="hero_header-information">
         <h1>Junior Developer Group</h1>
         <p>
-          We're an international open-source community helping early career developers 
-          gain new skills, make meaningful connections and provide guidance 
-          to those entering their first roles in tech. 
+          We're an international open-source community helping early career
+          developers gain new skills, make meaningful connections and provide
+          guidance to those entering their first roles in tech.
         </p>
 
-        <p> We started working together in December 2020 and have been building projects, <br>
-          exploring Scrum ceremonies and debugging JavaScript ever since. 
+        <p>
+          We started working together in December 2020 and have been building
+          projects, <br />
+          exploring Scrum ceremonies and debugging JavaScript ever since.
         </p>
         <a href="/pages/about.html">More Info</a>
       </div>
@@ -216,13 +177,12 @@
         </div>
       </div>
     </section>
-
+ 
     <!--EVENTS & WORKSHOPS -->
     <section class="events-and-workshops" id="events">
       <h2>Events & Workshops</h2>
 
       <div class="events-wrapper">
-
         <div class="single-event green">
           <div class="event-details">
             <h3>Friday Focus Session</h3>
@@ -253,7 +213,7 @@
 
         <div class="single-event blue">
           <div class="event-details">
-            <h3>Sprint Planning </h3>
+            <h3>Sprint Planning</h3>
             <p>Friday at 7:30 PM UK time</p>
           </div>
 
@@ -265,7 +225,6 @@
           </div>
         </div>
 
-        
         <div class="single-event green">
           <div class="event-details">
             <h3>Introduction to Scrum</h3>
@@ -294,7 +253,6 @@
           </div>
         </div>
 
-        
         <div class="single-event blue">
           <div class="event-details">
             <h3>Introduction to SEO</h3>
@@ -336,8 +294,6 @@
             />
           </div>
         </div>
-
-
       </div>
     </section>
 
@@ -348,14 +304,16 @@
       <div id="celebrate"></div>
     </section>
 
-    
     <!--BLOG POSTS & ANNOUNCEMENTS -->
     <section class="featured-posts" id="blog">
       <h2>Featured Posts</h2>
 
       <div class="single-post">
         <div class="post-image">
-          <img src="https://likiipedia.com/wp-content/uploads/2021/08/gather-1024x464.png" alt="Join junior developer group" />
+          <img
+            src="https://likiipedia.com/wp-content/uploads/2021/08/gather-1024x464.png"
+            alt="Join junior developer group"
+          />
         </div>
 
         <div class="post-details">
@@ -370,19 +328,29 @@
 
           <div class="post-description">
             <p>
-              In October 2020 a couple of us had a chance to explore Hacktoberfest Challenge together, for the first time. 
-              By the end of the month, we made a nice little page presenting our community using HTML, CSS, and (vanilla) JavaScript...
+              In October 2020 a couple of us had a chance to explore
+              Hacktoberfest Challenge together, for the first time. By the end
+              of the month, we made a nice little page presenting our community
+              using HTML, CSS, and (vanilla) JavaScript...
             </p>
           </div>
           <div class="post-url">
-            <a href="https://likiipedia.com/open-source-team-invitation/" target="blank"> Read more </a>
+            <a
+              href="https://likiipedia.com/open-source-team-invitation/"
+              target="blank"
+            >
+              Read more
+            </a>
           </div>
         </div>
       </div>
 
       <div class="single-post">
         <div class="post-image">
-          <img src="https://likiipedia.com/wp-content/uploads/2021/02/git-versioning-768x530.jpg" alt="github version control panel" />
+          <img
+            src="https://likiipedia.com/wp-content/uploads/2021/02/git-versioning-768x530.jpg"
+            alt="github version control panel"
+          />
         </div>
 
         <div class="post-details">
@@ -397,13 +365,19 @@
 
           <div class="post-description">
             <p>
-              When I first started using the terminal and writing commands, it all felt very complicated. 
-              I worked with a senior developer at that time who knew all of these commands, 
-              what they do and what do the errors mean...
+              When I first started using the terminal and writing commands, it
+              all felt very complicated. I worked with a senior developer at
+              that time who knew all of these commands, what they do and what do
+              the errors mean...
             </p>
           </div>
           <div class="post-url">
-            <a href="https://likiipedia.com/simplifying-git-commands/" target="blank"> Read more </a>
+            <a
+              href="https://likiipedia.com/simplifying-git-commands/"
+              target="blank"
+            >
+              Read more
+            </a>
           </div>
         </div>
       </div>
@@ -472,38 +446,7 @@
       </div>
     </section>
 
-    <footer>
-      <div class="footer-socials">
-
-        <img
-        class="discord-logo"
-        src="./assets/images/discord.png"
-        alt=" Discord logo"
-        onclick="openLink()"
-      />
-        <img
-          src="./assets/images/github-logo.png"
-          alt="GitHub logo | a white coloured kitten on a dark background"
-          onclick="openGitHub()"
-        />
-        <img
-          src="./assets/images/instagram-logo.png"
-          alt="Outline of Instagram logo on a white background"
-          onclick="openInstagram()"
-        />
-        <img
-          src="./assets/images/gather.png"
-          alt="GatherTown logo | Grape vine on a purple background"
-          onclick="openGather()"
-        />
-      </div>
-      <div class="footer-copyright">
-        <p>
-          © Junior Developer Group, <span class="footer-copyright--date"></span>
-        </p>
-      </div>
-    </footer>
-
+    <footer-component></footer-component>
     <gdpr-component></gdpr-component>
   </body>
 
@@ -511,16 +454,19 @@
   <script src="./assets/js/homepage-scripts.js"></script>
   <script src="./assets/js/celebrations.js"></script>
 
-  <script src="../assets/js/components/component-map.js"
-  type="module"
-  defer> </script>
+  <script
+    src="../assets/js/components/component-map.js"
+    type="module"
+    defer
+  ></script>
 
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
 
-    gtag('config', 'G-E7KQ4C9DKP');
-
-    </script>
+    gtag("config", "G-E7KQ4C9DKP");
+  </script>
 </html>

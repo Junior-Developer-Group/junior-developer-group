@@ -35,74 +35,31 @@
     <!-- CSS STYLESHEET -- TEAM PAGE -->
     <link rel="stylesheet" href="/teamPage.css" />
     <link rel="stylesheet" href="/assets/css/aboutPage.css" />
-
   </head>
 
   <body>
-    <!-- DESKTOP NAVIGATION -->
-    <nav class="main-navigation--desktop">
-      <div class="navigation-logo">
-        <img src="/assets/images/website-images/logo-with-background.png"  onclick="window.open('/')"/>
-      </div>
-      <div class="navigation-links">
-        <a href="/pages/about.html"> About</a>
-        <a href="/pages/developers.html"> Developers </a>
-        <!-- <a href="/pages/hacktoberfest/maintainers.html"> HacktoberFest 2021 </a> -->
-        <a href="/index.html#events"> Workshops </a>
-        <a href="/index.html#getInvolved"> Get Involved</a>
-        <a href="/index.html#blog"> Blog</a>
-      </div>
-    </nav>
-
-    <!-- MOBILE NAVIGATION -->
-    <nav class="main-navigation--mobile">
-      <div class="navigation-menu-icon">
-        <div class="hamburger" onclick="showMobileNavigationContent()">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-        </div>
-      </div>
-
-      <div class="navigation-links-wrapper" id="mobileNavigationWrapper">
-        <div class="close-icon-text">
-          Close
-          <div class="close-icon" onclick="hideMobileNavigationContent()">
-            <div class="close-line-1"></div>
-            <div class="close-line-2"></div>
-          </div>
-        </div>
-        <div class="navigation-links">
-          <a href="/pages/about.html"> About</a>
-          <a href="/pages/developers.html"> Developers </a>
-          <!-- <a href="/pages/hacktoberfest/maintainers.html"> HacktoberFest 2021 </a> -->
-          <a href="/index.html#events"> Workshops </a>
-          <a href="/index.html#getInvolved"> Get Involved</a>
-          <a href="/index.html#blog"> Blog</a>
-        </div>
-      </div>
-    </nav>
+    <navbar-component></navbar-component>
 
     <section class="about-us-wrapper">
-        
-        <div class="about-us-content column">
-            <div class="about-us__image">
-                <img src="/assets/images/website-images/logo-with-background.png" />
-            </div>
-
-            <div class="about-us__text column">
-                <p>
-                    We're an international open-source community helping early career developers 
-                    gain new skills, make meaningful connections and provide guidance 
-                    to those entering their first roles in tech. 
-                  </p>
-          
-                  <p> We started working together in December 2020 and have been building projects, <br>
-                    exploring Scrum ceremonies and debugging JavaScript ever since. 
-                  </p>
-            </div>
-
+      <div class="about-us-content column">
+        <div class="about-us__image">
+          <img src="/assets/images/website-images/logo-with-background.png" />
         </div>
+
+        <div class="about-us__text column">
+          <p>
+            We're an international open-source community helping early career
+            developers gain new skills, make meaningful connections and provide
+            guidance to those entering their first roles in tech.
+          </p>
+
+          <p>
+            We started working together in December 2020 and have been building
+            projects, <br />
+            exploring Scrum ceremonies and debugging JavaScript ever since.
+          </p>
+        </div>
+      </div>
     </section>
 
     <section class="about-us-content faq">
@@ -163,40 +120,13 @@
     <section class="socialMedia__discord">
       <iframe src="https://discord.com/widget?id=787411703901978684&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
     </section>
-    <footer>
-        <div class="footer-socials">
-  
-          <img
-          class="discord-logo"
-          src="/assets/images/discord.png"
-          alt=" Discord logo"
-          onclick="openLink()"
-        />
-          <img
-            src="/assets/images/github-logo.png"
-            alt="GitHub logo | a white coloured kitten on a dark background"
-            onclick="openGitHub()"
-          />
-          <img
-            src="/assets/images/instagram-logo.png"
-            alt="Outline of Instagram logo on a white background"
-            onclick="openInstagram()"
-          />
-          <img
-            src="/assets/images/gather.png"
-            alt="GatherTown logo | Grape vine on a purple background"
-            onclick="openGather()"
-          />
-        </div>
-        <div class="footer-copyright">
-          <p>
-            © Junior Developer Group, <span class="footer-copyright--date"></span>
-          </p>
-        </div>
-      </footer>
-    </body>
+
+    <footer-component></footer-component>
+  </body>
   
     <!-- SCRIPTS -->
-    <script src="./assets/js/homepage-scripts.js"></script>
-    <script src="./assets/js/celebrations.js"></script>
+    <script src="../assets/js/homepage-scripts.js"></script>
+    <script src="../assets/js/celebrations.js"></script>
+    <script src="../assets/js/components/component-map.js" type="module" defer></script>
   </html>
+
