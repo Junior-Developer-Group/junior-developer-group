@@ -85,3 +85,12 @@ summary strong {
         max-width: 300px;
     }
 }
+.socialMedia__discord{
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+.socialMedia__discord>iframe{
+    width: 40%;
+    min-width: 300px;
+}
