@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	 <!-- SEO SETTINGS FOR GOOGLE-->
+	 <meta name="author" content="Junior Developer Group" />
+	 <meta
+	   name="description"
+	   content="Junior Developer Group | Dashboard page containing all current and previous projects"
+	 />
+ 
+	 <!-- SEO SETTINGS FOR WHEN WEBSITE URL IS SHARED -->
+	 <meta
+	   name="og:title"
+	   property="og:title"
+	   content="Junior Developer Group Dashboard"
+	 />
+	 <meta
+	   property="og:description"
+	   content="Junior Developer Group | Dashboard page containing all current and previous projects"
+	 />
+	 <meta
+	   property="og:image"
+	   content="/assets/website-images/logo-with-background.png"
+	 />
+ 
+	 <!-- WEBSITE TITLE-->
+	 <title>JDG Dashboard</title>
+
+	  <!-- FAVICON -->
+	  <link rel="icon" type="image/jpg" href="/assets/images/favicon.ico" />
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous" />
+		<link rel="stylesheet" href="/assets/css/repositories.css">
+	<link rel="stylesheet" href="/assets/css/dashboard.css">
+</head>
+
+<body>
+	<page class="d-flex">
+		<sidebar-component></sidebar-component>
+		<main class="w-100">
+			<header class="header">
+				<h1 class="header__title text-uppercase fs-5">List of Repositories</h1>
+			</header>
+			<p class="loading-text">Fetching list of repositories...</p>
+			<!--START - Repositories table-->
+			<div class="repos" role="table">
+				<div class="sr-only d-flex fw-bold" role="row">
+					<div class="col-3" role="columnheader">
+						Image	
+					</div>
+					<div class="col-3" role="columnheader">
+						Details
+					</div>
+					<div class="col-3" role="columnheader">
+						Tags
+					</div>
+					<div class="col-3" role="columnheader">
+						Forks
+					</div>
+					<div class="col-3" role="columnheader">
+						Views
+					</div>
+				</div>
+				<div role="rowgroup">
+
+				</div>
+			</div>
+			<!--END - Repositories table-->
+			<div style="margin-top: 40px;">
+				<footer-component></footer-component>
+			</div>
+		</main>
+	</page>
+	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8"
+		crossorigin="anonymous"></script>
+	<script src="../assets/js/components/component-map.js" type="module" defer></script>
+	<script src="/assets/js/repositories.js" type="module"></script>
+	<script src="/assets//js/homepage-scripts.js"></script>
+</body>
+
+</html>
