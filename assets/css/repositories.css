@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap');
+
+:root{
+	--color-gray-100:#F5F5F5;
+	--color-gray-200:#DDDDDD;
+	--color-gray-500:#9F9F9F;
+	--color-gray-800:#4B4B4B;
+	--color-gray-900:#2C2C2C;
+	--color-purple-100:#DAE9FC;
+	--color-purple-500:#1473E6;
+	--color-red-100:#FEE5DD;
+	--color-red-500:#FC5569;
+	--row-v-padding:20px;
+	--row-h-padding:41.5px;
+}
+
+/*Screen reader only*/
+.sr-only{
+	display: block;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;	
+}
+
+main{
+	font-family: 'Montserrat', sans-serif;
+	padding:15px;
+}
+
+/* * * * * * * * * *
+* HEADER
+* * * * * * * * * * */
+
+.header{
+	border-bottom:1px solid var(--color-gray-200);
+	padding:var(--row-v-padding) var(--row-h-padding);
+}
+
+.header__title, .repo__title{
+	font-weight: 900;
+	color:var(--color-gray-900);
+}
+
+/* * * * * * * * * *
+* REPOSITORIES TABLE
+* * * * * * * * * * */
+.loading-text{
+	padding:2rem 0;
+	text-align: center;
+}
+
+.loading-text.hide{
+	display: none;
+}
+
+.repos{
+	width: 100%;
+	overflow: auto;
+}
+
+.repo{
+	border-bottom: 1px solid var(--color-gray-100);
+}
+
+.repo__col{
+	padding:var(--row-v-padding) 0;
+}
+
+.repo__img-wrapper{
+	height:50px;
+	width: 50px;
+	background-color: var(--color-purple-100);
+	border-radius: 50%;
+	font-weight: bold;
+	color:var(--color-purple-500);
+}
+
+.repo__createdAt{
+	color:var(--color-gray-500);
+	margin-bottom: 0;
+}
+
+.repo__tags{
+	list-style: none;
+	padding:0;
+}
+
+.repo__tag{
+	background-color: var(--color-red-100);
+	padding:0.1rem 0.5rem;
+	margin:0 0.5rem 0.5rem 0;
+	border-radius: 5px;
+}
+
+.repo__tag:nth-child(odd){
+	background-color: var(--color-red-100);
+	color:var(--color-red-500);
+}
+
+.repo__tag:nth-child(even){
+	background-color: var(--color-purple-100);
+	color:var(--color-purple-500);
+}
+
+.repo__views, .repo__forks{
+	color:var(--color-gray-800);
+}
+
+.repo__views::before, .repo__forks::before{
+	content:'';
+	height:1rem;
+	width: 1rem;
+	display: inline-block;
+	margin-right:0.5rem;
+}
+
+.repo__forks::before{
+	background-image:url('/assets/images/icons/book-icon.svg');
+}
+
+.repo__views::before{
+	background-image:url('/assets/images/icons/view-icon.svg');
+}
+
+
+@media screen and (min-width:768px){
+	.repo{
+		min-width: 1200px;
+	}
+		
+	.repo__col:first-child{
+		padding:0 var(--row-h-padding);
+	}
+
+	.repo__col:last-child{
+		padding-right:var(--row-h-padding);
+	}
+}
