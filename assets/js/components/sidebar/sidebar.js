@@ -11,9 +11,10 @@ export class Sidebar extends HTMLElement {
       '../assets/js/components/sidebar/sidebar.html'
     );
 
-	window.onload = () => {	// Run after DOM is loaded
+	const loadListener = window.addEventListener('load', () => {	// Run after DOM is loaded
 		this.setActiveLink();
-	}
+		window.removeEventListener('load', loadListener);
+	});
   }
 
   /**
