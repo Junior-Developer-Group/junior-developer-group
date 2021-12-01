@@ -98,9 +98,10 @@ function openDiscord() {
   );
 }
 
-window.onload = () => {	// Run after DOM is loaded
+const loadListener = window.addEventListener('load', () => {	// Run after DOM is loaded
 	updateFooter();
-}
+	window.removeEventListener('load',loadListener);
+});
 
 function runAnalyticsScripts() {
 

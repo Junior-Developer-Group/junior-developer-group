@@ -213,6 +213,21 @@ const Member = [
       github: "https://github.com/Deepak8717",
     },
   },
+
+  {
+    about:
+      "Hi, I'm a Front End Developer from Tamil Nadu, India. Currently learning and working with React.",
+    name: "Sulthan",
+    speciality: "Front-End Developer",
+    image:
+      "https://avatars.githubusercontent.com/u/32130871?v=4",
+    social_links: {
+      github: "https://github.com/SulthanNK",
+      twitter: "https://twitter.com/SulthanNK",
+      linkedin: "https://www.linkedin.com/in/sulthannk/",
+    },
+    contact: "https://sulthannk.me/",
+  },
 ];
 
 for (members of Member) {
