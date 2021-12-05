@@ -228,6 +228,20 @@ const Member = [
     },
     contact: "https://sulthannk.me/",
   },
+  {
+    about: 
+    "I am a junior developer from Kazakhstan. I am currently learning Web development",
+    name:"Sagi",
+    speciality:"Computer Engineering Master's student",
+    image:
+    "https://avatars.githubusercontent.com/u/52858682?s=400&u=b16ad96afcb6625c7467800888e86e3d1cbc899b&v=4",
+    social_links:{
+      github:"https://github.com/ratsagi",
+      instagram:"https://www.instagram.com/sagi.rat/",
+      twitter:"https://twitter.com/Sagi31758105",
+      linkedin:"https://www.linkedin.com/in/sagirat/"
+    }
+  },
 ];
 
 for (members of Member) {
