@@ -229,19 +229,20 @@ const Member = [
     contact: "https://sulthannk.me/",
   },
   {
-    about: 
-    "I am a junior developer from Kazakhstan. I am currently learning Web development",
+
+    about:
+    "Hello, I am Sagi. I am Computer Engineering Master's student who is interested in Web Development. Currently I am learning HTML,CSS and JavaScript",
     name:"Sagi",
     speciality:"Computer Engineering Master's student",
-    image:
-    "https://avatars.githubusercontent.com/u/52858682?s=400&u=b16ad96afcb6625c7467800888e86e3d1cbc899b&v=4",
+    image:"https://avatars.githubusercontent.com/u/52858682?s=400&u=b16ad96afcb6625c7467800888e86e3d1cbc899b&v=4",
+
     social_links:{
       github:"https://github.com/ratsagi",
       instagram:"https://www.instagram.com/sagi.rat/",
       twitter:"https://twitter.com/Sagi31758105",
       linkedin:"https://www.linkedin.com/in/sagirat/"
     }
-  },
+
 ];
 
 for (members of Member) {
