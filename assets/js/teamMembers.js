@@ -153,6 +153,7 @@ const Member = [
     },
     contact: "https://fitzcodes.github.io/",
   },
+
   {
     about: "Aspiring web developer",
     name: "Amon",
@@ -191,6 +192,7 @@ const Member = [
     },
     contact: "https://www.linkedin.com/in/ilyes-bhd-53a95021a/",
   },
+
   {
     about:
       "I'm a computer science student from North Macedonia. Currently studying more about JavaScript.",
@@ -203,6 +205,7 @@ const Member = [
       codepen: "https://codepen.io/codekoya",
     },
   },
+
   {
     about:
       "I'm Junior developer from India, trying to learn and be comfortable with Javascript. Tech has always been my thing.",
@@ -228,8 +231,8 @@ const Member = [
     },
     contact: "https://sulthannk.me/",
   },
-  {
 
+  {
     about:
     "Hello, I am Sagi. I am Computer Engineering Master's student who is interested in Web Development. Currently I am learning HTML,CSS and JavaScript",
     name:"Sagi",
@@ -242,7 +245,7 @@ const Member = [
       twitter:"https://twitter.com/Sagi31758105",
       linkedin:"https://www.linkedin.com/in/sagirat/"
     }
-
+  },
 ];
 
 for (members of Member) {
