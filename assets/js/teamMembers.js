@@ -160,6 +160,7 @@ const Member = [
     image: "https://avatars.githubusercontent.com/u/64846892?v=4",
     social_links: {
       github: "https://github.com/A-amon",
+	  linkedin:"https://www.linkedin.com/in/wing-kuang-tan-933bb6226/"
     },
     contact: "https://github.com/A-amon",
   },
