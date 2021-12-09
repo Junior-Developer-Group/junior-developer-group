@@ -73,6 +73,9 @@ summary strong {
     margin-bottom: 40px;
 }
 
+.about-us_faq_answers {
+    padding-left: 20px;
+}
 
 @media (max-width: 680px) {
 
