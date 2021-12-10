@@ -249,8 +249,71 @@ const Member = [
   },
 ];
 
-for (members of Member) {
-  const team_member = `
+const categories = {
+	//ADMIN TEAM
+	"Likii":"admin",
+	"Denice":"admin",
+	"John":"admin",
+	"Ruman":"admin",
+	"Oghenekparobo":"admin",
+	"Thomas":"admin",
+	"Jeff 👋":"admin",
+	//PREV COHORTS
+	"Lizard":"prev",
+	"Uriel":"prev",
+	"Francesca":"prev",
+	"Alejandro 🙋‍♂️":"prev"
+}
+
+/**
+ * Assign category to every member
+ * "active" if not "admin" and "prev"
+ */
+const categorizedMembers = Member.map(member => {
+	const category = categories[member.name]
+	member.category = category ? category:"active"
+	return member
+})
+
+/**
+ * Sort by category
+ * In order: Admin, Active, Previous Cohorts
+ */
+const sortedMembers = categorizedMembers.sort((firstMember, secondMember)=>{
+	const {category:firstCategory} = firstMember
+	const {category:secondCategory} = secondMember
+
+	if(firstCategory === secondCategory){
+		return 0
+	}
+	else if(secondCategory === "admin"){
+		return 1
+	}
+	else if(secondCategory === "prev" || (secondCategory === "active" && firstCategory === "admin")){
+		return -1
+	}
+
+	return 0
+})
+
+const cardWrapper = document.querySelector(".team-card-wrapper")
+let currentCategory = "";
+
+for (members of sortedMembers) {
+	const memberCategory = members.category
+	let category = "Admin Team"
+	if(memberCategory === "active"){
+		category = "Active Members"
+	}
+	else if(memberCategory === "prev"){
+		category = "Previous Cohorts"
+	}
+	
+	//Show category heading if enter new category list
+	(currentCategory != memberCategory) && (cardWrapper.innerHTML += `<h2 class="team-card__category">${category}</h2>`)
+	currentCategory = memberCategory
+
+  	const team_member = `
                 <div class="team-card">
                     <p>
                       ${members.about}
@@ -261,9 +324,9 @@ for (members of Member) {
                     </div>
 
                     <div class="details">
-                      <h2> ${members.name} <br />
+                      <h3> ${members.name} <br />
                         <span> ${members.speciality}</span>
-                      </h2>
+                      </h3>
                       
                     <div class="social_links">
                       ${
@@ -301,5 +364,5 @@ for (members of Member) {
                     </div>
                 </div>`;
 
-  document.querySelector(".team-card-wrapper").innerHTML += team_member;
+  	cardWrapper.innerHTML += team_member;
 }
