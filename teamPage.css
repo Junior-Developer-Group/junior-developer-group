@@ -75,6 +75,12 @@
     right: 40px;
   }
 
+  .about-us_faq_answers {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
+  }
+
   .main-navigation--desktop .navigation-links a {
     font-family: 'Heebo', sans-serif;
     font-style: normal;

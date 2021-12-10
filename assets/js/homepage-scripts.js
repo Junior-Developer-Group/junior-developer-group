@@ -70,7 +70,7 @@ function openInstagram() {
 
 function openGather() {
   window.open(
-    "https://gather.town/invite?token=6NeAjCOdrZUnwBN9RRoYHjPgAAyledKp",
+    "https://gather.town/app/EXCj9n8cz6KDtw3p/Junior%20Dev%20HQ",
     "_blank"
   );
 }
@@ -93,7 +93,7 @@ function updateFooter() {
 
 function openDiscord() {
   window.open(
-    "https://discord.gg/58YEbSgSAc",
+    "https://discord.com/invite/JdGZbZYDvd",
     "_blank"
   );
 }
