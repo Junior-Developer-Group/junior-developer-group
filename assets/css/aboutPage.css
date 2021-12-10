@@ -74,6 +74,12 @@ summary strong {
 }
 
 
+.about-us_faq_answers {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px; 
+}
+
 @media (max-width: 680px) {
 
     details {
