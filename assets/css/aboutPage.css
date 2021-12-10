@@ -74,6 +74,8 @@ summary strong {
 }
 
 .about-us_faq_answers {
+    display: flex;
+    flex-direction: column;
     padding-left: 20px;
 }
 
