@@ -1,3 +1,4 @@
+//Go to https://flagcdn.com/en/codes.json and find your respective country code.
 const Member = [
   {
     about:
@@ -13,6 +14,7 @@ const Member = [
       linkedin: "https://linkedin.com/in/matea-howard",
     },
     contact: "https://likiipedia.com/",
+    location: "gb"
   },
 
   {
@@ -88,6 +90,7 @@ const Member = [
     social_links: {
       github: "https://github.com/john-fowle/",
     },
+    location: "us"
   },
 
   {
@@ -112,6 +115,7 @@ const Member = [
       linkedin: "https://www.linkedin.com/in/j3ffjessie",
       twitter: "https://www.twitter.com/j3ffjessie",
     },
+    location: "us"
   },
 
   {
@@ -136,7 +140,10 @@ const Member = [
     social_links: {
       github: "https://github.com/loop-infinity",
       linkedin: "https://www.linkedin.com/in/ruman-mulla",
+      //Go to https://flagcdn.com/en/codes.json and find your respective country code.
     },
+    location: "gb",
+    willingToRelocate: true 
   },
 
   {
@@ -152,6 +159,7 @@ const Member = [
       linkedin: "https://www.linkedin.com/in/thomas-fitzgerald-fitzcodes/",
     },
     contact: "https://fitzcodes.github.io/",
+    location: "us"
   },
   {
     about: "Aspiring web developer",
@@ -162,6 +170,7 @@ const Member = [
       github: "https://github.com/A-amon",
     },
     contact: "https://github.com/A-amon",
+    location: "my"
   },
 
   {
@@ -242,7 +251,29 @@ for (members of Member) {
                     </div>
 
                     <div class="details">
-                      <h2> ${members.name} <br />
+                      <h2> ${members.name} 
+                      ${
+                        members.location 
+                        ? `<span>
+                              <img
+                              src="https://flagcdn.com/48x36/${members.location}.png"
+                              width="17"
+                              height="13"
+                              alt="${members.location}-flag">
+                          </span>
+                          ${
+                            members.willingToRelocate 
+                            ? `<br>
+                              <span class="willing-to-relocate-tag">
+                                Willing To Relocate
+                              </span>`
+                            : ""
+                          }
+                         
+                          `
+                        : ""
+                      } 
+                       <br />
                         <span> ${members.speciality}</span>
                       </h2>
                       
