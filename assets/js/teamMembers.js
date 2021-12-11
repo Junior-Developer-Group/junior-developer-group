@@ -142,8 +142,7 @@ const Member = [
       linkedin: "https://www.linkedin.com/in/ruman-mulla",
       //Go to https://flagcdn.com/en/codes.json and find your respective country code.
     },
-    location: "gb",
-    willingToRelocate: true 
+    location: "gb" 
   },
 
   {
