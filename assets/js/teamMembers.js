@@ -299,7 +299,7 @@ let sortedMembers = categorizedMembers.sort(({category:firstCategory}, {category
  * Sort by category - Continue
  * In order: Admin, Active, Inactive, Previous Cohorts
  */
-sortedMembers = categorizedMembers.sort(({category:firstCategory}, {category:secondCategory}) => {
+sortedMembers = sortedMembers.sort(({category:firstCategory}, {category:secondCategory}) => {
 	if(firstCategory === secondCategory){
 		return 0
 	}
