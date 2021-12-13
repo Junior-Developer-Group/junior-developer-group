@@ -258,6 +258,8 @@ const categories = {
 	"Oghenekparobo":"admin",
 	"Thomas":"admin",
 	"Jeff 👋":"admin",
+	//INACTIVE
+	"Deepak":"inactive",
 	//PREV COHORTS
 	"Lizard":"prev",
 	"Uriel":"prev",
@@ -277,19 +279,31 @@ const categorizedMembers = Member.map(member => {
 
 /**
  * Sort by category
- * In order: Admin, Active, Previous Cohorts
+ * In order: Admin, Active, (Previous Cohorts & Inactive)
  */
-const sortedMembers = categorizedMembers.sort((firstMember, secondMember)=>{
-	const {category:firstCategory} = firstMember
-	const {category:secondCategory} = secondMember
-
+let sortedMembers = categorizedMembers.sort(({category:firstCategory}, {category:secondCategory})=>{
 	if(firstCategory === secondCategory){
 		return 0
 	}
 	else if(secondCategory === "admin"){
 		return 1
 	}
-	else if(secondCategory === "prev" || (secondCategory === "active" && firstCategory === "admin")){
+	else if(secondCategory === "prev" || secondCategory === "inactive" || (secondCategory === "active" && firstCategory === "admin")){
+		return -1
+	}
+
+	return 0
+})
+
+/**
+ * Sort by category - Continue
+ * In order, Admin, Active, Inactive, Previous Cohorts
+ */
+sortedMembers = categorizedMembers.sort(({category:firstCategory}, {category:secondCategory}) => {
+	if(firstCategory === secondCategory){
+		return 0
+	}
+	else if(firstCategory === "inactive" && secondCategory === "prev"){
 		return -1
 	}
 
@@ -304,6 +318,9 @@ for (members of sortedMembers) {
 	let category = "Admin Team"
 	if(memberCategory === "active"){
 		category = "Active Members"
+	}
+	else if(memberCategory === "inactive"){
+		category = "Inactive Members"
 	}
 	else if(memberCategory === "prev"){
 		category = "Previous Cohorts"
