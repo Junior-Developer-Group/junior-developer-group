@@ -258,13 +258,13 @@ const categories = {
 	"Oghenekparobo":"admin",
 	"Thomas":"admin",
 	"Jeff 👋":"admin",
-	//INACTIVE
-	"Deepak":"inactive",
+
 	//PREV COHORTS
 	"Lizard":"prev",
 	"Uriel":"prev",
 	"Francesca":"prev",
-	"Alejandro 🙋‍♂️":"prev"
+	"Alejandro 🙋‍♂️":"prev",
+  "Deepak":"prev",
 }
 
 /**
@@ -288,7 +288,7 @@ let sortedMembers = categorizedMembers.sort(({category:firstCategory}, {category
 	else if(secondCategory === "admin"){
 		return 1
 	}
-	else if(secondCategory === "prev" || secondCategory === "inactive" || (secondCategory === "active" && firstCategory === "admin")){
+	else if(secondCategory === "prev" || (secondCategory === "active" && firstCategory === "admin")){
 		return -1
 	}
 
@@ -319,9 +319,7 @@ for (members of sortedMembers) {
 	if(memberCategory === "active"){
 		category = "Active Members"
 	}
-	else if(memberCategory === "inactive"){
-		category = "Inactive Members"
-	}
+
 	else if(memberCategory === "prev"){
 		category = "Previous Cohorts"
 	}
