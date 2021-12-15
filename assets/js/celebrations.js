@@ -7,55 +7,64 @@ const users = [
         'fName': 'Matea',
         'lName': 'Howard',
         'celebration': 'Created our first HacktoberFest challenge in 2020 🎉',
-        'image': './assets/images/team-members/likii.jpg'
+        'image': './assets/images/team-members/likii.jpg',
+        'alt': 'Matea | takes a selfie in a tanned overcoat on teal background',
     },
     {
         'fName': 'Matea',
         'lName': 'Howard',
         'celebration': 'Created our second HacktoberFest challenge in 2021 🎉',
-        'image': './assets/images/team-members/likii.jpg'
+        'image': './assets/images/team-members/likii.jpg',
+        'alt': 'Matea | takes a selfie in a tanned overcoat on teal background',
     },
     {
         'fName': 'Matea',
         'lName': 'Howard',
         'celebration': 'Established Junior Developer Group in 2020 🎉',
-        'image': './assets/images/team-members/likii.jpg'
+        'image': './assets/images/team-members/likii.jpg',
+        'alt': 'Matea | takes a selfie in a tanned overcoat on teal background',
     },
     {
         'fName': 'Denice',
         'lName': 'Soper',
         'celebration': 'Joined Junior Developer Group 🎉',
-        'image': './assets/images/team-members/denice.png'
+        'image': './assets/images/team-members/denice.png',
+        'alt': 'Denice | smiles with black colour framed spectacles',
     },
     {
         'fName': 'onlyasmall',
         'lName': 'lizard',
         'celebration': 'Joined Junior Developer Group 🎉',
-        'image': './assets/images/team-members/lizard.jpg'
+        'image': './assets/images/team-members/lizard.jpg',
+        'alt': 'Lizard | white mouse on the shoulder in a black t-shirt',
     },
     {
         'fName': 'Uriel',
         'lName': 'Ofir',
         'celebration': 'Joined Junior Developer Group 🎉',
-        'image': './assets/images/team-members/uriel.jpg'
+        'image': './assets/images/team-members/uriel.jpg',
+        'alt': 'Uriel | Sat in the blurred background in a blue t-shirt',
     },
     {
         'fName': 'Francesca',
         'lName': 'De Laurentis',
         'celebration': 'Joined Junior Developer Group 🎉',
-        'image': './assets/images/team-members/franny.jpg'
+        'image': './assets/images/team-members/franny.jpg',
+        'alt': 'Francesca | smiles in dark background with her red lipstick',
     },
     {
         'fName': 'Oghenekparobo',
         'lName': 'O.',
         'celebration': 'Joined Junior Developer Group 🎉',
-        'image': './assets/images/team-members/jay.jpg'
+        'image': './assets/images/team-members/jay.jpg',
+        'alt': 'Oghenekparobo | gives pose in a white striped red coat and white shirt',
     },
     {
         'fName': 'Debra-Kaye',
         'lName': 'Elliott',
         'celebration': 'Joined Junior Developer Group 🎉',
-        'image': './assets/images/team-members/debra-kaye.jpg'
+        'image': './assets/images/team-members/debra-kaye.jpg',
+        'alt': 'Debra-Kaye | his picture',
     }
 
 ]
@@ -77,7 +86,7 @@ const markup = `
     </div>
 
     <div class="avatar">
-        <img class="avatar-image" src= ${pickedUser.image} />
+        <img class="avatar-image" src= ${pickedUser.image} alt="${pickedUser.alt}"/>
     </div>
 
     <div class="card-content">
