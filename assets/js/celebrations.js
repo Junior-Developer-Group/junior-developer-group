@@ -58,13 +58,6 @@ const users = [
         'celebration': 'Joined Junior Developer Group 🎉',
         'image': './assets/images/team-members/jay.jpg',
         'alt': 'Oghenekparobo | gives pose in a white striped red coat and white shirt',
-    },
-    {
-        'fName': 'Debra-Kaye',
-        'lName': 'Elliott',
-        'celebration': 'Joined Junior Developer Group 🎉',
-        'image': './assets/images/team-members/debra-kaye.jpg',
-        'alt': 'Debra-Kaye | his picture',
     }
 
 ]
