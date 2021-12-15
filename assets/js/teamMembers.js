@@ -6,6 +6,7 @@ const Member = [
     speciality: "Front-End Developer",
     image:
       "https://avatars1.githubusercontent.com/u/51357920?s=460&u=0c0ba2fa0b0f222dd9ceaf301a6e609ec6a6ca9a&v=4",
+    alt: "Matea | takes a selfie in a tanned overcoat on teal background",
     social_links: {
       github: "https://github.com/mateahoward",
       instagram: "https://www.instagram.com/likiipedia/",
@@ -21,6 +22,7 @@ const Member = [
     name: "Lizard",
     speciality: "Front-end development, designing for accessibility",
     image: "https://idealkoala.files.wordpress.com/2021/01/img-1064-copy.jpg",
+    alt: "Lizard | white mouse on the shoulder in a black t-shirt",
     social_links: { github: "https://github.com/onlyasmalllizard" },
   },
 
@@ -29,6 +31,7 @@ const Member = [
     name: "Denice",
     speciality: "Junior developer",
     image: "https://github.com/Denice-S.png",
+    alt: "Denice | smiles with black colour framed spectacles",
     social_links: {
       github: "https://github.com/Denice-S",
       linkedin: "https://linkedin.com/in/denice-soper",
@@ -42,6 +45,7 @@ const Member = [
     name: "Uriel",
     speciality: "Front-End Developer",
     image: "https://avatars.githubusercontent.com/u/30144878",
+    alt: "Uriel | Sat in the blurred background in a blue t-shirt",
     social_links: {
       github: "https://github.com/urielofir",
       facebook: "https://www.facebook.com/urielofir86/",
@@ -56,6 +60,7 @@ const Member = [
     speciality: "Front-End Developer",
     image:
       "https://avatars.githubusercontent.com/u/46782373?s=400&u=1bb0e2a85f9e2d60f252810b39ffc000671839cf&v=4",
+    alt: "Francesca | smiles in dark background with her red lipstick",
     social_links: {
       github: "https://github.com/frannyfra",
       linkedin: "https://www.linkedin.com/in/frannyfra/",
@@ -65,10 +70,11 @@ const Member = [
 
   {
     about:
-      "I’m a junior software dev, serving in a non-profit religious organisation coding with js, python and solidity. I run a local community (southern code) in Nigeria, teaching programming.",
+      "I'm a junior software dev, serving in a non-profit religious organization coding with js, python and solidity. I run a local community (southern code) in Nigeria, teaching programming.",
     name: "Oghenekparobo",
     speciality: "Software Developer",
     image: "https://avatars.githubusercontent.com/u/68813273?v=4",
+    alt: "Oghenekparobo | gives pose in a white striped red coat and white shirt",
     social_links: {
       github: "https://github.com/Jaytru1997",
       instagram: "https://instagram.com/an_onosemuode?igshid=1r6teffyhnmdm",
@@ -85,6 +91,7 @@ const Member = [
     name: "John",
     speciality: "Front-End Developer",
     image: "https://avatars.githubusercontent.com/u/84462084?v=4",
+    alt: "John | smiles with his funky hairstyle",
     social_links: {
       github: "https://github.com/john-fowle/",
     },
@@ -96,6 +103,7 @@ const Member = [
     name: "Alejandro 🙋‍♂️",
     speciality: "Software Engineering Student",
     image: "https://avatars.githubusercontent.com/Alegarciy",
+    alt: "Alejandro | takes a selfie with the tongue out in a red cap",
     social_links: {
       github: "https://github.com/Alegarciy",
     },
@@ -107,6 +115,7 @@ const Member = [
     name: "Jeff 👋",
     speciality: "Front End Development / JavaScript All the Things",
     image: "https://avatars.githubusercontent.com/J3ffJessie",
+    alt: "Jeff | Jessie JavaScript Development brand logo “J3”",
     social_links: {
       github: "https://github.com/J3ffJessie",
       linkedin: "https://www.linkedin.com/in/j3ffjessie",
@@ -120,6 +129,7 @@ const Member = [
     name: "Alex",
     speciality: "Software Developer",
     image: "https://avatars.githubusercontent.com/aleksandar-trifunovic",
+    alt: "Alex | takes a selfie with a smile in his workspace",
     social_links: {
       github: "https://github.com/aleksandar-trifunovic",
       linkedin: "https://www.linkedin.com/in/aleksandar-trifunovic-rs/",
@@ -133,6 +143,7 @@ const Member = [
     name: "Ruman",
     speciality: "Software Developer",
     image: "https://avatars.githubusercontent.com/loop-infinity",
+    alt: "Ruman | represents by Github's default green pixelated  picture",
     social_links: {
       github: "https://github.com/loop-infinity",
       linkedin: "https://www.linkedin.com/in/ruman-mulla",
@@ -145,6 +156,7 @@ const Member = [
     name: "Thomas",
     speciality: "React Developer",
     image: "https://avatars.githubusercontent.com/fitzcodes",
+    alt: "Thomas | thinks with one hand on his chin in his workspace",
     social_links: {
       github: "https://github.com/fitzcodes",
       instagram: "https://www.instagram.com/fitzcodes/",
@@ -159,6 +171,7 @@ const Member = [
     name: "Amon",
     speciality: "Frontend web developer",
     image: "https://avatars.githubusercontent.com/u/64846892?v=4",
+    alt: "Amon | represented by Github's default red pixelated picture",
     social_links: {
       github: "https://github.com/A-amon",
 	  linkedin:"https://www.linkedin.com/in/wing-kuang-tan-933bb6226/"
@@ -173,6 +186,7 @@ const Member = [
     speciality: "Front-End Developer",
     image:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-zzhyevJYyVWIGKmoCU4Fn2tbuKJZgqDIGA&usqp=CAU",
+    alt: "Lokesh | represented by compressed javascript code",
     social_links: {
       github: "https://github.com/Lokesh-Rathore",
       linkedin: "https://www.linkedin.com/in/lokesh-rathore-6a661321a/",
@@ -186,6 +200,7 @@ const Member = [
     speciality: "Front-End Developer",
     image:
       "https://avatars.githubusercontent.com/u/76397123?s=400&u=706f68dcc2afa754355536114a15d3ce75280e43&v=4",
+    alt: "Ilyes | stands in a black t-shirt in blue background",
     social_links: {
       github: "https://github.com/ilyes-B-H-D",
       linkedin: "https://www.linkedin.com/in/ilyes-bhd-53a95021a/",
@@ -200,6 +215,7 @@ const Member = [
     name: "Angela",
     speciality: "Front-end Developer",
     image: "https://avatars.githubusercontent.com/u/41633886?v=4",
+    alt: "Angela | represented by a black and white animated girl",
     social_links: {
       github: "https://github.com/codekoya",
       linkedin: "https://www.linkedin.com/in/angela-nikolova-8a39601ab/",
@@ -213,6 +229,7 @@ const Member = [
     name: "Deepak",
     speciality: "Front-end Developer",
     image: "https://avatars.githubusercontent.com/u/5671550?v=4",
+    alt: "Deepak | takes a selfie in a blue t-shirt and denim cap in a nature background",
     social_links: {
       github: "https://github.com/Deepak8717",
     },
@@ -225,6 +242,7 @@ const Member = [
     speciality: "Front-End Developer",
     image:
       "https://avatars.githubusercontent.com/u/32130871?v=4",
+    alt: "Sulthan | smiles in a black shirt within a plain background",
     social_links: {
       github: "https://github.com/SulthanNK",
       twitter: "https://twitter.com/SulthanNK",
@@ -239,7 +257,7 @@ const Member = [
     name:"Sagi",
     speciality:"Computer Engineering Master's student",
     image:"https://avatars.githubusercontent.com/u/52858682?s=400&u=b16ad96afcb6625c7467800888e86e3d1cbc899b&v=4",
-
+    alt: "Sagi | looks in a white t-shirt with black colour framed spectacles",
     social_links:{
       github:"https://github.com/ratsagi",
       instagram:"https://www.instagram.com/sagi.rat/",
@@ -335,7 +353,7 @@ for (members of sortedMembers) {
                     </p>
 
                     <div class="image-wrapper">
-                      <img src=${members.image} alt="members profile image"/>
+                      <img src=${members.image} alt="${members.alt}"/>
                     </div>
 
                     <div class="details">
