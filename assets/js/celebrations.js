@@ -74,17 +74,17 @@ const markup = `
 
 <div class="card">
 
-    <div class="card-cover">
+    <span class="card-cover">
      “
-    </div>
+    </span>
 
     <div class="avatar">
         <img class="avatar-image" src= ${pickedUser.image} alt="${pickedUser.alt}"/>
     </div>
 
-    <div class="card-content">
+    <p class="card-content">
         ${pickedUser.celebration}
-    </div>
+    </p>
 
     <p class='card-text'> - ${pickedUser.fName} ${pickedUser.lName}</p>
 </div>
