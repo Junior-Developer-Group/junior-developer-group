@@ -62,6 +62,12 @@ body {
   margin-top: 60px;
   margin-bottom: 60px;
 }
+
+.team-card__category{
+	width:100%;
+	text-align: center;
+}
+
 .team-card {
   text-align:center;
   background-color: var(--dark-grey);

@@ -37,6 +37,10 @@
     text-decoration: none;
   }
 
+  .emoji-fix {
+    font-weight: 100;
+  }
+
   /****************************************/
   /******* DESKTOP NAVIGATION ************/
   /****************************************/
@@ -73,6 +77,12 @@
   .main-navigation--desktop .navigation-links {
     position: relative;
     right: 40px;
+  }
+
+  .about-us_faq_answers {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px;
   }
 
   .main-navigation--desktop .navigation-links a {
@@ -680,14 +690,14 @@
     font-family: Open Sans;
     font-style: normal;
     font-weight: bold;
-    font-size: 9px;
+    font-size: 14px;
     line-height: 25px;
 
     letter-spacing: 0.2em;
 
     color: var(--pure-white);
 
-    width: 110px;
+    width: 150px;
     height: 24px;
     display: flex;
     justify-content: center;
