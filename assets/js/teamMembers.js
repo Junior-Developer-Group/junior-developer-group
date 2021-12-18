@@ -24,6 +24,7 @@ const Member = [
     speciality: "Front-end development, designing for accessibility",
     image: "https://idealkoala.files.wordpress.com/2021/01/img-1064-copy.jpg",
     social_links: { github: "https://github.com/onlyasmalllizard" },
+    location: "gb"
   },
 
   {
@@ -49,6 +50,7 @@ const Member = [
       facebook: "https://www.facebook.com/urielofir86/",
       linkedin: "https://www.linkedin.com/in/uriel-ofir/",
     },
+    location: "il"
   },
 
   {
@@ -63,6 +65,7 @@ const Member = [
       linkedin: "https://www.linkedin.com/in/frannyfra/",
     },
     contact: "http://francesca-de-laurentis.com/",
+    location: "gb"
   },
 
   {
@@ -102,6 +105,7 @@ const Member = [
     social_links: {
       github: "https://github.com/Alegarciy",
     },
+    location: "cr"
   },
 
   {
@@ -129,6 +133,7 @@ const Member = [
       linkedin: "https://www.linkedin.com/in/aleksandar-trifunovic-rs/",
       twitter: "https://twitter.com/alex_javadev",
     },
+    location: "ba"
   },
 
   {
@@ -140,7 +145,6 @@ const Member = [
     social_links: {
       github: "https://github.com/loop-infinity",
       linkedin: "https://www.linkedin.com/in/ruman-mulla",
-      //Go to https://flagcdn.com/en/codes.json and find your respective country code.
     },
     location: "gb" 
   },
@@ -210,6 +214,7 @@ const Member = [
       linkedin: "https://www.linkedin.com/in/angela-nikolova-8a39601ab/",
       codepen: "https://codepen.io/codekoya",
     },
+    location: "mk"
   },
   {
     about:
@@ -235,6 +240,7 @@ const Member = [
       linkedin: "https://www.linkedin.com/in/sulthannk/",
     },
     contact: "https://sulthannk.me/",
+    location: "in"
   },
 ];
 
