@@ -1,3 +1,4 @@
+//Go to https://flagcdn.com/en/codes.json and find your respective country code.
 const Member = [
   {
     about:
@@ -14,6 +15,7 @@ const Member = [
       linkedin: "https://linkedin.com/in/matea-howard",
     },
     contact: "https://likiipedia.com/",
+    location: "gb"
   },
 
   {
@@ -24,6 +26,7 @@ const Member = [
     image: "https://idealkoala.files.wordpress.com/2021/01/img-1064-copy.jpg",
     alt: "Lizard | white mouse on the shoulder in a black t-shirt",
     social_links: { github: "https://github.com/onlyasmalllizard" },
+    location: "gb"
   },
 
   {
@@ -37,6 +40,7 @@ const Member = [
       linkedin: "https://linkedin.com/in/denice-soper",
     },
     contact: "",
+    location: "gb"
   },
 
   {
@@ -51,6 +55,7 @@ const Member = [
       facebook: "https://www.facebook.com/urielofir86/",
       linkedin: "https://www.linkedin.com/in/uriel-ofir/",
     },
+    location: "il"
   },
 
   {
@@ -66,6 +71,7 @@ const Member = [
       linkedin: "https://www.linkedin.com/in/frannyfra/",
     },
     contact: "http://francesca-de-laurentis.com/",
+    location: "gb"
   },
 
   {
@@ -95,6 +101,7 @@ const Member = [
     social_links: {
       github: "https://github.com/john-fowle/",
     },
+    location: "us"
   },
 
   {
@@ -107,6 +114,7 @@ const Member = [
     social_links: {
       github: "https://github.com/Alegarciy",
     },
+    location: "cr"
   },
 
   {
@@ -121,6 +129,7 @@ const Member = [
       linkedin: "https://www.linkedin.com/in/j3ffjessie",
       twitter: "https://www.twitter.com/j3ffjessie",
     },
+    location: "us"
   },
 
   {
@@ -135,6 +144,7 @@ const Member = [
       linkedin: "https://www.linkedin.com/in/aleksandar-trifunovic-rs/",
       twitter: "https://twitter.com/alex_javadev",
     },
+    location: "ba"
   },
 
   {
@@ -148,6 +158,7 @@ const Member = [
       github: "https://github.com/loop-infinity",
       linkedin: "https://www.linkedin.com/in/ruman-mulla",
     },
+    location: "gb" 
   },
 
   {
@@ -164,6 +175,7 @@ const Member = [
       linkedin: "https://www.linkedin.com/in/thomas-fitzgerald-fitzcodes/",
     },
     contact: "https://fitzcodes.github.io/",
+    location: "us"
   },
 
   {
@@ -177,6 +189,7 @@ const Member = [
 	  linkedin:"https://www.linkedin.com/in/wing-kuang-tan-933bb6226/"
     },
     contact: "https://github.com/A-amon",
+    location: "my"
   },
 
   {
@@ -221,6 +234,7 @@ const Member = [
       linkedin: "https://www.linkedin.com/in/angela-nikolova-8a39601ab/",
       codepen: "https://codepen.io/codekoya",
     },
+    location: "mk"
   },
 
   {
@@ -249,6 +263,7 @@ const Member = [
       linkedin: "https://www.linkedin.com/in/sulthannk/",
     },
     contact: "https://sulthannk.me/",
+    location: "in"
   },
 
   {
@@ -263,7 +278,8 @@ const Member = [
       instagram:"https://www.instagram.com/sagi.rat/",
       twitter:"https://twitter.com/Sagi31758105",
       linkedin:"https://www.linkedin.com/in/sagirat/"
-    }
+    },
+    location: "kz"
   },
 ];
 
@@ -357,7 +373,29 @@ for (members of sortedMembers) {
                     </div>
 
                     <div class="details">
-                      <h3> ${members.name} <br />
+                      <h2> ${members.name} 
+                      ${
+                        members.location 
+                        ? `<span>
+                              <img
+                              src="https://flagcdn.com/48x36/${members.location}.png"
+                              width="17"
+                              height="13"
+                              alt="${members.location}-flag">
+                          </span>
+                          ${
+                            members.willingToRelocate 
+                            ? `<br>
+                              <span class="willing-to-relocate-tag">
+                                Willing To Relocate
+                              </span>`
+                            : ""
+                          }
+                         
+                          `
+                        : ""
+                      } 
+                       <br />
                         <span> ${members.speciality}</span>
                       </h3>
                       
