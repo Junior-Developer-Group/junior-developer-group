@@ -65,6 +65,7 @@ summary strong {
     justify-content: center;
     padding: 20px;
     max-width: 600px;
+    height: 450px;
 }
 
 
@@ -88,7 +89,18 @@ summary strong {
 
     .about-us-wrapper .about-us__text {
         margin-bottom: 60px;
-        max-width: 300px;
+        max-width: 80%;
+        height: 100%;
+    }
+
+    .about-us__image {
+        display: flex;
+        justify-content: center;
+    }
+
+    .about-us__image img {
+        height: 80%;
+        width: 80%;
     }
 }
 .socialMedia__discord{
