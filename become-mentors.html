@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO SETTINGS FOR GOOGLE-->
+    <meta name="author" content="Junior Developer Group" />
+    <meta
+      name="description"
+      content="Want to share your skills and experiences with a group of likeminded individuals eager to learn? We'd love to have you!"
+    />
+
+    <!-- SEO SETTINGS FOR WHEN WEBSITE URL IS SHARED -->
+    <meta
+      name="og:title"
+      property="og:title"
+      content="Junior Developer Group | Mentor Request Form"
+    />
+    <meta
+      property="og:description"
+      content="Want to share your skills and experiences with a group of likeminded individuals eager to learn? We'd love to have you!"
+    />
+    <meta
+      property="og:image"
+      content="assets/website-images/logo-with-background.png"
+    />
+
+    <!-- WEBSITE TITLE-->
+    <title>Junior Developer Group | Mentors & Team Leads </title>
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/jpg" href="/assets/images/favicon.ico" />
+
+    <!-- CSS STYLESHEET -- TEAM PAGE -->
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/forms.css" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <navbar-component></navbar-component>
+
+        <!-- HEADER SECTION -->
+        <section class="hero_header">
+            <div class="hero_header-information">
+              <h1>Mentors and Team Leads </h1>
+                
+                <p> 
+                  You must have stumbled across this page to find out more about becoming a mentor or a 
+                  team lead for Junior Developer Group - and we're super happy you're here! 
+                </p>
+
+                <p>
+                    Our mentors and team leads support everyone's growth trough scheduled talks, workshops,
+                    events and projects they lead. They also help by answering questions and sharing their experiences
+                    which often easeas our worries and helps us make the right decisions.
+
+                </p>
+
+                <p>
+                    If that sounds like something you'd like to do, please fill out the 
+                    form below and Likii will get back to you as soon as she can <span class="emoji-fix">🤗</span>
+                </p>
+      
+
+            </div>
+            <div class="hero_header-logo">
+              <img src="./assets/images/website-images/logo-with-background.png"  alt="Junior Developer Group Logo | A butterfly with a blue and a purple wing"/> 
+            </div>
+        </section>
+
+        <!--- MENTOR FORM -->
+        <section class="mentor-form-wrapper">
+            <form class="mentor-form" action="https://formspree.io/f/xjvlkrpb" method="POST">
+                
+                <label for="Name"> Your Name:</label>
+                <input type="text" name="Name" id="name" aria-required="true" required placeholder="e.g John (he/him)" autocomplete="name">
+
+                <label for="Email"> Your Email:</label>
+                <input type="text" name="Email" id="email" aria-required="true" required placeholder="e.g john@gmail.com" autocomplete="email">
+
+                <label for="Role"> Your current role: </label>
+                <input type="text" name="Role" id="role" aria-required="true" required placeholder="e.g React Developer" autocomplete="off">
+
+                <label for="finding-us"> How did you find out about our group? </label>
+                <input type="text" name="finding-us" id="finding-us" aria-required="true" required placeholder="e.g Twitter" autocomplete="off">
+
+                <label for="Message"> How would you like to be involved? </label>
+                <textarea name="Message" id="message" aria-required="true" required rows="8" cols="50" placeholder="e.g I'd like to run a project using react"></textarea>
+
+                <button type="submit">Submit</button>
+
+            </form>
+        </section>
+
+    <footer-component></footer-component>
+    <gdpr-component></gdpr-component>
+  </body>
+
+  <!-- SCRIPTS -->
+  <script src="./assets/js/homepage-scripts.js"></script>
+
+
+  <!-- COMPONENTS -->
+  <script
+    src="../assets/js/components/component-map.js"
+    type="module"
+    defer
+  ></script>
+
+   <!-- GOOGLE ANALYTICS -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-E7KQ4C9DKP");
+  </script>
+</html>
