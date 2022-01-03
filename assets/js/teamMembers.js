@@ -15,7 +15,7 @@ const Member = [
       linkedin: "https://linkedin.com/in/matea-howard",
     },
     contact: "https://likiipedia.com/",
-    location: "gb"
+    location: "gb",
   },
 
   {
@@ -397,7 +397,13 @@ for (members of sortedMembers) {
                       } 
                        <br />
                         <span> ${members.speciality}</span>
-                      </h3>
+                      </h2>
+                      <div class="lookingForWork">
+                      ${members.lookingForWork
+                          ? `<i class="fas fa-search-dollar fa-2x"></i>`
+                          : ""
+                      }
+                    </div>
                       
                     <div class="social_links">
                       ${
