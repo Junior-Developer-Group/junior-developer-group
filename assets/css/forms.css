@@ -120,3 +120,51 @@ button:hover {
     width: 80%;
   }
 }
+
+/****************/
+/* CONTACT FORM */
+/****************/
+
+.contact__main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  margin: 8rem 6rem 4rem;
+  padding: 1rem;
+}
+
+.header__image {
+  height: 250px;
+  width: 250px;
+}
+
+.header__description {
+  display: grid;
+  justify-items: center;
+}
+
+.header__description p {
+  padding: 0 5rem;
+  text-align: justify;
+}
+
+.contact__header,
+.contact__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact__header {
+  align-items: center;
+}
+
+.contact__form > label {
+  margin: 5px 0;
+  color: var(--purple);
+  font-weight: 800;
+}
+
+.contact__form > input,
+textarea {
+  margin-bottom: 8px;
+}

@@ -15,7 +15,9 @@
       property="og:title"
       content="Junior Developer Group | Mentor Request Form"
     />
+
     <meta property="og:description" content="" />
+
     <meta
       property="og:image"
       content="assets/website-images/logo-with-background.png"
@@ -35,16 +37,83 @@
   <body>
     <navbar-component></navbar-component>
 
+    <main class="contact__main">
+      <section class="contact__header-wrapper">
+        <div class="contact__header">
+          <div class="image__holder">
+            <img
+              class="header__image"
+              src="/assets/images/website-images/logo-with-background.png"
+              alt="Junior Developer Group Logo | A butterfly with a blue and a purple wing"
+            />
+          </div>
+
+          <div class="header__description">
+            <h1>Want to talk with us?</h1>
+
+            <p>
+              Always humans, never bots. Our admin team is always happy to
+              answer your queries. Please fill out the form below and we'll get
+              in touch shortly.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact__form-wrapper">
+        <form
+          class="contact__form"
+          action="https://formspree.io/f/mayvnjln"
+          method="POST"
+        >
+          <label for="Name">Name:</label>
+          <input
+            type="text"
+            name="Name"
+            id="name"
+            aria-required="true"
+            required
+            placeholder="e.g John Doe"
+            autocomplete="name"
+          />
+
+          <label for="Email">Email:</label>
+          <input
+            type="text"
+            name="Email"
+            id="email"
+            aria-required="true"
+            required
+            placeholder="e.g johndoe@email.com"
+            autocomplete="email"
+          />
+
+          <label for="Message">Message:</label>
+          <textarea
+            name="Message"
+            id="message"
+            aria-required="true"
+            required
+            rows="8"
+            cols="50"
+            placeholder="e.g I would like to ask you..."
+          ></textarea>
+
+          <button type="submit">Submit</button>
+        </form>
+      </section>
+    </main>
+
     <footer-component></footer-component>
     <gdpr-component></gdpr-component>
   </body>
 
   <!-- SCRIPTS -->
-  <script src="/assets/js/homepage-scripts.js"></script>
+  <script src="../assets/js/homepage-scripts.js"></script>
 
   <!-- COMPONENTS -->
   <script
-    src="/assets/js/components/component-map.js"
+    src="../assets/js/components/component-map.js"
     type="module"
     defer
   ></script>
