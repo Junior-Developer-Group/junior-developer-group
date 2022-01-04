@@ -30,9 +30,9 @@ const Member = [
   },
 
   {
-    about: "I’m a Junior developer, working with Javascript, Node and Express",
+    about: "I’m a Junior developer, currently working with Javascript, React, Sql and Perl",
     name: "Denice",
-    speciality: "Junior developer",
+    speciality: "Software Developer",
     image: "https://github.com/Denice-S.png",
     alt: "Denice | smiles with black colour framed spectacles",
     social_links: {
@@ -234,7 +234,8 @@ const Member = [
       linkedin: "https://www.linkedin.com/in/angela-nikolova-8a39601ab/",
       codepen: "https://codepen.io/codekoya",
     },
-    location: "mk"
+    location: "mk",
+    lookingForWork:"Yes"
   },
 
   {
@@ -263,7 +264,8 @@ const Member = [
       linkedin: "https://www.linkedin.com/in/sulthannk/",
     },
     contact: "https://sulthannk.me/",
-    location: "in"
+    location: "in",
+    lookingForWork:"Yes"
   },
 
   {
@@ -279,7 +281,8 @@ const Member = [
       twitter:"https://twitter.com/Sagi31758105",
       linkedin:"https://www.linkedin.com/in/sagirat/"
     },
-    location: "kz"
+    location: "kz",
+    lookingForWork:"Yes"
   },
 ];
 
