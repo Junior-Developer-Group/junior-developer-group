@@ -12,7 +12,7 @@
   --yellow: #ffc22b;
   --pure-white: #ffff;
   --grey: rgba(0, 0, 0, 0.6);
-  --light-grey: #6E798C;
+  --light-grey: #6e798c;
   --dark: #21243d;
 }
 
@@ -41,76 +41,78 @@ a {
   font-weight: 100;
 }
 
-input, textarea {
-    margin-bottom: 30px;
-    text-indent: 10px;
-    border-radius: 6px;
-    border-color: grey;
-    background-color: white;
-    border: 1px solid;
-    outline:none;
+input,
+textarea {
+  margin-bottom: 30px;
+  text-indent: 10px;
+  border-radius: 6px;
+  border-color: grey;
+  background-color: white;
+  border: 1px solid;
+  outline: none;
 }
 
 input {
-    height: 45px;
+  height: 45px;
 }
 
-input:focus-visible, textarea:focus-visible {
+input:focus-visible,
+textarea:focus-visible {
   border: 2px solid #fc5b5b;
-  outline:none;
+  outline: none;
 }
 
 label {
-    font-size: 20px;
-    color: var( --purple);
-    font-weight: bold;
-    margin-bottom: 5px;
+  font-size: 20px;
+  color: var(--purple);
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
 form button {
-    background: var(--purple);
-    border-radius: 4px;
-    font-family: Open Sans;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 17px;
-    line-height: 25px;
+  background: var(--purple);
+  border-radius: 4px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 25px;
 
-    text-align: center;
-    letter-spacing: 0.2em;
+  text-align: center;
+  letter-spacing: 0.2em;
 
-    color: #FFFFFF;
-    padding: 15px 20px;
+  color: #ffffff;
+  padding: 15px 20px;
 
-    margin-top: 20px;
+  margin-top: 20px;
 
-    display: flex;
-    align-self: center;
-    justify-self: center;
+  display: flex;
+  align-self: center;
+  justify-self: center;
 }
 
 button:hover {
-    background: var(--yellow);
-    color: var(--dark);
-  }
+  background: var(--yellow);
+  color: var(--dark);
+}
 
 /****************/
 /* MENTOR FORM */
 /****************/
 
 .mentor-form-wrapper {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 
-    position: relative;
-    top: 90px;
-    height: 900px;
+  position: relative;
+  top: 90px;
+  height: 900px;
 }
 
 .mentor-form {
-    display: flex;
-    flex-direction: column;
-    width: 60%;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
 }
 
 @media (max-width: 500px) {
