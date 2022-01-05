@@ -15,7 +15,7 @@ const Member = [
       linkedin: "https://linkedin.com/in/matea-howard",
     },
     contact: "https://likiipedia.com/",
-    location: "gb"
+    location: "gb",
   },
 
   {
@@ -30,9 +30,9 @@ const Member = [
   },
 
   {
-    about: "I’m a Junior developer, working with Javascript, Node and Express",
+    about: "I’m a Junior developer, currently working with Javascript, React, Sql and Perl",
     name: "Denice",
-    speciality: "Junior developer",
+    speciality: "Software Developer",
     image: "https://github.com/Denice-S.png",
     alt: "Denice | smiles with black colour framed spectacles",
     social_links: {
@@ -234,7 +234,8 @@ const Member = [
       linkedin: "https://www.linkedin.com/in/angela-nikolova-8a39601ab/",
       codepen: "https://codepen.io/codekoya",
     },
-    location: "mk"
+    location: "mk",
+    lookingForWork:"Yes"
   },
 
   {
@@ -263,7 +264,8 @@ const Member = [
       linkedin: "https://www.linkedin.com/in/sulthannk/",
     },
     contact: "https://sulthannk.me/",
-    location: "in"
+    location: "in",
+    lookingForWork:"Yes"
   },
 
   {
@@ -279,7 +281,8 @@ const Member = [
       twitter:"https://twitter.com/Sagi31758105",
       linkedin:"https://www.linkedin.com/in/sagirat/"
     },
-    location: "kz"
+    location: "kz",
+    lookingForWork:"Yes"
   },
 ];
 
@@ -397,7 +400,13 @@ for (members of sortedMembers) {
                       } 
                        <br />
                         <span> ${members.speciality}</span>
-                      </h3>
+                      </h2>
+                      <div class="lookingForWork">
+                      ${members.lookingForWork
+                          ? `<i class="fas fa-search-dollar fa-2x"></i>`
+                          : ""
+                      }
+                    </div>
                       
                     <div class="social_links">
                       ${
