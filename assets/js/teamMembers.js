@@ -284,88 +284,105 @@ const Member = [
     location: "kz",
     lookingForWork:"Yes"
   },
+  {
+   about: "Hi, I'm Ibrahim, a Junior Full-Stack Developer from Nigeria using React and Node.js. I use frameworks like TailwindCSS for styling, GatbsyJS and NextJS.",
+   name: 'Ibrahim',
+   speciality: 'Full-Stack Developer',
+   image: 'https://avatars.githubusercontent.com/u/49033033?v=4',
+   alt: 'Ibrahim | stands in a black t-shirt',
+   social_links: {
+      github: 'httpshttps://github.com/CyberDevv',
+      twitter: 'https://twitter.com/CyberDevv',
+      linkedin: 'https://www.linkedin.com/in/odesolaibrahim/',
+   },
+   contact: 'https://ibrahim-odesola.netlify.app/',
+   location: 'ng',
+ },
 ];
 
 const categories = {
-	//ADMIN TEAM
-	"Likii":"admin",
-	"Denice":"admin",
-	"John":"admin",
-	"Ruman":"admin",
-	"Oghenekparobo":"admin",
-	"Thomas":"admin",
-	"Jeff 👋":"admin",
+   //ADMIN TEAM
+   Likii: 'admin',
+   Denice: 'admin',
+   John: 'admin',
+   Ruman: 'admin',
+   Oghenekparobo: 'admin',
+   Thomas: 'admin',
+   'Jeff 👋': 'admin',
 
-	//PREV COHORTS
-	"Lizard":"prev",
-	"Uriel":"prev",
-	"Francesca":"prev",
-	"Alejandro 🙋‍♂️":"prev",
-  "Deepak":"prev",
-}
+   //PREV COHORTS
+   Lizard: 'prev',
+   Uriel: 'prev',
+   Francesca: 'prev',
+   'Alejandro 🙋‍♂️': 'prev',
+   Deepak: 'prev',
+};
 
 /**
  * Assign category to every member
  * "active" if not "admin" and "prev"
  */
-const categorizedMembers = Member.map(member => {
-	const category = categories[member.name]
-	member.category = category ? category:"active"
-	return member
-})
+const categorizedMembers = Member.map((member) => {
+   const category = categories[member.name];
+   member.category = category ? category : 'active';
+   return member;
+});
 
 /**
  * Sort by category
  * In order: Admin, Active, (Previous Cohorts & Inactive)
  */
-let sortedMembers = categorizedMembers.sort(({category:firstCategory}, {category:secondCategory})=>{
-	if(firstCategory === secondCategory){
-		return 0
-	}
-	else if(secondCategory === "admin"){
-		return 1
-	}
-	else if(secondCategory === "prev" || (secondCategory === "active" && firstCategory === "admin")){
-		return -1
-	}
+let sortedMembers = categorizedMembers.sort(
+   ({ category: firstCategory }, { category: secondCategory }) => {
+      if (firstCategory === secondCategory) {
+         return 0;
+      } else if (secondCategory === 'admin') {
+         return 1;
+      } else if (
+         secondCategory === 'prev' ||
+         (secondCategory === 'active' && firstCategory === 'admin')
+      ) {
+         return -1;
+      }
 
-	return 0
-})
+      return 0;
+   }
+);
 
 /**
  * Sort by category - Continue
  * In order: Admin, Active, Inactive, Previous Cohorts
  */
-sortedMembers = sortedMembers.sort(({category:firstCategory}, {category:secondCategory}) => {
-	if(firstCategory === secondCategory){
-		return 0
-	}
-	else if(firstCategory === "inactive" && secondCategory === "prev"){
-		return -1
-	}
+sortedMembers = sortedMembers.sort(
+   ({ category: firstCategory }, { category: secondCategory }) => {
+      if (firstCategory === secondCategory) {
+         return 0;
+      } else if (firstCategory === 'inactive' && secondCategory === 'prev') {
+         return -1;
+      }
 
-	return 0
-})
+      return 0;
+   }
+);
 
-const cardWrapper = document.querySelector(".team-card-wrapper")
-let currentCategory = "";
+const cardWrapper = document.querySelector('.team-card-wrapper');
+let currentCategory = '';
 
 for (members of sortedMembers) {
-	const memberCategory = members.category
-	let category = "Admin Team"
-	if(memberCategory === "active"){
-		category = "Active Members"
-	}
+   const memberCategory = members.category;
+   let category = 'Admin Team';
+   if (memberCategory === 'active') {
+      category = 'Active Members';
+   } else if (memberCategory === 'prev') {
+      category = 'Previous Cohorts';
+   }
 
-	else if(memberCategory === "prev"){
-		category = "Previous Cohorts"
-	}
-	
-	//Show category heading if enter new category list
-	(currentCategory != memberCategory) && (cardWrapper.innerHTML += `<h2 class="team-card__category">${category}</h2>`)
-	currentCategory = memberCategory
+   //Show category heading if enter new category list
+   currentCategory != memberCategory &&
+      (cardWrapper.innerHTML += `<h2 class="team-card__category">${category}</h2>`);
+   currentCategory = memberCategory;
 
-  	const team_member = `
+   const team_member = `
                 <div class="team-card">
                     <p>
                       ${members.about}
@@ -378,25 +395,27 @@ for (members of sortedMembers) {
                     <div class="details">
                       <h2> ${members.name} 
                       ${
-                        members.location 
-                        ? `<span>
+                         members.location
+                            ? `<span>
                               <img
-                              src="https://flagcdn.com/48x36/${members.location}.png"
+                              src="https://flagcdn.com/48x36/${
+                                 members.location
+                              }.png"
                               width="17"
                               height="13"
                               alt="${members.location}-flag">
                           </span>
                           ${
-                            members.willingToRelocate 
-                            ? `<br>
+                             members.willingToRelocate
+                                ? `<br>
                               <span class="willing-to-relocate-tag">
                                 Willing To Relocate
                               </span>`
-                            : ""
+                                : ''
                           }
                          
                           `
-                        : ""
+                            : ''
                       } 
                        <br />
                         <span> ${members.speciality}</span>
@@ -410,39 +429,39 @@ for (members of sortedMembers) {
                       
                     <div class="social_links">
                       ${
-                        members.social_links.github
-                          ? `<span><a href= "${members.social_links.github}" aria-label="github"<i class="fab fa-github fa-2x"></i></a></span>`
-                          : ""
+                         members.social_links.github
+                            ? `<span><a href= "${members.social_links.github}" aria-label="github"<i class="fab fa-github fa-2x"></i></a></span>`
+                            : ''
                       }
                       ${
-                        members.social_links.instagram
-                          ? `<span><a href= "${members.social_links.instagram}" aria-label="instagram"<i class="fab fa-instagram fa-2x"></i></a></span>`
-                          : ""
+                         members.social_links.instagram
+                            ? `<span><a href= "${members.social_links.instagram}" aria-label="instagram"<i class="fab fa-instagram fa-2x"></i></a></span>`
+                            : ''
                       }
                       ${
-                        members.social_links.facebook
-                          ? `<span><a href= "${members.social_links.facebook}"aria-label="facebook" <i class="fab fa-facebook fa-2x"></i></a></span>`
-                          : ""
+                         members.social_links.facebook
+                            ? `<span><a href= "${members.social_links.facebook}"aria-label="facebook" <i class="fab fa-facebook fa-2x"></i></a></span>`
+                            : ''
                       }                    
                       ${
-                        members.social_links.twitter
-                          ? `<span><a href= "${members.social_links.twitter}"aria-label="Twitter"<i class="fab fa-twitter fa-2x"></i></a></span>`
-                          : ""
+                         members.social_links.twitter
+                            ? `<span><a href= "${members.social_links.twitter}"aria-label="Twitter"<i class="fab fa-twitter fa-2x"></i></a></span>`
+                            : ''
                       }
                       ${
-                        members.social_links.linkedin
-                          ? `<span><a href= "${members.social_links.linkedin}"aria-label="linkedin"<i class="fab fa-linkedin fa-2x"></i></a></span>`
-                          : ""
+                         members.social_links.linkedin
+                            ? `<span><a href= "${members.social_links.linkedin}"aria-label="linkedin"<i class="fab fa-linkedin fa-2x"></i></a></span>`
+                            : ''
                       }
                     </div>
                     <div class="contact-team-member">
                       ${
-                        members.contact
-                          ? `<a href="${members.contact}"> Find out more 🖱️ </a`
-                          : ""
+                         members.contact
+                            ? `<a href="${members.contact}"> Find out more 🖱️ </a`
+                            : ''
                       }
                     </div>
                 </div>`;
 
-  	cardWrapper.innerHTML += team_member;
+   cardWrapper.innerHTML += team_member;
 }
