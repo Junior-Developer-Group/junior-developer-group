@@ -49,9 +49,9 @@
           </div>
 
           <div class="header__description">
-            <h1>Want to talk with us?</h1>
+            <h1 class="description__title">Want to talk with us?</h1>
 
-            <p>
+            <p class="description__paragraph">
               Always humans, never bots. Our admin team is always happy to
               answer your queries. Please fill out the form below and we'll get
               in touch shortly.
@@ -66,8 +66,9 @@
           action="https://formspree.io/f/mayvnjln"
           method="POST"
         >
-          <label for="Name">Name:</label>
+          <label class="form__label" for="Name">Name:</label>
           <input
+            class="form__input"
             type="text"
             name="Name"
             id="name"
@@ -77,8 +78,9 @@
             autocomplete="name"
           />
 
-          <label for="Email">Email:</label>
+          <label class="form__label" for="Email">Email:</label>
           <input
+            class="form__input"
             type="text"
             name="Email"
             id="email"
@@ -88,8 +90,9 @@
             autocomplete="email"
           />
 
-          <label for="Message">Message:</label>
+          <label class="form__label" for="Message">Message:</label>
           <textarea
+            class="form__text"
             name="Message"
             id="message"
             aria-required="true"
@@ -99,7 +102,7 @@
             placeholder="e.g I would like to ask you..."
           ></textarea>
 
-          <button type="submit">Submit</button>
+          <button class="form__button" type="submit">Submit</button>
         </form>
       </section>
     </main>
@@ -109,7 +112,7 @@
   </body>
 
   <!-- SCRIPTS -->
-  <script src="../assets/js/homepage-scripts.js"></script>
+  <script src="./assets/js/homepage-scripts.js"></script>
 
   <!-- COMPONENTS -->
   <script

@@ -134,8 +134,8 @@ button:hover {
 }
 
 .header__image {
-  height: 250px;
-  width: 250px;
+  height: 210px;
+  width: 210px;
 }
 
 .header__description {
@@ -143,9 +143,18 @@ button:hover {
   justify-items: center;
 }
 
-.header__description p {
-  padding: 0 5rem;
+.description__title {
+  font-size: 20px;
+}
+
+.description__paragraph {
+  font-size: 15px;
+  padding: 0 3rem;
   text-align: justify;
+}
+
+.contact__form-wrapper {
+  margin: 25px 0;
 }
 
 .contact__header,
@@ -158,13 +167,26 @@ button:hover {
   align-items: center;
 }
 
-.contact__form > label {
+.form__label {
   margin: 5px 0;
   color: var(--purple);
   font-weight: 800;
+  font-size: 15px;
 }
 
-.contact__form > input,
-textarea {
+.form__input {
   margin-bottom: 8px;
+  height: 35px;
+}
+
+.form__text {
+  margin-bottom: 8px;
+  height: 90px;
+}
+
+.form__button {
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 20px;
+  padding: 10px 30px;
 }
