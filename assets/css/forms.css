@@ -190,3 +190,24 @@ button:hover {
   line-height: 20px;
   padding: 10px 30px;
 }
+
+@media (max-width: 768px) {
+  .contact__main {
+    display: grid;
+    grid-template-columns: none;
+    grid-template-rows: repeat(2, 1fr);
+    margin: 0;
+  }
+
+  .description__paragraph {
+    padding: 0 7rem;
+  }
+
+  .contact__header-wrapper {
+    margin-top: 4rem;
+  }
+
+  .contact__form-wrapper {
+    margin: 0;
+  }
+}
