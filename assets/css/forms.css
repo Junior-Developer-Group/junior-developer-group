@@ -211,3 +211,36 @@ button:hover {
     margin: 0;
   }
 }
+
+@media (max-width: 426px) {
+  .contact__main {
+    margin: 0;
+  }
+
+  .header__image {
+    height: 150px;
+    width: 150px;
+  }
+
+  .description__title {
+    font-size: 15px;
+  }
+
+  .description__paragraph {
+    font-size: 13px;
+    padding: 0px 3rem;
+  }
+
+  .contact__form-wrapper {
+    margin: 0;
+  }
+
+  .form__label,
+  .form__input,
+  .form__text {
+    width: 260px;
+  }
+  .form__button {
+    padding: 8px 24px;
+  }
+}
