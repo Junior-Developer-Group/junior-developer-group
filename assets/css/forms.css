@@ -244,3 +244,13 @@ button:hover {
     padding: 8px 24px;
   }
 }
+
+@media (max-width: 320px) {
+  .description__paragraph {
+    padding: 0px 2rem;
+  }
+
+  .contact__form-wrapper {
+    margin: 0;
+  }
+}
