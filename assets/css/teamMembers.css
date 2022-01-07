@@ -14,15 +14,14 @@
   --grey: rgba(0, 0, 0, 0.6);
   --light-grey: #6E798C;
   --dark: #21243d;
+  --light-purple:#8c47d6;
 }
 
 body {
   max-width: 1400px;
   margin: 0 auto;
-
   font-family: 'Heebo', sans-serif;
   background: var(--pure-white);
-
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -32,11 +31,8 @@ body {
 .team-header{
   margin:1.5em 1.5em;
   text-align:center;
-
-  
   position: relative;
   top: 60px;
-
   margin-bottom: 30px;
 
 }
@@ -102,10 +98,11 @@ body {
   font-size: 1em;
   color: var(--dark);
   height: 120px;
+  
 }
 .team-card h2 {
   font-size: 1.125em;
-  padding-bottom:1.25em;
+  padding-bottom:1em;
   color: var(--dark);
 }
 .team-card span {
@@ -119,7 +116,7 @@ body {
 }
 
 .team-card .details {
-    height: 180px;
+  height: 180px;
 }
 .team-card .details .social_links span {
   padding-top: 2.5em;
@@ -138,7 +135,7 @@ body {
 
 }
 .contact-team-member {
-  margin-top: 60px;
+  margin-top: 20px;
   font-weight: bold;
   letter-spacing: 2px;
   color:var(--dark);
@@ -164,11 +161,35 @@ body {
 }
 
 .team-card .details .willing-to-relocate-tag{
-  color: white;
-  background-color: #4BB543;
+  color: var(--white);
+  background-color: var(--light-purple);
   border-radius: 5px;
   padding-left: 5px;
   padding-right: 5px;
 
 }
 
+.lookingForWork {
+  position: relative;
+  display: inline-block;
+}
+
+.lookingForWork i{
+  color:var(--light-purple);
+  padding-bottom:0.2em;
+}
+
+.lookingForWork:hover:after {
+  content: " Hi, Im looking for work, please contact me via the links below. ";
+  position: absolute;
+  font-size:0.8em;
+  z-index: 1;
+  border-radius: 0.375em;
+  width: 7.5em;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5em;
+  padding:1.2em;
+  background-color: var(--dark);
+  color: var(--white);
+}
