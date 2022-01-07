@@ -134,6 +134,7 @@ button:hover {
   justify-items: center;
   margin: 8rem 6rem 4rem;
   padding: 1rem;
+  min-height: 600px;
 }
 
 .header__image {
