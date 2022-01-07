@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO SETTINGS FOR GOOGLE-->
+    <meta name="author" content="Junior Developer Group" />
+    <meta
+      name="description"
+      content="Want to talk with us? Just fill the form with any questions, concerns, and feedback. We'd love to hear from you!!!"
+    />
+
+    <!-- SEO SETTINGS FOR WHEN WEBSITE URL IS SHARED -->
+    <meta
+      name="og:title"
+      property="og:title"
+      content="Junior Developer Group | Mentor Request Form"
+    />
+
+    <meta
+      property="og:description"
+      content="Want to talk with us? Just fill the form with any questions, concerns, and feedback. We'd love to hear from you!!!"
+    />
+
+    <meta
+      property="og:image"
+      content="assets/website-images/logo-with-background.png"
+    />
+
+    <!-- WEBSITE TITLE-->
+    <title>Junior Developer Group | Contact</title>
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/jpg" href="/assets/images/favicon.ico" />
+
+    <!-- CSS STYLESHEET -- TEAM PAGE -->
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/css/forms.css" />
+  </head>
+
+  <body>
+    <navbar-component></navbar-component>
+
+    <main class="contact__main">
+      <section class="contact__header-wrapper">
+        <div class="contact__header">
+          <div class="image__holder">
+            <img
+              class="header__image"
+              src="/assets/images/website-images/logo-with-background.png"
+              alt="Junior Developer Group Logo | A butterfly with a blue and a purple wing"
+            />
+          </div>
+
+          <div class="header__description">
+            <h1 class="description__title">Want to talk with us?</h1>
+
+            <p class="description__paragraph">
+              Always humans, never bots. Our admin team is always happy to
+              answer your queries. Please fill out the form below and we'll get
+              in touch shortly.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact__form-wrapper">
+        <form
+          class="contact__form"
+          action="https://formspree.io/f/mayvnjln"
+          method="POST"
+        >
+          <label class="form__label" for="Name">Name:</label>
+          <input
+            class="form__input"
+            type="text"
+            name="Name"
+            id="name"
+            aria-required="true"
+            required
+            placeholder="e.g John Doe"
+            autocomplete="name"
+          />
+
+          <label class="form__label" for="Email">Email:</label>
+          <input
+            class="form__input"
+            type="text"
+            name="Email"
+            id="email"
+            aria-required="true"
+            required
+            placeholder="e.g johndoe@email.com"
+            autocomplete="email"
+          />
+
+          <label class="form__label" for="Message">Message:</label>
+          <textarea
+            class="form__text"
+            name="Message"
+            id="message"
+            aria-required="true"
+            required
+            rows="8"
+            cols="50"
+            placeholder="e.g I would like to ask you..."
+          ></textarea>
+
+          <button class="form__button" type="submit">Submit</button>
+        </form>
+      </section>
+    </main>
+
+    <footer-component></footer-component>
+    <gdpr-component></gdpr-component>
+  </body>
+
+  <!-- SCRIPTS -->
+  <script src="./assets/js/homepage-scripts.js"></script>
+
+  <!-- COMPONENTS -->
+  <script
+    src="../assets/js/components/component-map.js"
+    type="module"
+    defer
+  ></script>
+
+  <!-- GOOGLE ANALYTICS -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-E7KQ4C9DKP');
+  </script>
+</html>
