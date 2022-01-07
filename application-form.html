@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!-- SEO SETTINGS FOR GOOGLE-->
+     <meta name="author" content="Junior Developer Group" />
+
+     <!-- SEO SETTINGS FOR WHEN WEBSITE URL IS SHARED -->
+    <meta
+    name="og:title"
+    property="og:title"
+    content="Junior Developer Group | Application Form"
+  />
+
+    <!-- WEBSITE TITLE-->
+    <title>Junior Developer Group | Application Form</title>
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/jpg" href="/assets/images/favicon.ico"/>
+
+    <!-- CSS STYLESHEET -- APPLICATION FORM AND MAIN TEAM PAGE -->
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+    <link rel="stylesheet" href="/assets/css/forms.css" />
+</head>
+<body>
+    <!-- Navbar -->
+    <navbar-component></navbar-component>
+    <div class="application-form-title">
+        <h1>Application form</h1>
+    </div>
+    <!--APPLICATION FORM-->
+    <section class="application-form-wrapper">
+        <form class="application-form" action="https://formspree.io/f/xlezdnoj" method="POST">
+            <label for="Name"> Your Name:</label>
+            <input type="text" name="Name" id="name" aria-required="true" required placeholder="e.g Maria (she/her)" autocomplete="name">
+            
+            <label for="Email"> Your email address:</label>
+            <input type="email" name="Email" id="email" aria-required="true" required placeholder="e.g maria@mail.com" autocomplete="email">
+
+            <label for="Location"> Your location/timezone:</label>
+            <input type="text" name="Location" id="location" aria-required="true" required placeholder="e.g UK/GMT" autocomplete="location">
+
+            <label for="Skills"> Your current skills:</label>
+            <input type="text" name="Skills" id="skills" aria-required="true" required placeholder="e.g HTML/CSS, JavaScript, React etc" autocomplete="off">
+
+            <label for="Language">Are you able to communicate with the rest of the group using English?</label>
+            <div class="language-buttons">
+              <input type="radio" name="Language" id="yes" aria-required="true" value="Yes" required>
+              <label for="Yes">Yes</label>
+              <input type="radio" name="Language" id="no" aria-required="true" value="No">
+              <label for="No">No</label>
+            </div>
+
+            <label for="Experience">Are you currently employed or already have work experience as a developer?</label>
+            <input type="text" name="Experience" id="experience" aria-required="true" required placeholder="e.g Have experience as a developer and am employed" autocomplete="off">
+
+            <label for="Achivement"> What would you like to achieve by joining our group?</label>
+            <textarea name="Achivement" id="achivement" aria-required="true" required rows="8" cols="50" placeholder="e.g I'd like to develop my skills by working on projects"></textarea>
+
+            <label for="Inactivity"> How likely are you to become inactive within the next couple of weeks/months?</label>
+            <input type="text" name="Inactivity" id="inactivity" aria-required="true" required placeholder="e.g I will be inactive for two months because of exams" autocomplete="off">
+
+            <label for="Discover">How have you found about our group? </label>
+            <input type="text" name="Discover" id="discover" aria-required="true" required placeholder="e.g Through Github,Instagram etc" autocomplete="off">
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <footer-component></footer-component>
+    <gdpr-component></gdpr-component>
+</body>
+ <!-- SCRIPTS -->
+ <script src="./assets/js/homepage-scripts.js"></script>
+
+
+ <!-- COMPONENTS -->
+ <script
+   src="../assets/js/components/component-map.js"
+   type="module"
+   defer
+ ></script>
+
+  <!-- GOOGLE ANALYTICS -->
+ <script>
+   window.dataLayer = window.dataLayer || [];
+   function gtag() {
+     dataLayer.push(arguments);
+   }
+   gtag("js", new Date());
+
+   gtag("config", "G-E7KQ4C9DKP");
+ </script>
+</html>
