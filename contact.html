@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- SEO SETTINGS FOR GOOGLE-->
-    <meta name="author" content="Junior Developer Group" />
+    <meta 
+      name="author" 
+      content="Junior Developer Group" 
+    />
+
     <meta
       name="description"
       content="Want to talk with us? Just fill the form with any questions, concerns, and feedback. We'd love to hear from you!!!"
@@ -29,6 +33,16 @@
       content="assets/website-images/logo-with-background.png"
     />
 
+    <meta 
+      property="og:type" 
+      content="article" 
+    />
+
+    <meta 
+      name="twitter:card" 
+      content="summary_large_image"
+    />
+
     <!-- WEBSITE TITLE-->
     <title>Junior Developer Group | Contact</title>
 
@@ -44,6 +58,7 @@
     <navbar-component></navbar-component>
 
     <main class="contact__main">
+
       <section class="contact__header-wrapper">
         <div class="contact__header">
           <div class="image__holder">
@@ -72,7 +87,7 @@
           action="https://formspree.io/f/mayvnjln"
           method="POST"
         >
-          <label class="form__label" for="Name">Name:</label>
+          <label class="form__label" for="Name">Your Name:</label>
           <input
             class="form__input"
             type="text"
@@ -80,11 +95,11 @@
             id="name"
             aria-required="true"
             required
-            placeholder="e.g John Doe"
+            placeholder="e.g   Sasha Smith (they/them)"
             autocomplete="name"
           />
 
-          <label class="form__label" for="Email">Email:</label>
+          <label class="form__label" for="Email"> Your Email:</label>
           <input
             class="form__input"
             type="text"
@@ -92,11 +107,11 @@
             id="email"
             aria-required="true"
             required
-            placeholder="e.g johndoe@email.com"
+            placeholder="e.g   sasha.smith@email.com"
             autocomplete="email"
           />
 
-          <label class="form__label" for="Message">Message:</label>
+          <label class="form__label" for="Message">Your Message:</label>
           <textarea
             class="form__text"
             name="Message"
@@ -105,7 +120,7 @@
             required
             rows="8"
             cols="50"
-            placeholder="e.g I would like to ask you..."
+            placeholder="e.g   Hi! I would like to ask you..."
           ></textarea>
 
           <button class="form__button" type="submit">Submit</button>
