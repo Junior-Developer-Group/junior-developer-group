@@ -201,7 +201,6 @@ button:hover {
 .form__input {
   margin-bottom: 8px;
   height: 35px;
-
 }
 
 .form__button {
@@ -240,30 +239,73 @@ button:hover {
 }
 
 
-/****************/
+/*******************/
 /* APPLICATION FORM */
-/****************/
-.application-form-wrapper{
+/*******************/
+
+.new-member-applications {
+  position:relative; 
+  top: 100px;
+
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 2600px;
+}
+
+.hero_header--applications {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero_header--applications img {
+  height: 210px;
+  width: 210px;
+  margin-right: 30px;
+}
+
+.application-form-title {
+  text-align: center;
+  font-size: 1.7em;
+  color: var(--dark);
+}
+
+.application-form-title span {
+  color: var(--purple);
+  font-size: 1.8em;
+}
+
+.application-form-wrapper {
   display: flex;
   justify-content: center;
 
   position: relative;
   top: 90px;
-  height: 1200px;
   margin-bottom:120px;
 }
-.application-form{
+.application-form {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 80%;
 }
-.application-form-title {
-  text-align: center;
-  position:relative; 
+.application-form fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 60px;
+}
 
-  margin: 1.5em 1.5em;
-  top:60px;
+.application-form fieldset h2 {
+  color: var(--dark);
+  margin-bottom: 50px;
+  margin-top: 30px;
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: var(--pastel-orange);
+  text-align: center;
+  letter-spacing: 2px;
 }
+
 
 .application-form-title h1 {
   display: inline-block;
@@ -272,14 +314,66 @@ button:hover {
   color:var(--purple);
 }
 
-.language-buttons label {
+.language-buttons,
+.age-restrictions {
+  margin-bottom: 20px;
+}
+
+.language-buttons label,
+.age-restrictions label {
   letter-spacing: 1px;
   margin: 0;
   vertical-align: middle;
   padding: 0 5px 0 5px;
 }
 
-.language-buttons input {
+.language-buttons input,
+.age-restrictions input {
   vertical-align: middle;
   margin: 0;
+}
+
+
+@media (max-width: 800px) {
+  .new-member-applications  {
+    min-height: 2800px;
+  }
+
+  .hero_header--applications {
+    flex-direction: column;
+  }
+
+  .application-form-title {
+    font-size: 20px;
+  }
+
+  .application-form {
+    width: 90%;
+  }
+
+  .application-form textarea,
+  .application-form input:not(input[type=radio]) {
+    width: 90%;
+  }
+
+  .application-form label {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .language-buttons,
+  .age-restrictions {
+    margin-bottom: 30px;
+  }
+
+  label > .language-buttons,
+  label > .age-restrictions  {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 380px) {
+  .new-member-applications  {
+    min-height: 3100px;
+  }
 }
