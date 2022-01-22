@@ -98,6 +98,20 @@ function openDiscord() {
   );
 }
 
+function openMemberApplicationForm() {
+  window.open(
+    "https://junior-developer-group.com/application-form.html",
+    "_blank"
+  );
+}
+
+function openMentorApplicationForm() {
+  window.open(
+    "https://junior-developer-group.com/become-mentors.html",
+    "_blank"
+  );
+}
+
 const loadListener = window.addEventListener('load', () => {	// Run after DOM is loaded
 	updateFooter();
 	window.removeEventListener('load',loadListener);
