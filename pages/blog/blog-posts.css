@@ -1,11 +1,62 @@
 .blog-post-wrapper {
     position: relative;
     top: 90px;
+
+    /* means our content will not become super wide on larger screens*/
+    max-width: 1200px;
+
+    /*means our 'main' element will always be centered, no matter the device */
+    /**/
+    margin: 0 auto;
 }
 
 .blog_post_header {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
+}
+
+.blog_post_header_titles {
+    /* 50% of the parent div - in this case 'blog_post_header' */
+    width: 50%;
+}
+
+.blog_post_header_image {
+    /* 40% of the parent div - in this case 'blog_post_header' */
+    width: 40%;
+}
+
+.blog_post_header_image img {
+    /* 100% of the parent div - in this case 'blog_post_header_image' */
+    width: 100%;
+}
+
+.blog_post_article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.blog_post_article--image img {
+    /* 90% of the parent div - in this case 'blog_post_article' */
+    width: 90%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+@media (max-width: 500px) {
+
+    .blog_post_header {
+        flex-direction: column;
+    }
+
+    .blog_post_header_titles,
+    .blog_post_header_image {
+        /* 80% of the parent div - in this case 'blog_post_header' */
+        width: 80%;
+    }
+
 }
