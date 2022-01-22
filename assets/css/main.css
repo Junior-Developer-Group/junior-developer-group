@@ -722,6 +722,10 @@
     margin-bottom: 40px;
   }
 
+  .get-involved__column sub {
+    color: var(--light-grey);
+  }
+
   .get-involved .column-price {
     display: flex;
     justify-content: center;
@@ -732,7 +736,7 @@
     font-family: DM Serif Display;
     font-style: normal;
     font-weight: normal;
-    font-size: 72px;
+    font-size: 44px;
     line-height: 25px;
     letter-spacing: 0.04em;
 
