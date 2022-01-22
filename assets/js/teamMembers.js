@@ -89,6 +89,7 @@ const Member = [
       facebook: "https://www.facebook.com/oghenekparobo.onosemuode",
     },
     contact: "https://lesoustechnology.com/",
+    location: "ng"
   },
 
   {
@@ -204,6 +205,7 @@ const Member = [
       github: "https://github.com/Lokesh-Rathore",
       linkedin: "https://www.linkedin.com/in/lokesh-rathore-6a661321a/",
     },
+    location: "in"
   },
 
   {
@@ -220,6 +222,7 @@ const Member = [
       twitter: "https://twitter.com/hajdahman_ilyes",
     },
     contact: "https://www.linkedin.com/in/ilyes-bhd-53a95021a/",
+    location: "tn"
   },
 
   {
@@ -248,6 +251,7 @@ const Member = [
     social_links: {
       github: "https://github.com/Deepak8717",
     },
+    location: "in"
   },
 
   {
@@ -307,10 +311,10 @@ const categories = {
    John: 'admin',
    Ruman: 'admin',
    Oghenekparobo: 'admin',
-   Thomas: 'admin',
    'Jeff 👋': 'admin',
 
    //PREV COHORTS
+   Thomas: 'prev',
    Lizard: 'prev',
    Uriel: 'prev',
    Francesca: 'prev',
