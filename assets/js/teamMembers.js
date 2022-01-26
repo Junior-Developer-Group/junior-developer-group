@@ -310,11 +310,10 @@ const categories = {
    Denice: 'admin',
    John: 'admin',
    Ruman: 'admin',
-   Oghenekparobo: 'admin',
-   'Jeff 👋': 'admin',
 
    //PREV COHORTS
    Thomas: 'prev',
+   'Jeff 👋': 'prev',
    Lizard: 'prev',
    Uriel: 'prev',
    Francesca: 'prev',
