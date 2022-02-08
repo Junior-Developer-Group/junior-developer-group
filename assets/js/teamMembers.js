@@ -45,7 +45,7 @@ const Member = [
 
   {
     about:
-      "I’m a junior fullstack dev from Israel. Currently working with Vue and Firebase.",
+      "I’m a junior fullstack dev from Israel.",
     name: "Uriel",
     speciality: "Front-End Developer",
     image: "https://avatars.githubusercontent.com/u/30144878",
@@ -315,7 +315,6 @@ const categories = {
    Thomas: 'prev',
    'Jeff 👋': 'prev',
    Lizard: 'prev',
-   Uriel: 'prev',
    Francesca: 'prev',
    'Alejandro 🙋‍♂️': 'prev',
    Deepak: 'prev',
