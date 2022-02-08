@@ -133,3 +133,13 @@ function hideGDPRpopup () {
   element.classList.remove("gdpr-wrapper");
   element.classList.add("gdpr-wrapper--hidden")
 }
+
+let myCounter = document.getElementById("number");
+let counter = 0;
+setInterval(()=>{
+  if (counter <71){
+    counter ++;
+    myCounter.innerHTML=counter;
+  }
+
+},150)
