@@ -134,12 +134,20 @@ function hideGDPRpopup () {
   element.classList.add("gdpr-wrapper--hidden")
 }
 
-let myCounter = document.getElementById("number");
-let counter = 0;
-setInterval(()=>{
-  if (counter <71){
-    counter ++;
-    myCounter.innerHTML=counter;
-  }
+// The Our Forest Counter
+const myCounter = document.getElementById('number');
+const treeCounter = new IntersectionObserver(function(entries) {
+	if(entries[0].isIntersecting === true){
+    let counter = 0;
+    setInterval(()=>{
+      if (counter <71){
+        counter ++;
+        myCounter.innerHTML=counter;
+      }
 
-},150)
+},80)
+		// console.log('Fully Visible');
+  }
+}, { threshold: [1] });
+
+treeCounter.observe(document.getElementById("number"));

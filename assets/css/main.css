@@ -14,6 +14,7 @@
     --grey: rgba(0, 0, 0, 0.6);
     --light-grey: #6E798C;
     --dark: #21243d;
+    --forestGreen:#0b4211;
   }
 
   body {
@@ -376,8 +377,6 @@
     display: flex;
     flex-direction:row;
     padding:0.8em;
-    /* justify-content: center;
-    align-items: center; */
     font-family: 'Heebo', sans-serif;
     font-style: normal;
     font-weight:bold;
@@ -399,7 +398,6 @@
   }
 
   .forest-details h2{
-    /* text-align:left; */
     font-size: 36px;
     margin-left:30px;
     text-transform: uppercase;
@@ -417,7 +415,7 @@
     font-size: 20px;
     line-height: 30px;
     text-align: center;
-    border-left:2px solid #0b4211;
+    border-left:2px solid var(--forestGreen);
     width:30%;
   }
   .counter p {
@@ -427,11 +425,8 @@
   .counter img{
     width:100px;
     height:100px;
-    /* padding:0em 0.1em; */
     display:inline-block;
   }
-  
-
   .counter span {
     padding:0.5em ;
     margin:0em 1em;
@@ -440,12 +435,9 @@
     font-size:25px;
     color:var(--white);
     border-radius:40px;
-    background-color:#0b4211;
+    background-color:var(--forestGreen);
     display :inline-block;
-    
   }
-
-
   /**********************************/
   /******** EVENTS/WOR  KSHOPS ********/
   /**********************************/
@@ -1043,6 +1035,52 @@
     .about-technologies {
       width: 100%;
     }
+     /***************************/
+    /******* OUR FOREST************/
+    /***************************/
+    .forest-wrapper{
+      display:flex;
+      flex-direction:column;
+    }
+    .forest-wrapper{
+      display:flex;
+      flex-direction:column;
+      }
+  
+    .forest-details{
+      width:90%;
+      display:flex;
+      flex-direction:row;
+      flex-wrap:wrap;
+      align-items:center;
+      margin-bottom:10px;
+    }
+    .forest-details img{
+      margin-bottom:20px;
+      display:inline-block;
+    }
+    .forest-details h2{
+      font-size:26px;
+      margin-bottom:5px;
+    }
+    .forest-details p{
+      font-size:20px;
+      margin:auto;
+    }
+    .counter{
+      margin:auto;
+      justify-content: center;
+      border-left:0px;
+      width:100%;
+      border-top:1px solid var(--dark);
+    }
+    .counter span{
+      padding:0.3em ;
+      margin:0em 1em;
+      width:80px;
+      height:30px;
+      font-size:25px;
+    }
 
     /**********************************/
     /******** GET INVOLVED ************/
@@ -1105,6 +1143,9 @@
       font-size: 18px;
     }
 
+    /**********************************/
+    /******** OUR FOREST************/
+    /**********************************/
     .forest-wrapper{
     display:flex;
     flex-direction:column;
@@ -1127,8 +1168,6 @@
       font-size:18px;
       margin:auto;
     }
-
-
     .counter{
       margin:auto;
       justify-content: space-around;
