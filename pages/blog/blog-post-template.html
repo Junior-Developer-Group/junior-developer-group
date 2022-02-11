@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- MAIN CSS STYLESHEET -->
+        <link rel="stylesheet" href="/assets/css/main.css" />
+        <!-- BLOG POSTS STYLESHEET -->
+        <link rel="stylesheet" href="blog-posts.css" />
+
+    </head>
+
+    <body>
+        <navbar-component></navbar-component>
+        
+      <main class="blog-post-wrapper">
+        <!-- TITLES, AUTHOR SOCIAL LINKS, and IMAGE go here-->
+        <section class="blog_post_header">
+
+            <div class="blog_post_header-text">
+                <div class="blog_post_header_titles">
+                    <h1>Blog Post</h1>
+                    <h2>Blog Post Title Written by the Author</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                </div>
+    
+                <div class="blog_post_header_links">
+                    <a href="http://www.twitter.com/generic">Twitter</a>
+                    <a href="http://www.linkedin.com/generic">LinkedIn</a>
+                    <a href="http://www.github.com/generic">Github</a>
+                </div>
+            </div>
+
+            <div class="blog_post_header_image">       
+                <img src="https://www.pngkey.com/png/detail/233-2332677_image-500580-placeholder-transparent.png" alt="A generic header image with generic alt text">
+                <p>Posted by AUTHOR NAME on POSTED DATE</p>
+            </div>
+        </section>
+
+        <article class="blog_post_article">
+
+            <div class="blog_post_article--image">
+                <img src="https://www.pngkey.com/png/detail/233-2332677_image-500580-placeholder-transparent.png" alt="A generic body image and alt text">
+            </div>
+
+            <div class="blog_post_article--content">
+                <h3>Placeholder Section Title</h3>
+                        
+                <p>
+                    This is a placeholder paragraph. You should replace it with your own blog post text. 
+                    If you need more paragraphs, add more p tags below this one. 
+                    If you need more sections, add more h3 tags below this one.
+                </p>
+            </div>
+
+            <div class="blog_post_article--content">
+                <h3>Placeholder Section Title</h3>
+                        
+                <p>
+                    This is a placeholder paragraph. You should replace it with your own blog post text. 
+                    If you need more paragraphs, add more p tags below this one. 
+                    If you need more sections, add more h3 tags below this one.
+                </p>
+            </div>
+
+            <div class="blog_post_article--content">
+                <h3>Placeholder Section Title</h3>
+                        
+                <p>
+                    This is a placeholder paragraph. You should replace it with your own blog post text. 
+                    If you need more paragraphs, add more p tags below this one. 
+                    If you need more sections, add more h3 tags below this one.
+                </p>
+            </div>
+        </article>
+      </main>
+
+        <footer-component></footer-component>
+        <gdpr-component></gdpr-component>
+    </body>
+
+    <!-- To do: add css styling. align header caption. fill out head section with SEO etc. make navbar and footer work. make social links pretty-->
+
+    <!-- WEBSITE SCRIPTS -->
+    <!-- script below will import all functions we already use on the rest of the website -->
+    <script src="/assets/js/homepage-scripts.js"></script>
+
+    <!-- script below will import/map all our HTML components, without it none of them will be visible -->
+    <script src="/assets/js/components/component-map.js" type="module"defer></script>
+
+    <!-- script below is used for google analytics-->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        
+        gtag("js", new Date());
+        gtag("config", "G-E7KQ4C9DKP");
+    </script>
+</html>
+
