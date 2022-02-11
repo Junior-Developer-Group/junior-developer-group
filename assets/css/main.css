@@ -14,6 +14,7 @@
     --grey: rgba(0, 0, 0, 0.6);
     --light-grey: #6E798C;
     --dark: #21243d;
+    --forestGreen:#0b4211;
   }
 
   body {
@@ -359,7 +360,84 @@
     width: 50%;
     height: 50%;
   }
+  /**********************************/
+  /******** OUR FOREST********/
+  /**********************************/
+  .our-forest {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin:20px;
+    min-height: 150px
+    
+  }
+  .forest-wrapper {
+    display: flex;
+    flex-direction:row;
+    padding:0.8em;
+    font-family: 'Heebo', sans-serif;
+    font-style: normal;
+    font-weight:bold;
+    color: var(--grey);
+    width: 80%;
+    min-height: 130px;
+  }
 
+  .forest-details{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    align-items:center;
+    width:70%;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    padding:10px;
+  }
+
+  .forest-details h2{
+    font-size: 36px;
+    margin-left:30px;
+    text-transform: uppercase;
+  }
+
+  .forest-details img{
+    width:100px;
+    height:100px;
+    display:inline-block;
+  }
+  
+   .counter{
+    display:flex;
+    flex-wrap:wrap;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    border-left:2px solid var(--forestGreen);
+    width:30%;
+  }
+  .counter p {
+   width:100%;
+   margin-top:40px;
+  }
+  .counter img{
+    width:100px;
+    height:100px;
+    display:inline-block;
+  }
+  .counter span {
+    padding:0.5em ;
+    margin:0em 1em;
+    width:90px;
+    height:30px;
+    font-size:25px;
+    color:var(--white);
+    border-radius:40px;
+    background-color:var(--forestGreen);
+    display :inline-block;
+  }
   /**********************************/
   /******** EVENTS/WOR  KSHOPS ********/
   /**********************************/
@@ -957,6 +1035,52 @@
     .about-technologies {
       width: 100%;
     }
+     /***************************/
+    /******* OUR FOREST************/
+    /***************************/
+    .forest-wrapper{
+      display:flex;
+      flex-direction:column;
+    }
+    .forest-wrapper{
+      display:flex;
+      flex-direction:column;
+      }
+  
+    .forest-details{
+      width:90%;
+      display:flex;
+      flex-direction:row;
+      flex-wrap:wrap;
+      align-items:center;
+      margin-bottom:10px;
+    }
+    .forest-details img{
+      margin-bottom:20px;
+      display:inline-block;
+    }
+    .forest-details h2{
+      font-size:26px;
+      margin-bottom:5px;
+    }
+    .forest-details p{
+      font-size:20px;
+      margin:auto;
+    }
+    .counter{
+      margin:auto;
+      justify-content: center;
+      border-left:0px;
+      width:100%;
+      border-top:1px solid var(--dark);
+    }
+    .counter span{
+      padding:0.3em ;
+      margin:0em 1em;
+      width:80px;
+      height:30px;
+      font-size:25px;
+    }
 
     /**********************************/
     /******** GET INVOLVED ************/
@@ -1017,6 +1141,49 @@
 
     .project-details h3 {
       font-size: 18px;
+    }
+
+    /**********************************/
+    /******** OUR FOREST************/
+    /**********************************/
+    .forest-wrapper{
+    display:flex;
+    flex-direction:column;
+    }
+
+    .forest-details{
+      width:90%;
+      display:flex;
+      flex-direction:row;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+    .forest-details i{
+      display:inline-block;
+    }
+    .forest-details h2{
+      font-size:26px;
+    }
+    .forest-details p{
+      font-size:18px;
+      margin:auto;
+    }
+    .counter{
+      margin:auto;
+      justify-content: space-around;
+      border-left:0px;
+      width:100%;
+      border-top:1px solid var(--dark);
+    }
+    .counter i{
+      margin-right:30%;
+    }
+    .counter span{
+      padding:0.3em ;
+      margin:0em 1em;
+      width:80px;
+      height:30px;
+      font-size:25px;
     }
 
     .events-wrapper {
