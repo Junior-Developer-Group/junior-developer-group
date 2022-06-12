@@ -302,6 +302,20 @@ const Member = [
    contact: 'https://ibrahim-odesola.netlify.app/',
    location: 'ng',
  },
+  {
+   about: "Hi 👋, I'm Mariano, a Junior Full-Stack Developer from Argentina but currently living in the UK. I've a preference for Front-end development using React.js",
+   name: 'Mariano',
+   speciality: 'Front-end development',
+   image: 'https://avatars.githubusercontent.com/u/81637296?s=400&u=8ce66b564da5b2e58903306feb6ad7503c41c97e&v=4',
+   alt: 'Mariano | scot landscape',
+   social_links: {
+      github: 'https://github.com/marianoeq',
+      twitter: 'https://twitter.com/eqmariano19',
+      linkedin: 'https://www.linkedin.com/in/mariano-quiroga-react/',
+   },
+   contact: 'https://mariano-quiroga.netlify.app/',
+   location: 'gb',
+ },
 ];
 
 const categories = {
