@@ -314,7 +314,7 @@ const Member = [
       linkedin: 'https://www.linkedin.com/in/mariano-quiroga-react/',
    },
    contact: 'https://mariano-quiroga.netlify.app/',
-   location: 'UK',
+   location: 'gb',
  },
 ];
 
