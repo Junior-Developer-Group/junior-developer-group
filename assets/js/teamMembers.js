@@ -302,6 +302,20 @@ const Member = [
    contact: 'https://ibrahim-odesola.netlify.app/',
    location: 'ng',
  },
+ {
+  about:
+    "Hi, I'm Patricia! 👋 a Full-Stack Developer from United States. Currently working with React",
+  name: "Patricia",
+  speciality: "Full-Stack Developer",
+  image:
+    "https://avatars.githubusercontent.com/devpatricia",
+  alt: "Patricia | wearing a shirt",
+  social_links: {
+    github: "https://github.com/devpatricia",
+    linkedin: "https://linkedin.com/in/devpatricia",
+  },
+  location: "us-ny",
+},
   {
    about: "Hi 👋, I'm Mariano, a Junior Full-Stack Developer from Argentina but currently living in the UK. I've a preference for Front-end development using React.js",
    name: 'Mariano',
