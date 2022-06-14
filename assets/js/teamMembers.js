@@ -304,7 +304,7 @@ const Member = [
  },
  {
   about:
-    "Hi, I'm Patricia! 👋 a Full-Stack Developer from United Stated. Currently working with React",
+    "Hi, I'm Patricia! 👋 a Full-Stack Developer from United States. Currently working with React",
   name: "Patricia",
   speciality: "Full-Stack Developer",
   image:
