@@ -330,6 +330,20 @@ const Member = [
    contact: 'https://mariano-quiroga.netlify.app/',
    location: 'gb',
  },
+ {
+  about: "Hi 👋, I'm Destiny, a Junior Front End Developer from Nigeria but currently living in the Nigeria. Working with Vue and Learning React.js",
+  name: 'Destiny',
+  speciality: 'Front-end development',
+  image: 'https://avatars.githubusercontent.com/u/81637296?s=400&u=8ce66b564da5b2e58903306feb6ad7503c41c97e&v=4',
+  alt: 'Destiny | scot landscape',
+  social_links: {
+     github: 'https://github.com/jiboladestiny/',
+     twitter: 'https://twitter.com/Dhestiny144',
+     linkedin: 'https://www.linkedin.com/in/ige-rasaq-ajibola-572713213/',
+  },
+  contact: 'https://jiboladestiny.github.io/jibola-destiny/',
+  location: 'NG',
+},
 ];
 
 const categories = {
