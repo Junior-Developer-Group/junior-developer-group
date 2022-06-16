@@ -332,7 +332,7 @@ const Member = [
  },
  {
   about: "Hi 👋, I'm Destiny, a Junior Front End Developer from Nigeria but currently living in the Nigeria. Working with Vue and Learning React.js",
-  name: 'Destiny',
+  name: 'Jibola Destiny',
   speciality: 'Front-end development',
   image: 'https://avatars.githubusercontent.com/u/81637296?s=400&u=8ce66b564da5b2e58903306feb6ad7503c41c97e&v=4',
   alt: 'Destiny | scot landscape',
