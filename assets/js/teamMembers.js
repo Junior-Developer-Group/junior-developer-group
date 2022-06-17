@@ -342,7 +342,7 @@ const Member = [
      linkedin: 'https://www.linkedin.com/in/ige-rasaq-ajibola-572713213/',
   },
   contact: 'https://jiboladestiny.github.io/jibola-destiny/',
-  location: 'NG',
+  location: 'ng',
 },
 ];
 
