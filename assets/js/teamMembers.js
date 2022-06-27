@@ -355,7 +355,6 @@ const categories = {
 
    //PREV COHORTS
    Thomas: 'prev',
-   'Jeff 👋': 'prev',
    Lizard: 'prev',
    Francesca: 'prev',
    'Alejandro 🙋‍♂️': 'prev',
