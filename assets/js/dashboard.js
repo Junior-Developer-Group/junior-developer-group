@@ -47,42 +47,19 @@ export class Dashboard {
 
 	BuildDocument () {
 		const cardContainer = document.getElementById('card-container');
-		const ctrbContainer = document.getElementById('contributors-container');
 		const tablist = document.getElementById('repo-tabs');
 		const tabContent = document.getElementById('repo-tabs-content');
-
-		// Sort contributors by contributions/commits count - Descending (Largest to smallest)
-		const sortedContributors = this.contributors.sort((current, next) => (current.contributions > next.contributions ? -1 : 1));
-
-		sortedContributors.forEach((c) => {
-			ctrbContainer.append(this.ContributorRow(c));
-		});
-
-		let setActive = true;
-		this.cards.forEach((c) => {
-			// cardContainer.innerHTML += this.RepoCard(c);
-			tablist.innerHTML += this.RepoTab(c, setActive);
-			tabContent.innerHTML += this.RepoPane(c, setActive);
-			setActive = false;
-		});
-
-		const statsData = this.BuildStatsData();
-
-		const config = {
-			type: 'line',
-			data: this.BuildOverallCommitGraphData(statsData),
-			options: {
-				plugins: {
-					title: {
-						display: true,
-						text: `Weekly commit history for all repo's`
-					}
-				}
-			}
-		};
-
-		let ctx = document.getElementById('myChart');
-		this.chart = new Chart(ctx, config);
+		
+		if (tablist && tabContent){
+			let setActive = true;
+			this.cards.forEach((c) => {
+				// cardContainer.innerHTML += this.RepoCard(c);
+				tablist.innerHTML += this.RepoTab(c, setActive);
+				tabContent.innerHTML += this.RepoPane(c, setActive);
+				setActive = false;
+			});
+		}
+		
 	}
 
 	BuildOverallCommitGraphData (statsData) {
@@ -280,7 +257,7 @@ export class Dashboard {
 				});
 			}
 		}
-
+console.log(overallWeeks);
 		return {
 			overallWeeks: overallWeeks
 		};
