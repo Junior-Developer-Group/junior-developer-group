@@ -47,8 +47,18 @@ export class Dashboard {
 
 	BuildDocument () {
 		const cardContainer = document.getElementById('card-container');
+		const ctrbContainer = document.getElementById('contributors-container');
 		const tablist = document.getElementById('repo-tabs');
 		const tabContent = document.getElementById('repo-tabs-content');
+
+		// Sort contributors by contributions/commits count - Descending (Largest to smallest)
+		const sortedContributors = this.contributors.sort((current, next) => (current.contributions > next.contributions ? -1 : 1));
+
+		if (ctrbContainer){
+			sortedContributors.forEach((c) => {
+				ctrbContainer.append(this.ContributorRow(c));
+			});
+		}
 		
 		if (tablist && tabContent){
 			let setActive = true;
@@ -58,6 +68,26 @@ export class Dashboard {
 				tabContent.innerHTML += this.RepoPane(c, setActive);
 				setActive = false;
 			});
+		}
+
+		const statsData = this.BuildStatsData();
+
+		const config = {
+			type: 'line',
+			data: this.BuildOverallCommitGraphData(statsData),
+			options: {
+				plugins: {
+					title: {
+						display: true,
+						text: `Weekly commit history for all repo's`
+					}
+				}
+			}
+		};
+
+		let ctx = document.getElementById('myChart');
+		if (ctx){
+			this.chart = new Chart(ctx, config);
 		}
 		
 	}
@@ -103,7 +133,6 @@ export class Dashboard {
 		const repoData = this.repos.flatMap((x) => {
 			return { stats: x.cData.stats, reopName: x.name };
 		});
-		console.log(repoData);
 		const contributorAllRepo = repoData.map((x) => {
 			return {
 				stats: x.stats.filter((y) => y.author.login == contributorName),
