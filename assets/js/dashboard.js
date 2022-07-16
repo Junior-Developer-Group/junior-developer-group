@@ -54,17 +54,21 @@ export class Dashboard {
 		// Sort contributors by contributions/commits count - Descending (Largest to smallest)
 		const sortedContributors = this.contributors.sort((current, next) => (current.contributions > next.contributions ? -1 : 1));
 
-		sortedContributors.forEach((c) => {
-			ctrbContainer.append(this.ContributorRow(c));
-		});
-
-		let setActive = true;
-		this.cards.forEach((c) => {
-			// cardContainer.innerHTML += this.RepoCard(c);
-			tablist.innerHTML += this.RepoTab(c, setActive);
-			tabContent.innerHTML += this.RepoPane(c, setActive);
-			setActive = false;
-		});
+		if (ctrbContainer){
+			sortedContributors.forEach((c) => {
+				ctrbContainer.append(this.ContributorRow(c));
+			});
+		}
+		
+		if (tablist && tabContent){
+			let setActive = true;
+			this.cards.forEach((c) => {
+				// cardContainer.innerHTML += this.RepoCard(c);
+				tablist.innerHTML += this.RepoTab(c, setActive);
+				tabContent.innerHTML += this.RepoPane(c, setActive);
+				setActive = false;
+			});
+		}
 
 		const statsData = this.BuildStatsData();
 
@@ -82,7 +86,10 @@ export class Dashboard {
 		};
 
 		let ctx = document.getElementById('myChart');
-		this.chart = new Chart(ctx, config);
+		if (ctx){
+			this.chart = new Chart(ctx, config);
+		}
+		
 	}
 
 	BuildOverallCommitGraphData (statsData) {
@@ -126,7 +133,6 @@ export class Dashboard {
 		const repoData = this.repos.flatMap((x) => {
 			return { stats: x.cData.stats, reopName: x.name };
 		});
-		console.log(repoData);
 		const contributorAllRepo = repoData.map((x) => {
 			return {
 				stats: x.stats.filter((y) => y.author.login == contributorName),
@@ -280,7 +286,7 @@ export class Dashboard {
 				});
 			}
 		}
-
+console.log(overallWeeks);
 		return {
 			overallWeeks: overallWeeks
 		};
