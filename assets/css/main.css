@@ -129,7 +129,6 @@
 
   .hero_header-information {
     width: 50%;
-
   }
 
   .hero_header-information h1 {
@@ -149,9 +148,21 @@
     font-size: 18px;
     line-height: 23px;
     margin-bottom: 30px;
-
+    max-width: 80%;
     color: var(--dark);
+
   }
+
+  
+  @media (max-width: 620px) {
+
+    .hero_header-information p { 
+      max-width: 100%;
+    }
+
+    }
+
+
 
   .hero_header-information a {
 
@@ -368,7 +379,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 80%;
+    width: 90%;
     margin:0 auto;
     min-height: 150px
     
@@ -1123,7 +1134,7 @@
 
     .single-project {
       width: 100%;
-      height: 130px;
+      min-height: unset!important;
     }
 
     .single-project .project-image {
@@ -1141,6 +1152,10 @@
 
     .project-details h3 {
       font-size: 18px;
+    }
+
+    .single-post {
+      min-height: unset!important;
     }
 
     /**********************************/
@@ -1199,8 +1214,9 @@
       font-size: 12px;
     }
 
-    .featured-posts {
-      height: 1300px;
+    .get-involved__column .badge {
+      position: relative;
+      left: 50px;
     }
 
     .date-posted {
@@ -1210,6 +1226,23 @@
 
     .date-posted p {
       margin-top: 10px;
+    }
+
+    .gdpr-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+  
+    .gdpr-paragraph {
+      display: flex;
+      text-align: center;
+      width: 80%;
+    }
+  
+    .gdpr-actions button {
+      width: 280px;
     }
   }
 
@@ -1221,12 +1254,17 @@
   /***** VERY SMALL MOBILE VIEW **********/
   /***************************************/
 
-  @media (max-width: 300px) {
+  @media (max-width: 340px) {
+
 
     .single-project {
       margin-bottom: 40px;
       border: 1px dashed black;
       padding: 20px;
+      width: 60%;
+    }
+
+    .single-event {
       width: 100%;
     }
 
@@ -1234,15 +1272,46 @@
       display: none;
     }
 
+    .get-involved,.about-technologies, .group-projects {
+      width: 80%;
+      margin: 0 auto;
+      margin-bottom: 80px;
+    }
+
     .get-involved__column img {
       width: 80%;
       display: flex;
       align-items: center;
+      margin: 0 auto;
+    }
+
+    .get-involved__column sub {
+      width: 80%;
+      display: flex;
+      align-items: center;
+      margin: 0 auto;
     }
 
     .get-involved__column .column-button button {
       width: 60%;
-      height: 30px;
+    }
+
+
+
+    .column-information ul {
+      margin-block-start: 0;
+      padding-inline-start: 0;
+    }
+
+    .column-information li {
+      font-size: 16px!important;
+      text-align: left!important;
+      margin-bottom: 25px!important;
+    }
+
+    .single-tool {
+      width: 110px;
+      height: 110px;
     }
   }
 
@@ -1310,21 +1379,22 @@
 }
 
 
-@media (max-width: 500px) {
-  .gdpr-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
 
-  .gdpr-paragraph {
-    display: flex;
-    text-align: center;
-    width: 80%;
-  }
+.view-projects {
+  background: var(--purple);
+  border-radius: 4px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  color: #FFFFFF;
+  margin: 5px;
+  padding: 10px 20px;
+}
 
-  .gdpr-actions button {
-    width: 280px;
-  }
+
+* :focus {
+ border: 2px solid black;
 }
