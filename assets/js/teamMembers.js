@@ -18,16 +18,6 @@ const Member = [
     location: "gb",
   },
 
-  {
-    about:
-      "I’m a junior developer who is particularly interested in making education and the arts more accessible through the use of technology.",
-    name: "Lizard",
-    speciality: "Front-end development, designing for accessibility",
-    image: "https://idealkoala.files.wordpress.com/2021/01/img-1064-copy.jpg",
-    alt: "Lizard | white mouse on the shoulder in a black t-shirt",
-    social_links: { github: "https://github.com/onlyasmalllizard" },
-    location: "gb"
-  },
 
   {
     about: "I’m a Junior developer, currently working with Javascript, React, Sql and Perl",
@@ -43,20 +33,7 @@ const Member = [
     location: "gb"
   },
 
-  {
-    about:
-      "I’m a junior fullstack dev from Israel.",
-    name: "Uriel",
-    speciality: "Front-End Developer",
-    image: "https://avatars.githubusercontent.com/u/30144878",
-    alt: "Uriel | Sat in the blurred background in a blue t-shirt",
-    social_links: {
-      github: "https://github.com/urielofir",
-      facebook: "https://www.facebook.com/urielofir86/",
-      linkedin: "https://www.linkedin.com/in/uriel-ofir/",
-    },
-    location: "il"
-  },
+
 
   {
     about:
@@ -73,6 +50,7 @@ const Member = [
     contact: "http://francesca-de-laurentis.com/",
     location: "gb"
   },
+
 
   {
     about:
@@ -199,13 +177,39 @@ const Member = [
     name: "Lokesh",
     speciality: "Front-End Developer",
     image:
-      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-zzhyevJYyVWIGKmoCU4Fn2tbuKJZgqDIGA&usqp=CAU",
+      "https://avatars.githubusercontent.com/u/89118388?v=4",
     alt: "Lokesh | represented by compressed javascript code",
     social_links: {
       github: "https://github.com/Lokesh-Rathore",
       linkedin: "https://www.linkedin.com/in/lokesh-rathore-6a661321a/",
     },
     location: "in"
+  },
+
+  {
+    about:
+      "I’m a junior fullstack dev from Israel.",
+    name: "Uriel",
+    speciality: "Front-End Developer",
+    image: "https://avatars.githubusercontent.com/u/30144878",
+    alt: "Uriel | Sat in the blurred background in a blue t-shirt",
+    social_links: {
+      github: "https://github.com/urielofir",
+      facebook: "https://www.facebook.com/urielofir86/",
+      linkedin: "https://www.linkedin.com/in/uriel-ofir/",
+    },
+    location: "il"
+  },
+
+  {
+    about:
+      "I’m a junior developer who is particularly interested in making education and the arts more accessible through the use of technology.",
+    name: "Lizard",
+    speciality: "Front-end development, designing for accessibility",
+    image: "https://idealkoala.files.wordpress.com/2021/01/img-1064-copy.jpg",
+    alt: "Lizard | white mouse on the shoulder in a black t-shirt",
+    social_links: { github: "https://github.com/onlyasmalllizard" },
+    location: "gb"
   },
 
   {
@@ -303,6 +307,20 @@ const Member = [
    location: 'ng',
  },
  {
+  about: "Hi 👋, I'm Destiny, a Junior Front End Developer from Nigeria but currently living in the Nigeria. Working with Vue and Learning React.js",
+  name: 'Jibola Destiny',
+  speciality: 'Front-end development',
+  image: 'https://avatars.githubusercontent.com/u/84780162?v=4',
+  alt: 'Destiny | scot landscape',
+  social_links: {
+     github: 'https://github.com/jiboladestiny/',
+     twitter: 'https://twitter.com/Dhestiny144',
+     linkedin: 'https://www.linkedin.com/in/ige-rasaq-ajibola-572713213/',
+  },
+  contact: 'https://jiboladestiny.github.io/jibola-destiny/',
+  location: 'ng',
+},
+ {
   about:
     "Hi, I'm Patricia! 👋 a Full-Stack Developer from United States. Currently working with React",
   name: "Patricia",
@@ -330,27 +348,13 @@ const Member = [
    contact: 'https://mariano-quiroga.netlify.app/',
    location: 'gb',
  },
- {
-  about: "Hi 👋, I'm Destiny, a Junior Front End Developer from Nigeria but currently living in the Nigeria. Working with Vue and Learning React.js",
-  name: 'Jibola Destiny',
-  speciality: 'Front-end development',
-  image: 'https://avatars.githubusercontent.com/u/81637296?s=400&u=8ce66b564da5b2e58903306feb6ad7503c41c97e&v=4',
-  alt: 'Destiny | scot landscape',
-  social_links: {
-     github: 'https://github.com/jiboladestiny/',
-     twitter: 'https://twitter.com/Dhestiny144',
-     linkedin: 'https://www.linkedin.com/in/ige-rasaq-ajibola-572713213/',
-  },
-  contact: 'https://jiboladestiny.github.io/jibola-destiny/',
-  location: 'ng',
-},
+
 ];
 
 const categories = {
    //ADMIN TEAM
    Likii: 'admin',
    Denice: 'admin',
-   John: 'admin',
    Ruman: 'admin',
 
    //PREV COHORTS
@@ -359,6 +363,14 @@ const categories = {
    Francesca: 'prev',
    'Alejandro 🙋‍♂️': 'prev',
    Deepak: 'prev',
+   Uriel : 'prev',
+   Alex : 'prev',
+   Lokesh : 'prev',
+   Ilyes : 'prev',
+   Oghenekparobo : 'prev',
+   Sagi : 'prev',
+   Ibrahim : 'prev',
+
 };
 
 /**
@@ -413,11 +425,11 @@ let currentCategory = '';
 
 for (members of sortedMembers) {
    const memberCategory = members.category;
-   let category = 'Admin Team';
+   let category = 'Admin Team / Here to help';
    if (memberCategory === 'active') {
       category = 'Active Members';
    } else if (memberCategory === 'prev') {
-      category = 'Previous Cohorts';
+      category = 'Members from previous cohorts';
    }
 
    //Show category heading if enter new category list
