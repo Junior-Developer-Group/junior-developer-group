@@ -88,8 +88,16 @@
          max-width: 400px;
  
          img {
-             max-height: 450px;
+          width: 250px;
+          height: 450px;
+
+          @media (max-width: 600px) {
+            width: 100%;
+            height: unset;
+          }
          }
+
+
      }
  
  

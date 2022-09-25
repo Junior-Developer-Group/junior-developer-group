@@ -2,7 +2,7 @@
     <section class="our-forest">
       <div class="forest-wrapper green">
         <div class="forest-details">
-          <img src="../../assets/images/forest.png">
+          <img src="../../assets/images/forest.png" alt="">
           <h2>Our Forest:</h2>
           <p>
             We are commited to having a positive impact and making the world a better place, not only for our members but the environment as well!
@@ -11,9 +11,9 @@
         <div class="counter">
           <p> Trees planted so far:</p>
           <span id="number">
-            71
+            86
           </span>
-          <img src="../../assets/images/forest.png">
+          <img src="../../assets/images/forest.png" alt="">
             <p class="disclaimer"> *Planted trough third party applications</p>
         </div>
       </div>
