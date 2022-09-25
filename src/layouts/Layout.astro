@@ -1,0 +1,92 @@
+---
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+
+
+<script>  
+
+	//// toggle mobile navbar
+	document.addEventListener('DOMContentLoaded', () => {
+
+		document.querySelector('.navigation-hamburger').addEventListener('click', (event) => {
+			if(document.querySelector('.navigation__mobile-links').classList.contains('visible')) {
+				document.querySelector('.navigation__mobile-links').classList.remove('visible')
+			}
+			else {
+				document.querySelector('.navigation__mobile-links').classList.add('visible')
+			}
+		})
+
+	});
+</script>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
+ :root {
+    --coral: #fc5b5b;
+    --red: #f8593b;
+    --pastel-orange: #f58975;
+    --pastel-red: #f17272;
+    --white: #f5f5f5;
+    --purple: #434ba1;
+    --yellow: #ffc22b;
+    --pure-white: #ffff;
+    --grey: rgba(0, 0, 0, 0.6);
+    --light-grey: #6E798C;
+    --dark: #21243d;
+    --forestGreen:#0b4211;
+  }
+	html {
+		font-family: 'Heebo', sans-serif;
+	}
+
+	body {
+		margin: 0;
+		color: #21243d;
+	}
+
+</style>
+
+<style is:global>
+
+	main {
+		max-width: 1200px;
+		width: 100%;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	input, textarea {
+		text-indent: 10px;
+	}
+</style>

@@ -1,0 +1,37 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.vue'
+import Footer from '../components/Footer.vue'
+import HeroHeader from '../components/homepage/HeroHeader.vue'
+import OurForest from '../components/homepage/OurForest.vue'
+import ProjectList from '../components/homepage/ProjectList.vue'
+import ToolsList from '../components/homepage/ToolsList.vue'
+import Events from '../components/homepage/Events.vue'
+import GetInvolved from '../components/homepage/GetInvolved.vue'
+
+---
+<Navigation></Navigation>
+<Layout title="Junior Developer Group">
+
+	<main>
+        <HeroHeader></HeroHeader>
+
+
+        <OurForest></OurForest>
+        
+        <section class="column">
+            <ProjectList></ProjectList>
+            <ToolsList></ToolsList>
+        </section>
+
+
+        <Events></Events>
+        <GetInvolved></GetInvolved>
+	</main>
+</Layout>
+
+<Footer></Footer>
+
+<style>
+
+</style>
