@@ -1,0 +1,66 @@
+{
+    "admins": [
+        {
+            "name": "Likii",
+            "description": "Hi, I'm Likii! 👋 I run Junior Developer Group and work as a Front-End Developer [Vue] with a focus on accessibility 💛",
+            "location": "United Kingdom",
+            "job_title": "Front-End Developer [Vue]",
+            "website": "www.likiipedia.com",
+            "looking_for_work": false,
+            "image_url": "https://avatars1.githubusercontent.com/u/51357920?s=460&u=0c0ba2fa0b0f222dd9ceaf301a6e609ec6a6ca9a&v=4",
+            "socials": 
+                {
+
+                    "github": "https://github.com/mateahoward",
+                    "instagram": "https://www.instagram.com/likiipedia/",
+                    "twitter": "https://twitter.com/Likiipedia",
+                    "linkedin": "https://www.linkedin.com/in/mateahoward",
+                    "twitch": ""
+                }
+        },
+        {
+            "name": "Denice",
+            "description": "Hi, I'm Denice! 👋 I’m a Software Developer, currently working with Javascript, React, SQL, Python, Ruby and Perl 💪",
+            "location": "United Kingdom",
+            "job_title": "Software Developer",
+            "looking_for_work": false,
+            "website": "",
+            "image_url": "https://avatars.githubusercontent.com/u/62336740?v=4",
+            "socials": 
+                {
+                    "github": "https://github.com/Denice-S",
+                    "instagram": "",
+                    "twitter": "",
+                    "linkedin": "https://www.linkedin.com/in/denice-soper/",
+                    "twitch": ""
+                }
+            
+        },
+        {
+            "name": "Ruman",
+            "description": "Hi, I'm Ruman!👋 I'm a Software Developer from Nottingham, currently working with C#, .Net Core and Angular 🙌",
+            "location": "United Kingdom",
+            "job_title": "Software Developer",
+            "looking_for_work": false,
+            "website": "",
+            "image_url": "https://avatars.githubusercontent.com/u/91155446?v=4",
+            "socials": 
+                {
+                    "github": "https://github.com/loop-infinity",
+                    "instagram": "",
+                    "twitter": "",
+                    "linkedin": "https://www.linkedin.com/in/ruman-mulla/",
+                    "twitch": ""
+                }
+            
+        }
+    ], 
+
+    "members": [
+
+    ],
+
+    "previous-members": [
+
+    ]
+}

@@ -1,0 +1,59 @@
+{
+    "projects": [
+        {
+            "name": "HacktoberFest 2022",
+            "status": "In Progress",
+            "url": "https://junior-developer-group.github.io/hacktoberfest-2022/"
+        },
+
+        {
+            "name": "Team Dashboard",
+            "status": "In Progress",
+            "url": "https://junior-developer-group.com/pages/dashboard.html"
+        },
+
+        {
+            "name": "Group Resources Website",
+            "status": "Completed",
+            "url": "https://junior-developer-group.github.io/group-resources/"
+        },
+
+        {
+            "name": "Lifecycle of Plastics [Vue]",
+            "status": "Completed",
+            "url": "https://github.com/Junior-Developer-Group/lifecycle-of-plastics"
+        },
+
+        {
+            "name": "Cat Match",
+            "status": "Completed",
+            "url": "https://junior-developer-group.github.io/cat-match/"
+        },
+
+
+        {
+            "name": "HacktoberFest 2021",
+            "status": "Completed",
+            "url": "https://junior-developer-group.github.io/HacktoberPet/"
+        },
+
+        
+        {
+            "name": "Sleep Quality Calculator ",
+            "status": "Completed",
+            "url": "https://junior-developer-group.github.io/sleep-quality-calculator/"
+        },
+
+        {
+            "name": "Our first team website [2020]",
+            "status": "Completed",
+            "url": "https://junior-developer-group.github.io/junior-coding-team/"
+        },
+
+        {
+            "name": "HacktoberFest 2020",
+            "status": "Completed",
+            "url": "https://mateahoward.github.io/hacktoberfest-2020/"
+        }
+    ]
+}
