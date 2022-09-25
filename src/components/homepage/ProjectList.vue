@@ -109,7 +109,7 @@ export default {
 .view-all-projects {
     background: #fc5b5b;
     border-radius: 10px;
-    color: #28282E!important;
+    color: white!important;
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
