@@ -73,10 +73,7 @@ export default {
 
 
     footer {
-        // position: fixed;
-        // left: 0;
-        // right: 0;
-        // bottom: 0;
+
         background: #2c3e50;
         color: white;
         display: flex;
@@ -115,7 +112,8 @@ export default {
 
                     img {
                         width: 30px;
-                        margin-right: 10px;
+                        height: 30px;
+                        margin-right: 20px;
                     }
                 }
             }

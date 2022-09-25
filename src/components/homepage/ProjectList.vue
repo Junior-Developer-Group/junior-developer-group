@@ -59,10 +59,15 @@ export default {
     }
 
     aside {
-        width: 50%;
+        width: 200px;
         margin-right: 10px;
         img {
-            width: 100%;
+            width: 120px;
+            height: 120px;
+        }
+
+        @media (max-width: 400px) {
+            width: 120px;
         }
     }
 
@@ -104,7 +109,7 @@ export default {
 .view-all-projects {
     background: #fc5b5b;
     border-radius: 10px;
-    color: white!important;
+    color: #28282E!important;
     font-style: normal;
     font-weight: bold;
     font-size: 18px;

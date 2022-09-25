@@ -22,8 +22,13 @@
     justify-content: center;
     padding: 20px;
     margin: 0 auto;
+    width: 100%;
 
     min-height: 900px;
+
+    @media (max-width: 500px ){
+        padding: 0;
+    }
 
     aside {
         width: 50%
@@ -70,7 +75,14 @@
         display: flex;
         justify-content: center;
         img {
-            width: 50%;
+            width: 280px;
+            height: 280px;
+
+            @media (max-width: 350px) {
+                width: 150px;
+                height: 150px;
+                margin-top: 90px;
+            }
         }
     }
 }

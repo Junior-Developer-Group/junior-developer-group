@@ -11,7 +11,7 @@
                 <li> <a href="/developers"> Team </a>      </li>
                 <li> <a href="/become-a-member"> Get involved </a>    </li>
                 <li> <a href="/contact"> Contact </a>               </li>
-                <li> <a href="/blog"> Blog </a>                  </li>
+                <!-- <li> <a href="/blog"> Blog </a>                  </li> -->
             </ul>
         </div>
         <button
@@ -34,7 +34,7 @@
                 <li> <a href="/developers"> Team </a>      </li>
                 <li> <a href="/become-a-member"> Get involved </a>    </li>
                 <li> <a href="/contact"> Contact </a>               </li>
-                <li> <a href="/blog"> Blog </a>                  </li>
+                <!-- <li> <a href="/blog"> Blog </a>                  </li> -->
             </ul>
               
         </div>
