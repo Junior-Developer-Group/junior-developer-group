@@ -1,5 +1,5 @@
 <template>
-    <main>
+    <section>
 
         <h1> We'd love to meet you🤗</h1>
         <aside>
@@ -16,7 +16,7 @@
             <a href="/mentor-application-form" class="button"> Mentor application form </a>
         </aside>
 
-    </main>
+    </section>
 </template>
 
 <script>
@@ -27,7 +27,7 @@ export default {
 
 <style lang="scss" scoped>
 
-    main {
+    section {
         margin-top: 140px;
         display: flex;
         flex-direction: column;
@@ -36,6 +36,7 @@ export default {
 
         h1 {
             margin-bottom: 60px;
+            text-align: center;
         }
     }
 

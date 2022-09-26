@@ -80,11 +80,11 @@ export default {
 .contact__main {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   min-height: 800px;
   max-width: 1200px;
   margin: 0 auto;
-  margin-top: 160px;
+  margin-top: 180px;
 }
 
 .contact__header-wrapper,
@@ -189,14 +189,14 @@ export default {
 
   .contact__header-wrapper,
   .contact__form-wrapper {
-    width: 80%;
+    width: 100%;
   }
 
   .description__title {
     font-size: 20px;
   }
   .description__paragraph {
-    padding: 0;
+    padding: 20px;
   }
 
   .contact__form {

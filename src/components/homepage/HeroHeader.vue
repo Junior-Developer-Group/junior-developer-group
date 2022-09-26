@@ -7,7 +7,7 @@
             developers gain new skills, make meaningful connections and provide
             guidance to those entering their first roles in tech.
             </p>
-            <a href="/pages/about.html">Find out more</a>
+            <a href="/about.html">Find out more</a>
         </aside>
         <aside class="hero_header-logo">
             <img src="../../assets/logo-with-background.png" alt="Junior Developer Group Logo | A butterfly with a blue and a purple wing"> 
@@ -20,18 +20,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
     margin: 0 auto;
     width: 100%;
 
-    min-height: 900px;
+    min-height: 950px;
 
     @media (max-width: 500px ){
         padding: 0;
     }
 
     aside {
-        width: 50%
+        width: 50%;
     }
 
     .hero_header-information {

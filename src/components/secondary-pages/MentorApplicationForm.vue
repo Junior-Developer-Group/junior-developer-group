@@ -4,7 +4,7 @@
             <h1> Thank you for your interest! </h1>
             <p> We're not currently recruiting new mentors</p>
 
-            <a href="/"> return to homepage</a>
+            <span> Please return to <a href="/"> homepage</a> or visit our <a href="/contact"> contact form </a></span>
         </section>
     </main>
 </template>
@@ -21,9 +21,9 @@ export default {
     }
 
     .mentor-application-form {
-        background: grey;
+        background: lightblue;
         padding: 60px;
-        color: white;
+        color: var(--dark);
         max-width: 100%;
         display: flex;
         flex-direction: column;
@@ -37,18 +37,7 @@ export default {
 
 
     a {
-        width: 100%;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        border: 1px solid white;
-        padding: 10px;
-        color: white;
-        margin-top: 30px;
-
-        &:hover {
-            background: white;
-            color: var(--dark);
-        }
+        color: darkblue;
+        text-decoration: underline!important;
     }
 </style>

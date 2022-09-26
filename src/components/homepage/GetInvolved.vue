@@ -26,7 +26,7 @@
        </div>
  
        <!-- SKATEBOY IMAGE -->
-       <div class="get-involved__column">
+       <div class="get-involved__column skateboy">
          <img src="../../assets/images/skateboy.png" alt="a skateboy in an orange coloured tshirt enjoying his ride">
          <br>
        </div>
@@ -72,6 +72,24 @@
  
  
  <style lang="scss" scoped>
+
+  .skateboy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+      img {
+        width: 250px;
+        height: 450px;
+      }
+
+        @media (max-width: 600px) {
+          img {
+              width: 80%;
+              height: unset;
+          }
+        }
+  }
      .get-involved {
          display: flex;
          justify-content: space-evenly;
@@ -86,18 +104,6 @@
  
      .get-involved__column {
          max-width: 400px;
- 
-         img {
-          width: 250px;
-          height: 450px;
-
-          @media (max-width: 600px) {
-            width: 100%;
-            height: unset;
-          }
-         }
-
-
      }
  
  
@@ -109,7 +115,7 @@
          font-size: 14px;
          line-height: 25px;
          letter-spacing: 0.2em;
-         color: white;
+         color: var(--dark);
          width: 150px;
          height: 24px;
          display: flex;

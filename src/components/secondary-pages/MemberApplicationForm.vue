@@ -1,5 +1,5 @@
 <template>
-    <main>
+    <section>
         <header>
             <img src="../../assets/logo-with-background.png" alt="Junior Developer Group Logo | A butterfly with a blue and a purple wing"/>
             <h1> New Members</h1>
@@ -78,7 +78,7 @@
             <button type="submit"> Submit</button>
 
         </form>
-    </main>
+    </section>
 </template>
 
 <script>
@@ -89,12 +89,24 @@ export default {
 
 <style scoped lang="scss">
 
+    img {
+        width: 280px;
+        height: 280px;
+
+        @media (max-width: 350px) {
+            width: 150px;
+            height: 150px;
+            margin-top: 90px;
+        }
+    }
+
     header {
         text-align: center;
     }
-    main {
+    section {
         margin-top: 140px;
         margin-bottom: 40px;
+        width: 90%;
     }
 
     form {
@@ -178,8 +190,13 @@ export default {
             color: white;
             border: none;
             outline: none;
-            padding: 10px 20px;
+            padding: 15px 60px;
             border-radius: 10px;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-family: inherit;
+            font-size: 18px;
+            cursor: pointer;
         }
     }
 </style>
