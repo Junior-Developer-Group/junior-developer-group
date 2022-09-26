@@ -1,5 +1,5 @@
 <template>
-    <main>
+    <div class="team">
         <section class="team-header">
            <h1>  Meet the team 👋</h1>
         </section>
@@ -42,7 +42,7 @@
                 </span>
             </article>
         </section>
-    </main>
+    </div>
 </template>
 
 <script> 
@@ -58,7 +58,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-    main {
+    team {
         margin-top: 140px;
     }
 

@@ -157,10 +157,23 @@ export default {
         justify-content: center;
         margin-bottom: 40px;
         margin-top: 140px;
+        max-width: 80%;
+
+        img {
+            width: 280px;
+            height: 280px;
+
+            @media (max-width: 350px) {
+                width: 150px;
+                height: 150px;
+                margin-top: 90px;
+            }
+        }
     }
 
     .privacy-policy__content{
         margin-bottom: 80px;
+        max-width: 80%;
     }
 
     .column {

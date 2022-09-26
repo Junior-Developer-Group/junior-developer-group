@@ -79,16 +79,28 @@
              width: 120px;
              height: 120px;
          }
+
+         @media (max-width: 600px) {
+          width: 90px;
+          height: 90px;
+
+          img {
+            height: 50px;
+            width: 50px;
+          }
+         }
+
      }
  
      .tool-row {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%;
+        width: 90%;
         flex-wrap: wrap;
         max-width: 800px;
         margin: 0 auto;
+
      }
  
  

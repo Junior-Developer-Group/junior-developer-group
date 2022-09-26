@@ -151,12 +151,14 @@
     min-height: 600px;
     flex-wrap: wrap;
     padding: 20px;
+    margin: 0 auto;
 }
 
 .about-us-content {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
 }
 
 .about-us__image {
@@ -221,7 +223,9 @@ details a {
     display: flex;
     justify-content: center;
     width: 100%;
+    margin: 0 auto;
     margin-bottom: 50px;
+
 }
 
 .socialMedia__discord>iframe {

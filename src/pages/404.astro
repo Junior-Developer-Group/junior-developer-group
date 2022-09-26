@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navigation from '../components/Navigation.vue'
+import Footer from '../components/Footer.vue'
+
+---
+
+<Layout title="Junior Developer Group - 404">
+    <Navigation></Navigation>
+    <section>
+        <h1> Page not found </h1>
+        <p> Please return to <a href="/"> homepage</a> or visit our <a href="/contact"> contact form </a></p>
+    </section>
+    <Footer></Footer>
+</Layout>
+
+
+
+<style lang="scss" scoped>
+
+    section {
+        background-color: lightblue;
+        color: var(--dark);
+
+        padding: 60px;
+        min-height: 900px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    a {
+        color: darkblue;
+        text-decoration: underline!important;
+    }
+
+
+</style>

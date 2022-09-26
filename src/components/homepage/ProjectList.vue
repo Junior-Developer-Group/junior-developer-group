@@ -130,7 +130,7 @@ export default {
         flex-direction: column;
     }
     .projects__single {
-        max-width: 100%;
+        max-width: 80%;
     }
 }
 
