@@ -14,20 +14,27 @@ import GetInvolved from '../components/homepage/GetInvolved.vue'
 <Layout title="Junior Developer Group">
     <Navigation></Navigation>
 	<main>
-        <HeroHeader></HeroHeader>
-
-
-        <OurForest></OurForest>
-        
-        <section class="column">
-            <ProjectList></ProjectList>
-            <ToolsList></ToolsList>
-        </section>
-
-
-        <Events></Events>
+        <div class="header-wrapper">
+            <HeroHeader></HeroHeader>
+        </div>
+        <ProjectList></ProjectList>
+        <div class="forest-wrapper">
+            <OurForest></OurForest>
+        </div>
+        <ToolsList></ToolsList>
+        <Events> </Events>
         <GetInvolved></GetInvolved>
 	</main>
     <Footer></Footer>
 </Layout>
+
+<style lang="scss">
+    .header-wrapper {
+        width: 100%;
+    }
+    .forest-wrapper {
+        width: 100%;
+        background: #f5f4f4;
+    }
+</style>
 

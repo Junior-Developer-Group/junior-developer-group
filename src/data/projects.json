@@ -1,9 +1,9 @@
 {
     "projects": [
         {
-            "name": "HacktoberFest 2022",
-            "status": "In Progress",
-            "url": "https://junior-developer-group.github.io/hacktoberfest-2022/"
+            "name": "New Project - November 2022",
+            "status": "Planning stage",
+            "url": ""
         },
 
         {
@@ -13,7 +13,7 @@
         },
 
         {
-            "name": "Group Resources Website",
+            "name": "Group Resources Website [PWA]",
             "status": "Completed",
             "url": "https://junior-developer-group.github.io/group-resources/"
         },
