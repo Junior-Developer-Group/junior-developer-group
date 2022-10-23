@@ -21,7 +21,7 @@
            </ul>
          </div>
          <div class="column-button">
-           <a href="/member-application-form">Join us</a>
+           <a href="/member-application-form">Become a member</a>
          </div>
        </div>
  
@@ -98,8 +98,7 @@
          width: 100%;
          flex-wrap: wrap;
          min-height: 900px;
-         margin-top: 60px;
-         margin-bottom: 60px;
+         background: #f5f4f4;
      }
  
      .get-involved__column {
@@ -180,24 +179,22 @@
      align-items: center;
  
      a {
-         background: #f8593b;
-         border-radius: 4px;
-         font-style: normal;
-         font-weight: 600;
-         font-size: 17px;
-         line-height: 25px;
-         text-align: center;
-         letter-spacing: 0.2em;
-         color: #FFFFFF;
-         width: 250px;
-         height: 65px;
-         margin-top: 20px;
-         outline: none;
-         border: none;
-         cursor: pointer;
-         display: flex;
-         justify-content: center;
-         align-items: center;
+        background: #ff3e3e;
+        border-radius: 10px;
+        color: white;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 29px;
+        text-align: center;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px;
+        padding: 10px 20%;
+        transition: 300ms all ease-in-out;
      }
  }
  

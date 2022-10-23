@@ -3,9 +3,9 @@
       <div class="forest-wrapper green">
         <div class="forest-details">
           <img src="../../assets/images/forest.png" alt="">
-          <h2>Our Forest:</h2>
+          <h2>We planted some trees</h2>
           <p>
-            We are commited to having a positive impact and making the world a better place, not only for our members but the environment as well!
+            Having a positive impact and making the world a better place is very important to us 🖤
           </p>
         </div>
         <div class="counter">
@@ -35,14 +35,23 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 100%;
     margin: 0 auto;
     min-height: 550px; 
+    max-width: 1200px;
 
     p.disclaimer {
         text-align: right;
         width: 100%;
         font-size: 10px;
+       
+    }
+
+    p:not(.disclaimer) {
+        max-width: 400px;
+        margin: 0 auto;
+        font-size: 20px;
     }
 }
 
@@ -59,7 +68,7 @@ export default {
 }
 
 .green {
-    background: linear-gradient(132.9deg, #63F7A1 1.3%, #27AE60 98.06%), linear-gradient(143.36deg, #D6FF94 3.66%, #3DC24B 103.19%);
+    // background: linear-gradient(132.9deg, #63F7A1 1.3%, #27AE60 98.06%), linear-gradient(143.36deg, #D6FF94 3.66%, #3DC24B 103.19%);
     border-radius: 16px;
 }
 
@@ -79,6 +88,10 @@ export default {
         width: 100px;
         height: 100px;
         display: inline-block;
+    }
+
+    h2 {
+        margin-left: 30px;
     }
 }
 

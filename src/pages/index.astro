@@ -8,26 +8,103 @@ import ProjectList from '../components/homepage/ProjectList.vue'
 import ToolsList from '../components/homepage/ToolsList.vue'
 import Events from '../components/homepage/Events.vue'
 import GetInvolved from '../components/homepage/GetInvolved.vue'
-
+import Learning from '../components/homepage/Learning.vue'
 ---
 
 <Layout title="Junior Developer Group">
     <Navigation></Navigation>
 	<main>
-        <HeroHeader></HeroHeader>
+        <div class="header-wrapper">
+            <HeroHeader></HeroHeader>
+        </div>
+        <div class="learning-wrapper">
+            <Learning> </Learning>
+        </div>
+        <ProjectList></ProjectList>
+        <div class="forest-wrapper">
+            <OurForest></OurForest>
+        </div>
+        <ToolsList></ToolsList>
+        <div class="event-wrapper">
+            <Events> </Events>
+        </div>
 
-
-        <OurForest></OurForest>
-        
-        <section class="column">
-            <ProjectList></ProjectList>
-            <ToolsList></ToolsList>
-        </section>
-
-
-        <Events></Events>
+        <div class="quote-wrapper">
+            <sub> &ldquo; </sub>
+            <div class="quote-wrapper__details">
+                <p> It does not matter how slowly you go as long as you do not stop </p>
+                <p style="text-align: right;"> - Confucius </p>
+            </div>
+            <sup> &rdquo;</sup>
+        </div>
         <GetInvolved></GetInvolved>
 	</main>
     <Footer></Footer>
 </Layout>
+
+<style lang="scss">
+    .header-wrapper,.event-wrapper {
+        width: 100%;
+    }
+    .forest-wrapper {
+        width: 100%;
+        background: #f5f4f4;
+    }
+
+    .event-wrapper,
+    .learning-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 950px;
+        background-color: #F2F3F5;
+    }
+
+    .learning-wrapper {
+        border-top: solid 2px #ebebeb;
+    }
+
+    .quote-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 350px;
+        width: 100%;
+        background-color: #2c3e50;
+
+        sub, sup {
+            color: white;
+            font-size: 6rem;
+        }
+
+        sub {
+            margin-bottom: 35px;
+            margin-right: 20px;
+
+            @media(max-width:400px) {
+                margin-bottom: 185px;
+            }
+        }
+
+        sup {
+            margin-top: 35px;
+            margin-left: 20px;
+
+            @media(max-width:400px) {
+                margin-top: 185px;
+            }
+        }
+
+        .quote-wrapper__details {
+            p {
+                color: white;
+                font-size: 1.3rem;
+
+                @media(max-width:400px) {
+                    margin: 10px;
+                }
+            }
+        }
+    }
+</style>
 

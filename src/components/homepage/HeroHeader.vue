@@ -3,10 +3,11 @@
         <aside class="hero_header-information">
             <h1>Junior Developer Group</h1>
             <p>
-            We're an international community helping early career
-            developers gain new skills, make meaningful connections and provide
-            guidance to those entering their first roles in tech.
+            We're a friendly, international community, 
+            providing an additional way of gaining  experience, 
+            practicing your skills and creating meaningful connections while working together
             </p>
+
             <a href="/about">Find out more</a>
         </aside>
         <aside class="hero_header-logo">
@@ -21,7 +22,9 @@
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    width: 100%;
+    width: 90%;
+    max-width: 1200px;
+    
 
     min-height: 950px;
 
@@ -31,16 +34,21 @@
 
     aside {
         width: 50%;
+        margin: 0 auto;
     }
 
     .hero_header-information {
-        text-align: left;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
 
         h1 {
             font-weight: bold;
             font-size: 44px;
             margin-block-start: 0;
             margin-block-end: 0;
+            text-align: center;
         }
 
         p {
@@ -48,10 +56,16 @@
             line-height: 23px;
             margin-bottom: 30px;
             max-width: 90%;
+            text-align: center;
+
+            @media(max-width:500px) { 
+                max-width: 100%;
+                margin-top: 30px;
+            }
         }
 
         a {
-            background: #fc5b5b;
+            background: #ff3e3e;
             border-radius: 10px;
             color: white;
             font-style: normal;
@@ -61,12 +75,22 @@
             text-align: center;
             letter-spacing: 2px;
             text-transform: uppercase;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+
             margin-top: 15px;
-            padding: 10px 10px;
-            max-width: 80%;
+            padding: 10px 150px;
+            transition: 300ms all ease-in-out;
+
+            &:hover {
+                padding: 10px 165px;
+            }
+
+            @media(max-width:500px) {
+                padding: 10px 50px;
+
+                &:hover {
+                    padding: 10px 65px;
+                }
+            }
         }
     }
 

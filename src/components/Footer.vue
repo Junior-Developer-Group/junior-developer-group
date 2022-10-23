@@ -97,9 +97,9 @@ export default {
                     font-weight: bold;
                     font-size: 1.4em;
                     text-decoration-line: underline;
-                    text-decoration-style: dashed;
-                    text-decoration-color: #4358d8;
-                    text-underline-offset: 5px;
+                    text-decoration-style: solid;
+                    text-decoration-color: #ffc22b;
+                    text-underline-offset: 10px;
                 }
 
                 a {
