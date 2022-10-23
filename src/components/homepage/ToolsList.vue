@@ -47,7 +47,7 @@
 
  .tools {
   width: 100%;
-  min-height: 750px;
+  min-height: 950px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -68,13 +68,21 @@
          background: linear-gradient(321.69deg, #4481EB 0%, #04BEFE 100%);
          border-radius: 16px;
      }
+
+     .about-technologies {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+     }
  
      h2 {
-        margin-bottom: 60px;
+         margin-bottom: 60px;
          color: white;
-         width: 100%;
+         width: 80%;
          text-align: center;
-         font-size: 1.5rem;
+         font-size: 2rem;
+         word-break: break-word;
 
      }
 

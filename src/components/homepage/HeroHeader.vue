@@ -57,6 +57,11 @@
             margin-bottom: 30px;
             max-width: 90%;
             text-align: center;
+
+            @media(max-width:500px) { 
+                max-width: 100%;
+                margin-top: 30px;
+            }
         }
 
         a {
@@ -70,15 +75,21 @@
             text-align: center;
             letter-spacing: 2px;
             text-transform: uppercase;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+
             margin-top: 15px;
-            padding: 10px 20%;
+            padding: 10px 150px;
             transition: 300ms all ease-in-out;
 
             &:hover {
-                padding: 10px 25%
+                padding: 10px 165px;
+            }
+
+            @media(max-width:500px) {
+                padding: 10px 50px;
+
+                &:hover {
+                    padding: 10px 65px;
+                }
             }
         }
     }

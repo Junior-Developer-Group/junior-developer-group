@@ -48,14 +48,14 @@ export default {
     justify-content: center;
     width: 100%;
     flex-wrap: wrap;
-    min-height: 850px;
+    min-height: 950px;
     background: #2c3e50;
     padding-bottom: 20px;
 
     h2 {
         margin-bottom: 60px;
          color: white;
-         width: 100%;
+         width: 80%;
          text-align: center;
          font-size: 2rem;
 
@@ -77,7 +77,14 @@ export default {
         }
 
         @media (max-width: 400px) {
-            width: 120px;
+            width: 900px;
+        }
+
+        @media (max-width: 300px) {
+           img {
+            width: 60px;
+            height: 60px;
+           }
         }
     }
 
