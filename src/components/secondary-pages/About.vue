@@ -47,7 +47,7 @@
 						👉 Sleep Quality Calculator
 					</a>
 					<a href="https://junior-developer-group.github.io/tamagotchi-game/" target="_blank">
-						👉 Tamagotchi inpired game
+						👉 Tamagotchi inspired game
 					</a>
 					<a href="https://github.com/Junior-Developer-Group/cat-match" target="_blank"> 👉 Cat Match </a>
 					<a href="https://junior-developer-group.github.io/HacktoberPet/" target="_blank">
