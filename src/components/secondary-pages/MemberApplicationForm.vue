@@ -1,11 +1,21 @@
 <template>
-    <section>
-        <header>
-            <img src="../../assets/logo-with-background.png" alt="Junior Developer Group Logo | A butterfly with a blue and a purple wing"/>
-            <h1> New Members</h1>
-            <p> Application form </p>
-        </header>
-        <form action="https://formspree.io/f/xlezdnoj" method="POST">
+	<section>
+		<header>
+			<img
+				src="../../assets/logo-with-background.png"
+				alt="Junior Developer Group Logo | A butterfly with a blue and a purple wing" />
+			<h1>New Members</h1>
+			<!-- <p> Application form </p> -->
+
+			<p>
+				Over the years, the group has supported over 200 early career developers and, as of right now, we're not
+				able to accept any more new members (or mentors). <br />There are no plans to open the group for new
+				members in the foreseeable future.
+			</p>
+
+			<span> Please return to <a href="/"> homepage</a> or visit our <a href="/contact"> contact form </a></span>
+		</header>
+		<!-- <form action="https://formspree.io/f/xlezdnoj" method="POST">
 
             <fieldset>
                 <legend> Personal details: </legend>
@@ -77,126 +87,122 @@
 
             <button type="submit"> Submit</button>
 
-        </form>
-    </section>
+        </form> -->
+	</section>
 </template>
 
 <script>
 export default {
-    name: 'MemberApplicationForm'
+	name: 'MemberApplicationForm',
 }
 </script>
 
 <style scoped lang="scss">
+img {
+	width: 280px;
+	height: 280px;
 
-    img {
-        width: 280px;
-        height: 280px;
+	@media (max-width: 350px) {
+		width: 150px;
+		height: 150px;
+		margin-top: 90px;
+	}
+}
 
-        @media (max-width: 350px) {
-            width: 150px;
-            height: 150px;
-            margin-top: 90px;
-        }
-    }
+header {
+	text-align: center;
+}
+section {
+	margin-top: 140px;
+	margin-bottom: 40px;
+	width: 90%;
+}
 
-    header {
-        text-align: center;
-    }
-    section {
-        margin-top: 140px;
-        margin-bottom: 40px;
-        width: 90%;
-    }
+form {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	width: 80%;
+	max-width: 600px;
+	margin: 0 auto;
+	margin-top: 50px;
 
-    form {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        width: 80%;
-        max-width: 600px;
-        margin: 0 auto;
-        margin-top: 50px;
+	fieldset {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		padding: 20px;
+		border-image: linear-gradient(#016492, #cddc39) 30;
+		border-width: 4px;
+		border-style: solid;
+		margin-bottom: 30px;
 
-        fieldset {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: flex-start;
-            padding: 20px;
-            border-image: linear-gradient(#016492, #cddc39) 30;
-            border-width: 4px;
-            border-style: solid;
-            margin-bottom: 30px;
+		span {
+			display: flex;
+			align-items: baseline;
 
-            span {
-                display: flex;
-                align-items: baseline;
+			label {
+				font-weight: normal;
+				margin-bottom: 0 !important;
+			}
+		}
 
-                label {
-                    font-weight: normal;
-                    margin-bottom: 0!important;
-                }
-            }
+		span.buttons {
+			justify-content: space-between;
+			width: 100%;
+		}
+	}
 
-            span.buttons {
-                justify-content: space-between;
-                width: 100%;
-            }
-        }
+	legend {
+		text-align: left;
+		font-weight: bold;
+		font-size: 1.5rem;
+		color: #434ba1;
+	}
 
-        legend {
-            text-align: left;
-            font-weight: bold;
-            font-size: 1.5rem;
-            color: #434ba1;
+	input,
+	textarea {
+		margin-bottom: 20px;
+		width: 100%;
+		text-indent: 10px;
+		border-radius: 4px;
+		border-color: grey;
+		background-color: white;
+		border: 1px solid;
+		outline: none;
+	}
 
-        }
+	input:not(input[type='checkbox']) {
+		height: 35px;
+	}
 
-        input, textarea {
-            margin-bottom: 20px;
-            width: 100%;
-            text-indent: 10px;
-            border-radius: 4px;
-            border-color: grey;
-            background-color: white;
-            border: 1px solid;
-            outline: none;
-        }
+	input[type='checkbox'] {
+		accent-color: #016492;
+		margin-right: 5px;
+	}
 
-        input:not(input[type=checkbox]) {
-            height: 35px;
-        }
+	label,
+	p {
+		font-weight: bold;
+		font-size: 16px;
+		margin-bottom: 10px;
+	}
 
-        input[type=checkbox] {
-            accent-color: #016492;
-            margin-right: 5px;
-
- 
-        }
-
-
-        label, p {
-            
-            font-weight: bold;
-            font-size: 16px;
-            margin-bottom: 10px;
-        }
-
-        button {
-            background: #434ba1;
-            color: white;
-            border: none;
-            outline: none;
-            padding: 15px 60px;
-            border-radius: 10px;
-            text-transform: uppercase;
-            font-weight: bold;
-            font-family: inherit;
-            font-size: 18px;
-            cursor: pointer;
-        }
-    }
+	button {
+		background: #434ba1;
+		color: white;
+		border: none;
+		outline: none;
+		padding: 15px 60px;
+		border-radius: 10px;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-family: inherit;
+		font-size: 18px;
+		cursor: pointer;
+	}
+}
 </style>

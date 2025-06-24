@@ -1,59 +1,51 @@
 {
-    "projects": [
-        {
-            "name": "New Project - November 2022",
-            "status": "Planning stage",
-            "url": ""
-        },
+	"projects": [
+		{
+			"name": "Team Dashboard",
+			"status": "Completed",
+			"url": "https://junior-developer-group.com/pages/dashboard.html"
+		},
 
-        {
-            "name": "Team Dashboard",
-            "status": "In Progress",
-            "url": "https://junior-developer-group.com/pages/dashboard.html"
-        },
+		{
+			"name": "Group Resources",
+			"status": "Completed",
+			"url": "https://junior-developer-group.github.io/group-resources/"
+		},
 
-        {
-            "name": "Group Resources Website [PWA]",
-            "status": "Completed",
-            "url": "https://junior-developer-group.github.io/group-resources/"
-        },
+		{
+			"name": "Lifecycle of Plastics",
+			"status": "Completed",
+			"url": "https://github.com/Junior-Developer-Group/lifecycle-of-plastics"
+		},
 
-        {
-            "name": "Lifecycle of Plastics [Vue]",
-            "status": "Completed",
-            "url": "https://github.com/Junior-Developer-Group/lifecycle-of-plastics"
-        },
+		{
+			"name": "Cat Match",
+			"status": "Completed",
+			"url": "https://junior-developer-group.github.io/cat-match/"
+		},
 
-        {
-            "name": "Cat Match",
-            "status": "Completed",
-            "url": "https://junior-developer-group.github.io/cat-match/"
-        },
+		{
+			"name": "HacktoberFest 2021",
+			"status": "Completed",
+			"url": "https://junior-developer-group.github.io/HacktoberPet/"
+		},
 
+		{
+			"name": "Sleep Quality Calculator ",
+			"status": "Completed",
+			"url": "https://junior-developer-group.github.io/sleep-quality-calculator/"
+		},
 
-        {
-            "name": "HacktoberFest 2021",
-            "status": "Completed",
-            "url": "https://junior-developer-group.github.io/HacktoberPet/"
-        },
+		{
+			"name": "Our first team website [2020]",
+			"status": "Completed",
+			"url": "https://junior-developer-group.github.io/junior-coding-team/"
+		},
 
-        
-        {
-            "name": "Sleep Quality Calculator ",
-            "status": "Completed",
-            "url": "https://junior-developer-group.github.io/sleep-quality-calculator/"
-        },
-
-        {
-            "name": "Our first team website [2020]",
-            "status": "Completed",
-            "url": "https://junior-developer-group.github.io/junior-coding-team/"
-        },
-
-        {
-            "name": "HacktoberFest 2020",
-            "status": "Completed",
-            "url": "https://mateahoward.github.io/hacktoberfest-2020/"
-        }
-    ]
+		{
+			"name": "HacktoberFest 2020",
+			"status": "Completed",
+			"url": "https://mateahoward.github.io/hacktoberfest-2020/"
+		}
+	]
 }
